@@ -56,9 +56,18 @@
 		CA9EBF11245A2EC200380442 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CAFE7B2C245A211300167140 /* Assets.xcassets */,
 				CA9EBF12245A2EEC00380442 /* R.generated.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		CA9EBF14245A35A300380442 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				CAFE7B31245A211300167140 /* LaunchScreen.storyboard */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		CAFE7B1A245A211100167140 = {
@@ -82,12 +91,11 @@
 		CAFE7B25245A211100167140 /* Plane Rent */ = {
 			isa = PBXGroup;
 			children = (
+				CA9EBF14245A35A300380442 /* Screens */,
 				CA9EBF11245A2EC200380442 /* Resources */,
 				CAFE7B26245A211100167140 /* AppDelegate.swift */,
 				CAFE7B28245A211100167140 /* SceneDelegate.swift */,
 				CAFE7B2A245A211100167140 /* ContentView.swift */,
-				CAFE7B2C245A211300167140 /* Assets.xcassets */,
-				CAFE7B31245A211300167140 /* LaunchScreen.storyboard */,
 				CAFE7B34245A211300167140 /* Info.plist */,
 				CAFE7B2E245A211300167140 /* Preview Content */,
 			);
