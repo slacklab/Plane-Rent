@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA9EBF13245A2EEC00380442 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EBF12245A2EEC00380442 /* R.generated.swift */; };
 		CAFE7B27245A211100167140 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE7B26245A211100167140 /* AppDelegate.swift */; };
 		CAFE7B29245A211100167140 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE7B28245A211100167140 /* SceneDelegate.swift */; };
 		CAFE7B2B245A211100167140 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE7B2A245A211100167140 /* ContentView.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		C0E1DEFAD280620FA7BB0981 /* Pods-Plane Rent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plane Rent.release.xcconfig"; path = "Target Support Files/Pods-Plane Rent/Pods-Plane Rent.release.xcconfig"; sourceTree = "<group>"; };
+		CA9EBF12245A2EEC00380442 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		CAFE7B23245A211100167140 /* Plane Rent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plane Rent.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAFE7B26245A211100167140 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAFE7B28245A211100167140 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,8 +50,15 @@
 				ED07593FA36261D73D3F79CE /* Pods-Plane Rent.debug.xcconfig */,
 				C0E1DEFAD280620FA7BB0981 /* Pods-Plane Rent.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		CA9EBF11245A2EC200380442 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CA9EBF12245A2EEC00380442 /* R.generated.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		CAFE7B1A245A211100167140 = {
@@ -73,6 +82,7 @@
 		CAFE7B25245A211100167140 /* Plane Rent */ = {
 			isa = PBXGroup;
 			children = (
+				CA9EBF11245A2EC200380442 /* Resources */,
 				CAFE7B26245A211100167140 /* AppDelegate.swift */,
 				CAFE7B28245A211100167140 /* SceneDelegate.swift */,
 				CAFE7B2A245A211100167140 /* ContentView.swift */,
@@ -108,6 +118,7 @@
 			buildConfigurationList = CAFE7B37245A211300167140 /* Build configuration list for PBXNativeTarget "Plane Rent" */;
 			buildPhases = (
 				3ADAF9A791CAE594A655FEA6 /* [CP] Check Pods Manifest.lock */,
+				CA9EBF10245A2DC200380442 /* R.swift */,
 				CAFE7B1F245A211100167140 /* Sources */,
 				CAFE7B20245A211100167140 /* Frameworks */,
 				CAFE7B21245A211100167140 /* Resources */,
@@ -191,6 +202,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CA9EBF10245A2DC200380442 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 		D596DC5C54A9C00E7FA8C27A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -218,6 +249,7 @@
 				CAFE7B27245A211100167140 /* AppDelegate.swift in Sources */,
 				CAFE7B29245A211100167140 /* SceneDelegate.swift in Sources */,
 				CAFE7B2B245A211100167140 /* ContentView.swift in Sources */,
+				CA9EBF13245A2EEC00380442 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
