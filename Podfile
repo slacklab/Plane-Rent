@@ -6,5 +6,6 @@ target 'Plane Rent' do
   use_frameworks!
 
   # Pods for Plane Rent
+  pod 'R.swift'
 
 end
