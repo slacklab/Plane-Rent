@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA0BA78F245A63FB00A9F992 /* UIApplication+endEditing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0BA78E245A63FB00A9F992 /* UIApplication+endEditing.swift */; };
+		CA0BA791245A6CBF00A9F992 /* DismissingKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0BA790245A6CBF00A9F992 /* DismissingKeyboard.swift */; };
 		CA9EBF13245A2EEC00380442 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EBF12245A2EEC00380442 /* R.generated.swift */; };
+		CA9EBF17245A428500380442 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EBF16245A428500380442 /* Colors.swift */; };
 		CAFE7B27245A211100167140 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE7B26245A211100167140 /* AppDelegate.swift */; };
 		CAFE7B29245A211100167140 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE7B28245A211100167140 /* SceneDelegate.swift */; };
-		CAFE7B2B245A211100167140 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE7B2A245A211100167140 /* ContentView.swift */; };
+		CAFE7B2B245A211100167140 /* InputPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE7B2A245A211100167140 /* InputPhoneView.swift */; };
 		CAFE7B2D245A211300167140 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAFE7B2C245A211300167140 /* Assets.xcassets */; };
 		CAFE7B30245A211300167140 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAFE7B2F245A211300167140 /* Preview Assets.xcassets */; };
 		CAFE7B33245A211300167140 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAFE7B31245A211300167140 /* LaunchScreen.storyboard */; };
@@ -19,11 +22,14 @@
 
 /* Begin PBXFileReference section */
 		C0E1DEFAD280620FA7BB0981 /* Pods-Plane Rent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plane Rent.release.xcconfig"; path = "Target Support Files/Pods-Plane Rent/Pods-Plane Rent.release.xcconfig"; sourceTree = "<group>"; };
+		CA0BA78E245A63FB00A9F992 /* UIApplication+endEditing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+endEditing.swift"; sourceTree = "<group>"; };
+		CA0BA790245A6CBF00A9F992 /* DismissingKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissingKeyboard.swift; sourceTree = "<group>"; };
 		CA9EBF12245A2EEC00380442 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		CA9EBF16245A428500380442 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CAFE7B23245A211100167140 /* Plane Rent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plane Rent.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAFE7B26245A211100167140 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAFE7B28245A211100167140 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CAFE7B2A245A211100167140 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CAFE7B2A245A211100167140 /* InputPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPhoneView.swift; sourceTree = "<group>"; };
 		CAFE7B2C245A211300167140 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAFE7B2F245A211300167140 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CAFE7B32245A211300167140 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,11 +59,21 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		CA0BA78D245A63AF00A9F992 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CA0BA78E245A63FB00A9F992 /* UIApplication+endEditing.swift */,
+				CA0BA790245A6CBF00A9F992 /* DismissingKeyboard.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		CA9EBF11245A2EC200380442 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				CAFE7B2C245A211300167140 /* Assets.xcassets */,
 				CA9EBF12245A2EEC00380442 /* R.generated.swift */,
+				CA9EBF16245A428500380442 /* Colors.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -65,9 +81,27 @@
 		CA9EBF14245A35A300380442 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				CA9EBF18245A573200380442 /* InputPhone */,
 				CAFE7B31245A211300167140 /* LaunchScreen.storyboard */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		CA9EBF18245A573200380442 /* InputPhone */ = {
+			isa = PBXGroup;
+			children = (
+				CAFE7B2A245A211100167140 /* InputPhoneView.swift */,
+			);
+			path = InputPhone;
+			sourceTree = "<group>";
+		};
+		CA9EBF19245A574300380442 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				CAFE7B26245A211100167140 /* AppDelegate.swift */,
+				CAFE7B28245A211100167140 /* SceneDelegate.swift */,
+			);
+			path = System;
 			sourceTree = "<group>";
 		};
 		CAFE7B1A245A211100167140 = {
@@ -91,13 +125,12 @@
 		CAFE7B25245A211100167140 /* Plane Rent */ = {
 			isa = PBXGroup;
 			children = (
+				CA0BA78D245A63AF00A9F992 /* Extensions */,
+				CA9EBF19245A574300380442 /* System */,
 				CA9EBF14245A35A300380442 /* Screens */,
 				CA9EBF11245A2EC200380442 /* Resources */,
-				CAFE7B26245A211100167140 /* AppDelegate.swift */,
-				CAFE7B28245A211100167140 /* SceneDelegate.swift */,
-				CAFE7B2A245A211100167140 /* ContentView.swift */,
-				CAFE7B34245A211300167140 /* Info.plist */,
 				CAFE7B2E245A211300167140 /* Preview Content */,
+				CAFE7B34245A211300167140 /* Info.plist */,
 			);
 			path = "Plane Rent";
 			sourceTree = "<group>";
@@ -255,8 +288,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAFE7B27245A211100167140 /* AppDelegate.swift in Sources */,
+				CA0BA78F245A63FB00A9F992 /* UIApplication+endEditing.swift in Sources */,
+				CA9EBF17245A428500380442 /* Colors.swift in Sources */,
 				CAFE7B29245A211100167140 /* SceneDelegate.swift in Sources */,
-				CAFE7B2B245A211100167140 /* ContentView.swift in Sources */,
+				CA0BA791245A6CBF00A9F992 /* DismissingKeyboard.swift in Sources */,
+				CAFE7B2B245A211100167140 /* InputPhoneView.swift in Sources */,
 				CA9EBF13245A2EEC00380442 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
