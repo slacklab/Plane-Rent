@@ -9,8 +9,12 @@
 /* Begin PBXBuildFile section */
 		CA0BA78F245A63FB00A9F992 /* UIApplication+endEditing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0BA78E245A63FB00A9F992 /* UIApplication+endEditing.swift */; };
 		CA0BA791245A6CBF00A9F992 /* DismissingKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0BA790245A6CBF00A9F992 /* DismissingKeyboard.swift */; };
+		CA780C50245BC7560052D65B /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA780C4F245BC7560052D65B /* Links.swift */; };
+		CA780C52245BC8D70052D65B /* SmsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA780C51245BC8D70052D65B /* SmsService.swift */; };
 		CA9EBF13245A2EEC00380442 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EBF12245A2EEC00380442 /* R.generated.swift */; };
 		CA9EBF17245A428500380442 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EBF16245A428500380442 /* Colors.swift */; };
+		CAE0A792245CF19E00224FED /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE0A791245CF19E00224FED /* Requests.swift */; };
+		CAE0A794245D04E600224FED /* StatusResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE0A793245D04E600224FED /* StatusResponse.swift */; };
 		CAFE7B27245A211100167140 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE7B26245A211100167140 /* AppDelegate.swift */; };
 		CAFE7B29245A211100167140 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE7B28245A211100167140 /* SceneDelegate.swift */; };
 		CAFE7B2B245A211100167140 /* InputPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE7B2A245A211100167140 /* InputPhoneView.swift */; };
@@ -24,8 +28,12 @@
 		C0E1DEFAD280620FA7BB0981 /* Pods-Plane Rent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plane Rent.release.xcconfig"; path = "Target Support Files/Pods-Plane Rent/Pods-Plane Rent.release.xcconfig"; sourceTree = "<group>"; };
 		CA0BA78E245A63FB00A9F992 /* UIApplication+endEditing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+endEditing.swift"; sourceTree = "<group>"; };
 		CA0BA790245A6CBF00A9F992 /* DismissingKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissingKeyboard.swift; sourceTree = "<group>"; };
+		CA780C4F245BC7560052D65B /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
+		CA780C51245BC8D70052D65B /* SmsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsService.swift; sourceTree = "<group>"; };
 		CA9EBF12245A2EEC00380442 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		CA9EBF16245A428500380442 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		CAE0A791245CF19E00224FED /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
+		CAE0A793245D04E600224FED /* StatusResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusResponse.swift; sourceTree = "<group>"; };
 		CAFE7B23245A211100167140 /* Plane Rent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plane Rent.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAFE7B26245A211100167140 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAFE7B28245A211100167140 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +76,24 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		CA780C47245BC4700052D65B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CA780C51245BC8D70052D65B /* SmsService.swift */,
+				CAE0A791245CF19E00224FED /* Requests.swift */,
+				CAE0A793245D04E600224FED /* StatusResponse.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		CA780C4E245BC7360052D65B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				CA780C4F245BC7560052D65B /* Links.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		CA9EBF11245A2EC200380442 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,15 +102,6 @@
 				CA9EBF16245A428500380442 /* Colors.swift */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		CA9EBF14245A35A300380442 /* Screens */ = {
-			isa = PBXGroup;
-			children = (
-				CA9EBF18245A573200380442 /* InputPhone */,
-				CAFE7B31245A211300167140 /* LaunchScreen.storyboard */,
-			);
-			path = Screens;
 			sourceTree = "<group>";
 		};
 		CA9EBF18245A573200380442 /* InputPhone */ = {
@@ -125,12 +142,15 @@
 		CAFE7B25245A211100167140 /* Plane Rent */ = {
 			isa = PBXGroup;
 			children = (
+				CA780C4E245BC7360052D65B /* Constants */,
+				CA780C47245BC4700052D65B /* Networking */,
 				CA0BA78D245A63AF00A9F992 /* Extensions */,
 				CA9EBF19245A574300380442 /* System */,
-				CA9EBF14245A35A300380442 /* Screens */,
+				CA9EBF18245A573200380442 /* InputPhone */,
 				CA9EBF11245A2EC200380442 /* Resources */,
 				CAFE7B2E245A211300167140 /* Preview Content */,
 				CAFE7B34245A211300167140 /* Info.plist */,
+				CAFE7B31245A211300167140 /* LaunchScreen.storyboard */,
 			);
 			path = "Plane Rent";
 			sourceTree = "<group>";
@@ -289,9 +309,13 @@
 			files = (
 				CAFE7B27245A211100167140 /* AppDelegate.swift in Sources */,
 				CA0BA78F245A63FB00A9F992 /* UIApplication+endEditing.swift in Sources */,
+				CAE0A792245CF19E00224FED /* Requests.swift in Sources */,
+				CA780C52245BC8D70052D65B /* SmsService.swift in Sources */,
+				CAE0A794245D04E600224FED /* StatusResponse.swift in Sources */,
 				CA9EBF17245A428500380442 /* Colors.swift in Sources */,
 				CAFE7B29245A211100167140 /* SceneDelegate.swift in Sources */,
 				CA0BA791245A6CBF00A9F992 /* DismissingKeyboard.swift in Sources */,
+				CA780C50245BC7560052D65B /* Links.swift in Sources */,
 				CAFE7B2B245A211100167140 /* InputPhoneView.swift in Sources */,
 				CA9EBF13245A2EEC00380442 /* R.generated.swift in Sources */,
 			);

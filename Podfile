@@ -7,5 +7,6 @@ target 'Plane Rent' do
 
   # Pods for Plane Rent
   pod 'R.swift'
+  pod 'SwiftHTTP', '~> 3.0.1'
 
 end

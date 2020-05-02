@@ -2,19 +2,23 @@ PODS:
   - R.swift (5.1.0):
     - R.swift.Library (~> 5.1.0)
   - R.swift.Library (5.1.0)
+  - SwiftHTTP (3.0.1)
 
 DEPENDENCIES:
   - R.swift
+  - SwiftHTTP (~> 3.0.1)
 
 SPEC REPOS:
   trunk:
     - R.swift
     - R.swift.Library
+    - SwiftHTTP
 
 SPEC CHECKSUMS:
   R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
+  SwiftHTTP: e94f1aa8cde58637dcc0100f6349de31a3337fde
 
-PODFILE CHECKSUM: d2341d1941575dbc34de95472269ec9b7a8ba33e
+PODFILE CHECKSUM: 0333d3c729b3c81a6614e20cba89c2c75fd2e79b
 
 COCOAPODS: 1.9.1

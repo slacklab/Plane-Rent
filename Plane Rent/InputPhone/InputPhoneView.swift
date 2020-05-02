@@ -10,7 +10,7 @@ import SwiftUI
 
 struct InputPhoneView: View {
     
-    @State var phoneNumber: String = "+7"
+    @State var phoneNumber: String = "7"
     
     var body: some View {
         
@@ -31,6 +31,18 @@ struct InputPhoneView: View {
             
             Button(action: {
                 print("button pressed")
+                print(self.phoneNumber)
+//                print(Requests().userLoginCheck(phone: self.phoneNumber))
+                
+                var result: Bool = false
+                Requests().userLoginCheck(
+                    phone: self.phoneNumber,
+                    finished: {(result: Bool) -> Void in print(result)})
+                
+//                foo(username.text, password: password.text, finished: {(result:Bool) -> Void in
+//                        println("result is: \(result)")
+//                })
+                
             }) {
                 Image("plane")
                     .renderingMode(.original)
@@ -48,5 +60,14 @@ struct InputPhoneView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         InputPhoneView()
+    }
+}
+
+struct PhoneNumberTextField : View {
+    
+    @Binding var phoneNumber: String
+    
+    var body: some View {
+        return TextField("PhoneNumber", text: $phoneNumber)
     }
 }
