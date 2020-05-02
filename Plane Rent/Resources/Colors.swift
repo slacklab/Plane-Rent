@@ -7,9 +7,9 @@
 //
 
 import Foundation
-import UIKit
+import SwiftUI
 
-enum Colors {
-    static let bgColor = #colorLiteral(red: 0.337254902, green: 0.8, blue: 0.9490196078, alpha: 1)
+struct  Colors {
+    static let bgColor = Color(hex: 0x8ab9ff)
     
 }

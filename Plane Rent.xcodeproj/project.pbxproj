@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		CA0BA78F245A63FB00A9F992 /* UIApplication+endEditing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0BA78E245A63FB00A9F992 /* UIApplication+endEditing.swift */; };
 		CA0BA791245A6CBF00A9F992 /* DismissingKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0BA790245A6CBF00A9F992 /* DismissingKeyboard.swift */; };
+		CA38BCFA245D9E25009EF2EF /* InputPhoneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA38BCF9245D9E25009EF2EF /* InputPhoneController.swift */; };
+		CA63B444245DA04600AFC7EF /* InputSmsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA63B443245DA04600AFC7EF /* InputSmsView.swift */; };
+		CA63B446245DA05F00AFC7EF /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA63B445245DA05F00AFC7EF /* RegistrationView.swift */; };
+		CA63B448245DA60600AFC7EF /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA63B447245DA60600AFC7EF /* Color+Hex.swift */; };
 		CA780C50245BC7560052D65B /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA780C4F245BC7560052D65B /* Links.swift */; };
 		CA780C52245BC8D70052D65B /* SmsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA780C51245BC8D70052D65B /* SmsService.swift */; };
 		CA9EBF13245A2EEC00380442 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EBF12245A2EEC00380442 /* R.generated.swift */; };
@@ -28,6 +32,10 @@
 		C0E1DEFAD280620FA7BB0981 /* Pods-Plane Rent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plane Rent.release.xcconfig"; path = "Target Support Files/Pods-Plane Rent/Pods-Plane Rent.release.xcconfig"; sourceTree = "<group>"; };
 		CA0BA78E245A63FB00A9F992 /* UIApplication+endEditing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+endEditing.swift"; sourceTree = "<group>"; };
 		CA0BA790245A6CBF00A9F992 /* DismissingKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissingKeyboard.swift; sourceTree = "<group>"; };
+		CA38BCF9245D9E25009EF2EF /* InputPhoneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPhoneController.swift; sourceTree = "<group>"; };
+		CA63B443245DA04600AFC7EF /* InputSmsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSmsView.swift; sourceTree = "<group>"; };
+		CA63B445245DA05F00AFC7EF /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		CA63B447245DA60600AFC7EF /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
 		CA780C4F245BC7560052D65B /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
 		CA780C51245BC8D70052D65B /* SmsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsService.swift; sourceTree = "<group>"; };
 		CA9EBF12245A2EEC00380442 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -72,8 +80,34 @@
 			children = (
 				CA0BA78E245A63FB00A9F992 /* UIApplication+endEditing.swift */,
 				CA0BA790245A6CBF00A9F992 /* DismissingKeyboard.swift */,
+				CA63B447245DA60600AFC7EF /* Color+Hex.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CA38BCFB245D9E6E009EF2EF /* InputPhone */ = {
+			isa = PBXGroup;
+			children = (
+				CAFE7B2A245A211100167140 /* InputPhoneView.swift */,
+				CA38BCF9245D9E25009EF2EF /* InputPhoneController.swift */,
+			);
+			path = InputPhone;
+			sourceTree = "<group>";
+		};
+		CA63B441245DA00A00AFC7EF /* InputSms */ = {
+			isa = PBXGroup;
+			children = (
+				CA63B443245DA04600AFC7EF /* InputSmsView.swift */,
+			);
+			path = InputSms;
+			sourceTree = "<group>";
+		};
+		CA63B442245DA02500AFC7EF /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				CA63B445245DA05F00AFC7EF /* RegistrationView.swift */,
+			);
+			path = Registration;
 			sourceTree = "<group>";
 		};
 		CA780C47245BC4700052D65B /* Networking */ = {
@@ -86,30 +120,25 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		CA780C4E245BC7360052D65B /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				CA780C4F245BC7560052D65B /* Links.swift */,
-			);
-			path = Constants;
-			sourceTree = "<group>";
-		};
 		CA9EBF11245A2EC200380442 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				CAFE7B2C245A211300167140 /* Assets.xcassets */,
 				CA9EBF12245A2EEC00380442 /* R.generated.swift */,
 				CA9EBF16245A428500380442 /* Colors.swift */,
+				CA780C4F245BC7560052D65B /* Links.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		CA9EBF18245A573200380442 /* InputPhone */ = {
+		CA9EBF18245A573200380442 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				CAFE7B2A245A211100167140 /* InputPhoneView.swift */,
+				CA63B442245DA02500AFC7EF /* Registration */,
+				CA63B441245DA00A00AFC7EF /* InputSms */,
+				CA38BCFB245D9E6E009EF2EF /* InputPhone */,
 			);
-			path = InputPhone;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		CA9EBF19245A574300380442 /* System */ = {
@@ -142,12 +171,11 @@
 		CAFE7B25245A211100167140 /* Plane Rent */ = {
 			isa = PBXGroup;
 			children = (
-				CA780C4E245BC7360052D65B /* Constants */,
+				CA9EBF11245A2EC200380442 /* Resources */,
 				CA780C47245BC4700052D65B /* Networking */,
 				CA0BA78D245A63AF00A9F992 /* Extensions */,
 				CA9EBF19245A574300380442 /* System */,
-				CA9EBF18245A573200380442 /* InputPhone */,
-				CA9EBF11245A2EC200380442 /* Resources */,
+				CA9EBF18245A573200380442 /* Screens */,
 				CAFE7B2E245A211300167140 /* Preview Content */,
 				CAFE7B34245A211300167140 /* Info.plist */,
 				CAFE7B31245A211300167140 /* LaunchScreen.storyboard */,
@@ -309,7 +337,10 @@
 			files = (
 				CAFE7B27245A211100167140 /* AppDelegate.swift in Sources */,
 				CA0BA78F245A63FB00A9F992 /* UIApplication+endEditing.swift in Sources */,
+				CA38BCFA245D9E25009EF2EF /* InputPhoneController.swift in Sources */,
+				CA63B446245DA05F00AFC7EF /* RegistrationView.swift in Sources */,
 				CAE0A792245CF19E00224FED /* Requests.swift in Sources */,
+				CA63B448245DA60600AFC7EF /* Color+Hex.swift in Sources */,
 				CA780C52245BC8D70052D65B /* SmsService.swift in Sources */,
 				CAE0A794245D04E600224FED /* StatusResponse.swift in Sources */,
 				CA9EBF17245A428500380442 /* Colors.swift in Sources */,
@@ -318,6 +349,7 @@
 				CA780C50245BC7560052D65B /* Links.swift in Sources */,
 				CAFE7B2B245A211100167140 /* InputPhoneView.swift in Sources */,
 				CA9EBF13245A2EEC00380442 /* R.generated.swift in Sources */,
+				CA63B444245DA04600AFC7EF /* InputSmsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

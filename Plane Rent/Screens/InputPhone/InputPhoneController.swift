@@ -1,5 +1,5 @@
 //
-//  Requests.swift
+//  InputPhoneController.swift
 //  Plane Rent
 //
 //  Created by Ivan Sorokoletov on 02.05.2020.
@@ -8,9 +8,11 @@
 
 import Foundation
 import SwiftHTTP
+import SwiftUI
 
-struct Requests {
-    func userLoginCheck(phone: String) {
+struct InputPhoneController {
+        
+    func ifAccountExistLoginElseRegistration(phone: String, completionBlock: @escaping ((Bool) -> Void)) {
         let link = Links.generateLoginUserCheck(phone: phone)
                 
         HTTP.GET(link) { response in
@@ -23,22 +25,14 @@ struct Requests {
             let error = StatusResponse.error.rawValue
             
             print("value: \(result)")
-            
+                        
             if result.contains(error) {
+                print("User not exist: open registration screen")
+                completionBlock(false)
             } else {
+                print("User exist: Login with sms")
+                completionBlock(true)
             }
         }
-    }
-    
-    func smth1() {
-        print("do smth1")
-    }
-    
-    func smth2() {
-        print("do smth2")
-    }
-    
-    func addUser(phone: String, name: String, lastName: String, type: String, address: String) {
-        let link = Links.generateRegister(phone: phone, name: name, lastName: lastName, type: type, address: address)
     }
 }
