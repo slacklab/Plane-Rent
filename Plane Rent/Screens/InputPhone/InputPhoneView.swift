@@ -9,20 +9,14 @@
 import SwiftUI
 import UIKit
 
-
-struct InputPhoneViewState {
-    
-    static var shared = InputPhoneViewState()
-    var isAccounExist: Bool = false
-}
-
 struct InputPhoneView: View {
     
     @State var phoneNumber: String = "7"
-    
     @State var isModal = false
-
-        
+    @State var stateExist = false
+    
+    let defaults = UserDefaults.standard
+    
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
@@ -40,34 +34,21 @@ struct InputPhoneView: View {
                 Text("___________________________")
                     .frame(width: 250, alignment: .center)
                 
-                Button(action: {
-                    self.isModal.toggle()
-                    print("before tap")
-                    
-                    var result: Bool = false
-                    
-                    InputPhoneController().ifAccountExistLoginElseRegistration(
-                        phone: self.phoneNumber,
-                        completionBlock: { (result: Bool) -> Void in
-                            print("result is: \(result)")
-                    })
-                    
-                    print("after tap")
-                }) {
-                    Image("plane")
-                    .renderingMode(.original)
-                    .resizable()
-                    .frame(width: 50, height: 50)
-                    .aspectRatio(contentMode: .fill)
-                    .clipped()
-                }.sheet(isPresented: $isModal, content: {
-                    
-                    if InputPhoneViewState.shared.isAccounExist {
-                        InputSmsView()
-                    } else {
-                        RegistrationView()
+                if InputPhoneController().isAccountExist(phone: self.phoneNumber) {
+                    NavigationLink(destination: InputSmsView(phoneNumber: $phoneNumber, inputedCode: "")) {
+                        CheckPhoneButtonView()
                     }
-                })
+                } else {
+                    NavigationLink(destination: RegistrationView(
+                        phoneNumber: $phoneNumber,
+                        name: "",
+                        lastName: "",
+                        address: "",
+                        accountType: "")
+                    ) {
+                        CheckPhoneButtonView()
+                    }
+                }
             }
             .edgesIgnoringSafeArea(.all)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -77,19 +58,23 @@ struct InputPhoneView: View {
     }
 }
 
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        InputPhoneView()
-    }
-}
-
 struct PhoneNumberTextField : View {
     
     @Binding var phoneNumber: String
     
     var body: some View {
         return TextField("PhoneNumber", text: $phoneNumber)
+    }
+}
+
+struct CheckPhoneButtonView: View {
+    var body: some View {
+        Image("plane")
+            .renderingMode(.original)
+            .resizable()
+            .frame(width: 50, height: 50)
+            .aspectRatio(contentMode: .fill)
+            .clipped()
     }
 }
 
@@ -115,7 +100,7 @@ struct PhoneNumberTextField : View {
 //                            .clipped()
 //                    }
 //                }
-                
+
 //                NavigationLink(destination: InputSmsView()) {
 //                    Image("plane")
 //                        .renderingMode(.original)
@@ -124,3 +109,25 @@ struct PhoneNumberTextField : View {
 //                        .aspectRatio(contentMode: .fill)
 //                        .clipped()
 //                }
+
+
+//                Button(action: {
+//                    self.isModal.toggle()
+//                    print("before tap")
+//
+//                    print("after tap")
+//                }) {
+//                    Image("plane")
+//                        .renderingMode(.original)
+//                        .resizable()
+//                        .frame(width: 50, height: 50)
+//                        .aspectRatio(contentMode: .fill)
+//                        .clipped()
+//                }
+//                .sheet(isPresented: $isModal, content: {
+//                    if InputPhoneController().isAccountExist(phone: self.phoneNumber) {
+//                        InputSmsView(phoneNumber: self.$phoneNumber, inputedCode: "")
+//                    } else {
+//                        RegistrationView()
+//                    }
+//                })

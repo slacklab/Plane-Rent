@@ -16,4 +16,7 @@ enum StatusResponse: String {
     case `true` = "\"true\""
     case success = "\"success\""
     
+    // Sms.ru
+    case ok = "\"OK\""
+    
 }

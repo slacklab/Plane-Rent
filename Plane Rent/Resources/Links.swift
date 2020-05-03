@@ -17,7 +17,7 @@ struct Links {
     
     // MARK: - Methods
     
-    static func generateSmsSend(api_id: String = smsApiId, phone: String, message: String) -> String {
+    static func generateSmsSend(api_id: String = Links.smsApiId, phone: String, message: String) -> String {
         return "https://sms.ru/sms/send?api_id=" + smsApiId + "&to=" + phone + "&msg=" + message + "&json=1"
     }
     
