@@ -44,7 +44,7 @@ struct InputPhoneView: View {
                         name: "",
                         lastName: "",
                         address: "",
-                        accountType: "")
+                        accountTypeNameChecked: "")
                     ) {
                         CheckPhoneButtonView()
                     }

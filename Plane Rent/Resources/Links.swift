@@ -25,13 +25,13 @@ struct Links {
         return apiPath + "DB_SELECT.php?select=loginUserCheck&selfrom=air_users&where=" + phone
     }
     
-    static func generateRegister(
+    static func generateAddUser(
         phone: String,
         name: String,
         lastName: String,
         type: String,
         address: String) -> String {
         
-        return "http://big-marka.xyz/DB_REGISTER.php?select=addUser&phone=" + phone + "&name=" + name + "&lastName=" + lastName + "&type" + type + "&address=" + address
+        return "http://big-marka.xyz/DB_REGISTER.php?select=addUser&phone=" + phone + "&name=" + name + "&lastName=" + lastName + "&type=" + type + "&address=" + address
     }
 }

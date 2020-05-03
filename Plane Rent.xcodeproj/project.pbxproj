@@ -16,7 +16,7 @@
 		CA780C50245BC7560052D65B /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA780C4F245BC7560052D65B /* Links.swift */; };
 		CA780C52245BC8D70052D65B /* SmsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA780C51245BC8D70052D65B /* SmsService.swift */; };
 		CA88E6A3245E56BF00C15809 /* AccountType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA88E6A2245E56BF00C15809 /* AccountType.swift */; };
-		CA88E6A5245EEB2A00C15809 /* RegistrationViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA88E6A4245EEB2A00C15809 /* RegistrationViewTest.swift */; };
+		CA88E6A7245F2B1400C15809 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA88E6A6245F2B1400C15809 /* RegistrationViewController.swift */; };
 		CA9EBF13245A2EEC00380442 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EBF12245A2EEC00380442 /* R.generated.swift */; };
 		CA9EBF17245A428500380442 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EBF16245A428500380442 /* Colors.swift */; };
 		CAB484D4245E069C00F31870 /* UserDefaultList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB484D3245E069C00F31870 /* UserDefaultList.swift */; };
@@ -47,7 +47,7 @@
 		CA780C4F245BC7560052D65B /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
 		CA780C51245BC8D70052D65B /* SmsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsService.swift; sourceTree = "<group>"; };
 		CA88E6A2245E56BF00C15809 /* AccountType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountType.swift; sourceTree = "<group>"; };
-		CA88E6A4245EEB2A00C15809 /* RegistrationViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewTest.swift; sourceTree = "<group>"; };
+		CA88E6A6245F2B1400C15809 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		CA9EBF12245A2EEC00380442 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		CA9EBF16245A428500380442 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CAB484D3245E069C00F31870 /* UserDefaultList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultList.swift; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				CA63B445245DA05F00AFC7EF /* RegistrationView.swift */,
-				CA88E6A4245EEB2A00C15809 /* RegistrationViewTest.swift */,
+				CA88E6A6245F2B1400C15809 /* RegistrationViewController.swift */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -384,7 +384,6 @@
 				CA38BCFA245D9E25009EF2EF /* InputPhoneController.swift in Sources */,
 				CA63B446245DA05F00AFC7EF /* RegistrationView.swift in Sources */,
 				CA63B448245DA60600AFC7EF /* Color+Hex.swift in Sources */,
-				CA88E6A5245EEB2A00C15809 /* RegistrationViewTest.swift in Sources */,
 				CAC37EAE245E2D1200BEB7D6 /* ProfilePilotView.swift in Sources */,
 				CA780C52245BC8D70052D65B /* SmsService.swift in Sources */,
 				CAE0A794245D04E600224FED /* StatusResponse.swift in Sources */,
@@ -393,6 +392,7 @@
 				CA0BA791245A6CBF00A9F992 /* DismissingKeyboard.swift in Sources */,
 				CA780C50245BC7560052D65B /* Links.swift in Sources */,
 				CAC37EB2245E2D3100BEB7D6 /* ProfilePassengerView.swift in Sources */,
+				CA88E6A7245F2B1400C15809 /* RegistrationViewController.swift in Sources */,
 				CAFE7B2B245A211100167140 /* InputPhoneView.swift in Sources */,
 				CA9EBF13245A2EEC00380442 /* R.generated.swift in Sources */,
 				CAB484D4245E069C00F31870 /* UserDefaultList.swift in Sources */,
@@ -536,14 +536,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Plane Rent/Preview Content\"";
-				DEVELOPMENT_TEAM = H333A6BLFX;
+				DEVELOPMENT_TEAM = CX8VPR967D;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Plane Rent/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "IS.Plane-Rent";
+				PRODUCT_BUNDLE_IDENTIFIER = "IS.Plane-Rent.own";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -557,14 +557,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Plane Rent/Preview Content\"";
-				DEVELOPMENT_TEAM = H333A6BLFX;
+				DEVELOPMENT_TEAM = CX8VPR967D;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Plane Rent/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "IS.Plane-Rent";
+				PRODUCT_BUNDLE_IDENTIFIER = "IS.Plane-Rent.own";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

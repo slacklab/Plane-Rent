@@ -14,11 +14,11 @@ struct RegistrationView: View {
     
     @Binding var phoneNumber: String
     
-    
     @State var name: String
     @State var lastName: String
     @State var address: String
-    @State var accountType: String
+    
+    @State var accountTypeNameChecked: String
     
     @State var checkPilotState: Bool = false
     @State var checkPassengerState: Bool = false
@@ -32,8 +32,16 @@ struct RegistrationView: View {
             
             VStack(alignment: .leading) {
                 
+                RegistrationViewTitle()
                 
-
+                // MARK: - Name
+                
+                TextField("Имя", text: $name) {
+                    UIApplication.shared.endEditing()
+                }
+                .keyboardType(.default)
+                .frame(width: 250, height: 50, alignment: .center)
+                .font(.title)
                 
                 // MARK: - LastName
                 
@@ -43,8 +51,6 @@ struct RegistrationView: View {
                 .keyboardType(.default)
                 .frame(width: 250, height: 50, alignment: .center)
                 .font(.title)
-                Text("___________________________")
-                    .frame(width: 250, alignment: .center)
                 
                 // MARK: - Address
                 
@@ -54,21 +60,20 @@ struct RegistrationView: View {
                 .keyboardType(.default)
                 .frame(width: 250, height: 50, alignment: .center)
                 .font(.title)
-                Text("___________________________")
-                    .frame(width: 250, alignment: .center)
-                    
-                    .background(Colors.bgColor)
+                .background(Colors.bgColor)
                 
                 // MARK: - CheckBoxes, Apply
                 
                 // MARK: - Pilot
-
+                
                 Button(action:
                     {
                         self.checkPilotState = !self.checkPilotState
                         self.checkPassengerState = false
                         self.checkOwnerState = false
-                        print("State : \(self.checkPilotState)")
+                        print("Pilot State : \(self.checkPilotState)")
+                        
+                        self.accountTypeNameChecked = AccountType.pilot
                 }) {
                     HStack(alignment: .top, spacing: 10) {
                         Rectangle()
@@ -80,15 +85,17 @@ struct RegistrationView: View {
                     }
                 }
                 .foregroundColor(Color.white)
-
+                
                 // MARK: - Passenger
-
+                
                 Button(action:
                     {
                         self.checkPilotState = false
                         self.checkPassengerState = !self.checkPassengerState
                         self.checkOwnerState = false
-                        print("State : \(self.checkPassengerState)")
+                        print("Passenger State : \(self.checkPassengerState)")
+                        
+                        self.accountTypeNameChecked = AccountType.passenger
                 }) {
                     HStack(alignment: .top, spacing: 10) {
                         Rectangle()
@@ -100,15 +107,17 @@ struct RegistrationView: View {
                     }
                 }
                 .foregroundColor(Color.white)
-
+                
                 // MARK: - Owner
-
+                
                 Button(action:
                     {
                         self.checkPilotState = false
                         self.checkPassengerState = false
                         self.checkOwnerState = !self.checkOwnerState
-                        print("State : \(self.checkOwnerState)")
+                        print("Owner State : \(self.checkOwnerState)")
+                        
+                        self.accountTypeNameChecked = AccountType.owner
                 }) {
                     HStack(alignment: .top, spacing: 10) {
                         Rectangle()
@@ -116,21 +125,40 @@ struct RegistrationView: View {
                             .frame(width:20, height:20, alignment: .center)
                             .cornerRadius(5)
                         
-                        Text(AccountType.passenger)
+                        Text(AccountType.owner)
                     }
                 }
                 .foregroundColor(Color.white)
-
                 
-                // MARK: - Apply
+                
+                // MARK: - Register button
                 
                 NavigationLink(destination: ProfileTemplateDelete()) {
-                    regitstrationApplyButton
+                    regitstrationApplyButton.onTapGesture {
+                        
+                        let isAllTextFieldsEmpty = self.isTextFieldsEmpty(name: self.name,
+                                                                          lastName: self.lastName,
+                                                                          address: self.address)
+                        
+                        let isOneAccountTypeChecked = self.isAccountTypeChecked(pilotCheck: self.checkPilotState,
+                                                                             passengerCheck: self.checkPassengerState,
+                                                                             ownerCheck: self.checkOwnerState)
+                        
+                        if !isAllTextFieldsEmpty && isOneAccountTypeChecked {
+                            
+                            let registrationResponse = RegistrationViewController().addUser(
+                                phone: self.phoneNumber,
+                                name: self.name,
+                                lastName: self.lastName,
+                                accountType: self.accountTypeNameChecked,
+                                address: self.address)
+                        }
+                    }
                 }
                 
             }
             .background(Colors.bgColor)
-
+            
             
         }
         .edgesIgnoringSafeArea(.all)
@@ -138,44 +166,35 @@ struct RegistrationView: View {
         .background(Colors.bgColor)
         .modifier(DismissingKeyboard())
     }
-}
-
-//struct RegistrationViewTitle: View {
-//    @Binding var name: String
-//
-//    var body: some View {
-//        // MARK: - Title
-//
-//        Text("Регистрация")
-//            .font(.largeTitle)
-//            .foregroundColor(Color.white)
-//            .background(Colors.bgColor)
-//
-//        // MARK: - Name
-//
-//        Text("Имя") {
-//
-////        TextField("Имя", text: $name) {
-//            UIApplication.shared.endEditing()
-//        }
-//        .keyboardType(.default)
-//        .frame(width: 250, height: 50, alignment: .center)
-//        .font(.title)
-//        Text("___________________________")
-//            .frame(width: 250, alignment: .center)
-//
-//    }
-//}
-
-struct RegistrationViewTitleWithTextFields: View {
-    var body: some View {
-        Text("Регистарция")
-            .font(.largeTitle)
-            .foregroundColor(Color.green)
-            .background(Colors.bgColor)
+    
+    // MARK: - Validation
+    
+    func isTextFieldsEmpty(name: String, lastName: String, address: String) -> Bool {
+        
+        if (name == "" || lastName == "" || address == "") {
+            return true
+        }
+        
+        return false
+    }
+    
+    func isAccountTypeChecked(pilotCheck: Bool, passengerCheck: Bool, ownerCheck: Bool) -> Bool {
+        
+        let accountTypeStates = [pilotCheck, passengerCheck, ownerCheck]
+        
+        if accountTypeStates.contains(true) {
+            return true
+        }
+        
+        return false
     }
 }
 
-
-
-
+struct RegistrationViewTitle: View {
+    var body: some View {
+        Text("Регистрация")
+            .font(.largeTitle)
+            .foregroundColor(Color.white)
+            .background(Colors.bgColor)
+    }
+}
