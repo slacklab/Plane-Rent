@@ -24,13 +24,25 @@ struct RegistrationView: View {
     @State var checkPassengerState: Bool = false
     @State var checkOwnerState: Bool = false
     
+    @State var isAddUserSuccess = false
     
     var body: some View {
         NavigationView {
             
+            
+            
+            
             // MARK: - Textfield, text
             
             VStack(alignment: .leading) {
+                
+                
+//                if registrationData.isRegister {
+//                    Text("Success1111")
+//                } else {
+//                    Text("Wrong11111")
+//                }
+                
                 
                 RegistrationViewTitle()
                 
@@ -133,28 +145,68 @@ struct RegistrationView: View {
                 
                 // MARK: - Register button
                 
-                NavigationLink(destination: ProfileTemplateDelete()) {
-                    regitstrationApplyButton.onTapGesture {
-                        
-                        let isAllTextFieldsEmpty = self.isTextFieldsEmpty(name: self.name,
-                                                                          lastName: self.lastName,
-                                                                          address: self.address)
-                        
-                        let isOneAccountTypeChecked = self.isAccountTypeChecked(pilotCheck: self.checkPilotState,
-                                                                             passengerCheck: self.checkPassengerState,
-                                                                             ownerCheck: self.checkOwnerState)
-                        
-                        if !isAllTextFieldsEmpty && isOneAccountTypeChecked {
+                
+                
+                if isAddUserSuccess {
+                    NavigationLink(destination: ProfileTemplateDelete()) {
+//                        self.regitstrationApplyButton
+                        regitstrationApplyButton.onTapGesture {
                             
-                            let registrationResponse = RegistrationViewController().addUser(
-                                phone: self.phoneNumber,
-                                name: self.name,
-                                lastName: self.lastName,
-                                accountType: self.accountTypeNameChecked,
-                                address: self.address)
+                            let isAllTextFieldsEmpty = self.isTextFieldsEmpty(name: self.name,
+                                                                              lastName: self.lastName,
+                                                                              address: self.address)
+                            
+                            let isOneAccountTypeChecked = self.isAccountTypeChecked(pilotCheck: self.checkPilotState,
+                                                                                    passengerCheck: self.checkPassengerState,
+                                                                                    ownerCheck: self.checkOwnerState)
+                            
+                            if !isAllTextFieldsEmpty && isOneAccountTypeChecked {
+                                
+                                self.isAddUserSuccess = RegistrationViewController().addUser(
+                                    phone: self.phoneNumber,
+                                    name: self.name,
+                                    lastName: self.lastName,
+                                    accountType: self.accountTypeNameChecked,
+                                    address: self.address)
+                            }
                         }
+
+                    }
+                } else {
+                    NavigationLink(destination: RegistrationView(phoneNumber: $phoneNumber, name: name, lastName: lastName, address: address, accountTypeNameChecked: accountTypeNameChecked)) {
+//                        self.regitstrationApplyButton
+                        regitstrationApplyButton.onTapGesture {
+                            
+                            let isAllTextFieldsEmpty = self.isTextFieldsEmpty(name: self.name,
+                                                                              lastName: self.lastName,
+                                                                              address: self.address)
+                            
+                            let isOneAccountTypeChecked = self.isAccountTypeChecked(pilotCheck: self.checkPilotState,
+                                                                                    passengerCheck: self.checkPassengerState,
+                                                                                    ownerCheck: self.checkOwnerState)
+                            
+                            if !isAllTextFieldsEmpty && isOneAccountTypeChecked {
+                                
+                                self.isAddUserSuccess = RegistrationViewController().addUser(
+                                    phone: self.phoneNumber,
+                                    name: self.name,
+                                    lastName: self.lastName,
+                                    accountType: self.accountTypeNameChecked,
+                                    address: self.address)
+                            }
+                        }
+
                     }
                 }
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
             }
             .background(Colors.bgColor)

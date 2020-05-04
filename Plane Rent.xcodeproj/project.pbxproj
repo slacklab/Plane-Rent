@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CA0BA78F245A63FB00A9F992 /* UIApplication+endEditing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0BA78E245A63FB00A9F992 /* UIApplication+endEditing.swift */; };
 		CA0BA791245A6CBF00A9F992 /* DismissingKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0BA790245A6CBF00A9F992 /* DismissingKeyboard.swift */; };
+		CA312654245FB68400343CC8 /* RegistrationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA312653245FB68400343CC8 /* RegistrationData.swift */; };
 		CA38BCFA245D9E25009EF2EF /* InputPhoneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA38BCF9245D9E25009EF2EF /* InputPhoneController.swift */; };
 		CA63B444245DA04600AFC7EF /* InputSmsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA63B443245DA04600AFC7EF /* InputSmsView.swift */; };
 		CA63B446245DA05F00AFC7EF /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA63B445245DA05F00AFC7EF /* RegistrationView.swift */; };
@@ -40,6 +41,7 @@
 		C0E1DEFAD280620FA7BB0981 /* Pods-Plane Rent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plane Rent.release.xcconfig"; path = "Target Support Files/Pods-Plane Rent/Pods-Plane Rent.release.xcconfig"; sourceTree = "<group>"; };
 		CA0BA78E245A63FB00A9F992 /* UIApplication+endEditing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+endEditing.swift"; sourceTree = "<group>"; };
 		CA0BA790245A6CBF00A9F992 /* DismissingKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissingKeyboard.swift; sourceTree = "<group>"; };
+		CA312653245FB68400343CC8 /* RegistrationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationData.swift; sourceTree = "<group>"; };
 		CA38BCF9245D9E25009EF2EF /* InputPhoneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPhoneController.swift; sourceTree = "<group>"; };
 		CA63B443245DA04600AFC7EF /* InputSmsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSmsView.swift; sourceTree = "<group>"; };
 		CA63B445245DA05F00AFC7EF /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			children = (
 				CA63B445245DA05F00AFC7EF /* RegistrationView.swift */,
 				CA88E6A6245F2B1400C15809 /* RegistrationViewController.swift */,
+				CA312653245FB68400343CC8 /* RegistrationData.swift */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				CAE0A794245D04E600224FED /* StatusResponse.swift in Sources */,
 				CA9EBF17245A428500380442 /* Colors.swift in Sources */,
 				CAFE7B29245A211100167140 /* SceneDelegate.swift in Sources */,
+				CA312654245FB68400343CC8 /* RegistrationData.swift in Sources */,
 				CA0BA791245A6CBF00A9F992 /* DismissingKeyboard.swift in Sources */,
 				CA780C50245BC7560052D65B /* Links.swift in Sources */,
 				CAC37EB2245E2D3100BEB7D6 /* ProfilePassengerView.swift in Sources */,

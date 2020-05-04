@@ -7,14 +7,18 @@
 //
 
 import Foundation
+import SwiftHTTP
 
 struct RegistrationViewController {
-    
-    func addUser(phone: String, name: String, lastName: String, accountType: String, address: String) -> String {
+            
+    func addUser(phone: String, name: String, lastName: String, accountType: String, address: String) -> Bool {
         
+        var isAddUserSuccess: Bool = false
         var result = ""
         
-        let link = Links.generateAddUser(phone: phone, name: name, lastName: lastName, type: accountType, address: address)
+        let linkGenerated = Links.generateAddUser(phone: phone, name: name, lastName: lastName, type: accountType, address: address)
+        
+        let link = linkGenerated.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
         
         var semaphore = DispatchSemaphore (value: 0)
         
@@ -27,8 +31,18 @@ struct RegistrationViewController {
                 return
             }
             
+            let success = StatusResponse.success.rawValue
+
             result = String(data: data, encoding: .utf8)!
             print(result)
+            
+            if result.contains(success) {
+                isAddUserSuccess = true
+                print("Registration success")
+            } else {
+                isAddUserSuccess = false
+                print("Registration wrong")
+            }
             
             semaphore.signal()
         }
@@ -36,9 +50,6 @@ struct RegistrationViewController {
         task.resume()
         semaphore.wait()
         
-        return result
+        return isAddUserSuccess
     }
-    
-    
-    
 }
