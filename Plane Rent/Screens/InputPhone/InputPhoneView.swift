@@ -11,49 +11,70 @@ import UIKit
 
 struct InputPhoneView: View {
     
-    @State var phoneNumber: String = "7"
+    @State var phoneNumber: String = ""
     @State var isModal = false
     @State var stateExist = false
+    
+    @State var mockStartPhone: String = "+7"
     
     let defaults = UserDefaults.standard
     
     var body: some View {
         NavigationView {
-            VStack(alignment: .leading) {
-                Text("Plane rent")
-                    .font(.largeTitle)
-                    .foregroundColor(Color.white)
+            
+            ZStack {
                 
-                TextField("", text: $phoneNumber) {
-                    UIApplication.shared.endEditing()
-                }
-                .keyboardType(.phonePad)
-                .frame(width: 250, height: 50, alignment: .center)
-                .font(.title)
+                Colors.bgColor.edgesIgnoringSafeArea(.all)
                 
-                Text("___________________________")
-                    .frame(width: 250, alignment: .center)
-                
-                if InputPhoneController().isAccountExist(phone: self.phoneNumber) {
-                    NavigationLink(destination: InputSmsView(phoneNumber: $phoneNumber, inputedCode: "")) {
-                        CheckPhoneButtonView()
+                VStack(alignment: .center) {
+                                        
+                    Text("Plane rent")
+                        .font(.system(size: 50))
+                        .foregroundColor(Color.white)
+                        
+                    HStack(alignment: .bottom, spacing: 20) {
+                        
+                        TextField("+7", text: $mockStartPhone)
+                            .font(.title)
+                            .disabled(true)
+                            .frame(width: 40, height: 50, alignment: .bottom)
+                        
+                        TextField("", text: $phoneNumber) {
+                            UIApplication.shared.endEditing()
+                        }
+                        .keyboardType(.phonePad)
+                        .frame(width: 250, height: 50, alignment: .bottom)
+                        .font(.title)
+                        
                     }
-                } else {
-                    NavigationLink(destination: RegistrationView(
-                        phoneNumber: $phoneNumber,
-                        name: "",
-                        lastName: "",
-                        address: "",
-                        accountTypeNameChecked: "")
-                    ) {
-                        CheckPhoneButtonView()
+                    
+                    Divider()
+                    
+                    if InputPhoneController().isAccountExist(phone: self.phoneNumber) {
+                        NavigationLink(destination: InputSmsView(phoneNumber: $phoneNumber, inputedCode: "")) {
+                            CheckPhoneButtonView()
+                            .padding(100)
+                        }
+                    } else {
+                        NavigationLink(destination: RegistrationView(
+                            phoneNumber: $phoneNumber,
+                            name: "",
+                            lastName: "",
+                            address: "",
+                            accountTypeNameChecked: "")
+                        ) {
+                            CheckPhoneButtonView()
+                            .padding(100)
+                        }
                     }
                 }
+                .padding(300)
+                .edgesIgnoringSafeArea(.all)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Colors.bgColor)
+                .modifier(DismissingKeyboard())
+                .navigationBarTitle("Вход")
             }
-            .edgesIgnoringSafeArea(.all)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Colors.bgColor)
-            .modifier(DismissingKeyboard())
         }
     }
 }

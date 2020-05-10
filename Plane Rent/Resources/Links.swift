@@ -29,9 +29,8 @@ struct Links {
         phone: String,
         name: String,
         lastName: String,
-        type: String,
         address: String) -> String {
         
-        return "http://big-marka.xyz/DB_REGISTER.php?select=addUser&phone=" + phone + "&name=" + name + "&lastName=" + lastName + "&type=" + type + "&address=" + address
+        return "http://big-marka.xyz/DB_REGISTER.php?select=addUser&phone=" + phone + "&name=" + name + "&lastName=" + lastName + "&address=" + address
     }
 }

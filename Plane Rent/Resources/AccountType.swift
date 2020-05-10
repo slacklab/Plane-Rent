@@ -9,7 +9,7 @@
 import Foundation
 
 struct AccountType {
-    static let pilot = "Пилот"
+    static let pilot = "Пилот       "
     static let passenger = "Пассажир"
     static let owner = "Владелец"
 }

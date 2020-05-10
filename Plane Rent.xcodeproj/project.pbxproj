@@ -11,6 +11,7 @@
 		CA0BA791245A6CBF00A9F992 /* DismissingKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0BA790245A6CBF00A9F992 /* DismissingKeyboard.swift */; };
 		CA312654245FB68400343CC8 /* RegistrationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA312653245FB68400343CC8 /* RegistrationData.swift */; };
 		CA38BCFA245D9E25009EF2EF /* InputPhoneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA38BCF9245D9E25009EF2EF /* InputPhoneController.swift */; };
+		CA3AAE8C24611145009AEC64 /* SelectAirTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3AAE8B24611145009AEC64 /* SelectAirTypeView.swift */; };
 		CA63B444245DA04600AFC7EF /* InputSmsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA63B443245DA04600AFC7EF /* InputSmsView.swift */; };
 		CA63B446245DA05F00AFC7EF /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA63B445245DA05F00AFC7EF /* RegistrationView.swift */; };
 		CA63B448245DA60600AFC7EF /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA63B447245DA60600AFC7EF /* Color+Hex.swift */; };
@@ -28,6 +29,7 @@
 		CAC37EB4245E2E1700BEB7D6 /* ProfileTemplateDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC37EB3245E2E1700BEB7D6 /* ProfileTemplateDelete.swift */; };
 		CAC37EB9245E41D800BEB7D6 /* BaseApplyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC37EB8245E41D800BEB7D6 /* BaseApplyButtonView.swift */; };
 		CAE0A794245D04E600224FED /* StatusResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE0A793245D04E600224FED /* StatusResponse.swift */; };
+		CAFC51EB246112C100B7AE12 /* String+StartSym.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFC51EA246112C100B7AE12 /* String+StartSym.swift */; };
 		CAFE7B27245A211100167140 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE7B26245A211100167140 /* AppDelegate.swift */; };
 		CAFE7B29245A211100167140 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE7B28245A211100167140 /* SceneDelegate.swift */; };
 		CAFE7B2B245A211100167140 /* InputPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE7B2A245A211100167140 /* InputPhoneView.swift */; };
@@ -43,6 +45,7 @@
 		CA0BA790245A6CBF00A9F992 /* DismissingKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissingKeyboard.swift; sourceTree = "<group>"; };
 		CA312653245FB68400343CC8 /* RegistrationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationData.swift; sourceTree = "<group>"; };
 		CA38BCF9245D9E25009EF2EF /* InputPhoneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPhoneController.swift; sourceTree = "<group>"; };
+		CA3AAE8B24611145009AEC64 /* SelectAirTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAirTypeView.swift; sourceTree = "<group>"; };
 		CA63B443245DA04600AFC7EF /* InputSmsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSmsView.swift; sourceTree = "<group>"; };
 		CA63B445245DA05F00AFC7EF /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		CA63B447245DA60600AFC7EF /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
@@ -60,6 +63,7 @@
 		CAC37EB3245E2E1700BEB7D6 /* ProfileTemplateDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTemplateDelete.swift; sourceTree = "<group>"; };
 		CAC37EB8245E41D800BEB7D6 /* BaseApplyButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApplyButtonView.swift; sourceTree = "<group>"; };
 		CAE0A793245D04E600224FED /* StatusResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusResponse.swift; sourceTree = "<group>"; };
+		CAFC51EA246112C100B7AE12 /* String+StartSym.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+StartSym.swift"; sourceTree = "<group>"; };
 		CAFE7B23245A211100167140 /* Plane Rent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plane Rent.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAFE7B26245A211100167140 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAFE7B28245A211100167140 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 				CA0BA790245A6CBF00A9F992 /* DismissingKeyboard.swift */,
 				CA63B447245DA60600AFC7EF /* Color+Hex.swift */,
 				CAC37EAA245E287F00BEB7D6 /* String+Random.swift */,
+				CAFC51EA246112C100B7AE12 /* String+StartSym.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -111,6 +116,14 @@
 				CA38BCF9245D9E25009EF2EF /* InputPhoneController.swift */,
 			);
 			path = InputPhone;
+			sourceTree = "<group>";
+		};
+		CA3AAE8A2461111E009AEC64 /* SelectAirType */ = {
+			isa = PBXGroup;
+			children = (
+				CA3AAE8B24611145009AEC64 /* SelectAirTypeView.swift */,
+			);
+			path = SelectAirType;
 			sourceTree = "<group>";
 		};
 		CA63B441245DA00A00AFC7EF /* InputSms */ = {
@@ -155,6 +168,7 @@
 		CA9EBF18245A573200380442 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				CA3AAE8A2461111E009AEC64 /* SelectAirType */,
 				CAC37EAC245E2CB400BEB7D6 /* Profiles */,
 				CA63B442245DA02500AFC7EF /* Registration */,
 				CA63B441245DA00A00AFC7EF /* InputSms */,
@@ -380,12 +394,14 @@
 			files = (
 				CAFE7B27245A211100167140 /* AppDelegate.swift in Sources */,
 				CAC37EAB245E287F00BEB7D6 /* String+Random.swift in Sources */,
+				CA3AAE8C24611145009AEC64 /* SelectAirTypeView.swift in Sources */,
 				CAC37EB4245E2E1700BEB7D6 /* ProfileTemplateDelete.swift in Sources */,
 				CAC37EB9245E41D800BEB7D6 /* BaseApplyButtonView.swift in Sources */,
 				CAC37EB0245E2D2200BEB7D6 /* ProfileOwnerView.swift in Sources */,
 				CA0BA78F245A63FB00A9F992 /* UIApplication+endEditing.swift in Sources */,
 				CA38BCFA245D9E25009EF2EF /* InputPhoneController.swift in Sources */,
 				CA63B446245DA05F00AFC7EF /* RegistrationView.swift in Sources */,
+				CAFC51EB246112C100B7AE12 /* String+StartSym.swift in Sources */,
 				CA63B448245DA60600AFC7EF /* Color+Hex.swift in Sources */,
 				CAC37EAE245E2D1200BEB7D6 /* ProfilePilotView.swift in Sources */,
 				CA780C52245BC8D70052D65B /* SmsService.swift in Sources */,

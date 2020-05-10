@@ -19,40 +19,46 @@ struct InputSmsView: View {
     
     var body: some View {
         NavigationView {
-            VStack(alignment: .leading) {
-                Text("Введите код")
-                    .font(.largeTitle)
-                    .foregroundColor(Color.white)
-                
-                Text(self.phoneNumber)
-                TextField("Code from sms", text: $inputedCode) {
-                    UIApplication.shared.endEditing()
-                }
-                .keyboardType(.phonePad)
-                .frame(width: 250, height: 50, alignment: .center)
-                .font(.title)
-                
-                Text("___________________________")
-                    .frame(width: 250, alignment: .center)
-                
-                if (self.inputedCode == self.generatedCode) {
-                    NavigationLink(destination: ProfileTemplateDelete()) {
-                            CheckCodeButtonView()
+            
+            ZStack {
+                Colors.bgColor
+                VStack(alignment: .center) {
+                    Text("Введите код")
+                        .font(.largeTitle)
+                        .foregroundColor(Color.white)
+                        .padding(.top, 150)
+                    
+                    Text(self.phoneNumber.startSym("+7"))
+                    
+                    TextField("Код из смс", text: $inputedCode) {
+                        UIApplication.shared.endEditing()
                     }
-                } else {
-                    CheckCodeButtonView()
-                }
-                
-            }.background(Colors.bgColor)
-        }.onAppear {
-            print(self.generatedCode)
-            // TODO: - uncomment this
-//            SmsService.send(phone: self.phoneNumber, message: self.generatedCode)
+                    .keyboardType(.phonePad)
+                    .multilineTextAlignment(.center)
+                    .font(.title)
+                    
+                    Divider()
+                    
+                    if (self.inputedCode == self.generatedCode) {
+                        NavigationLink(destination: SelectAirTypeView()) {
+                            CheckCodeButtonView()
+                        }
+                    } else {
+                        CheckCodeButtonView()
+                    }
+                    
+                }.background(Colors.bgColor)
+            }.onAppear {
+                print(self.generatedCode)
+                // TODO: - uncomment this
+//                SmsService.send(phone: self.phoneNumber.startSym("7"), message: self.generatedCode)
+            }
+            .edgesIgnoringSafeArea(.all)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Colors.bgColor)
+            .modifier(DismissingKeyboard())
         }
-        .edgesIgnoringSafeArea(.all)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Colors.bgColor)
-        .modifier(DismissingKeyboard())
+        
     }
 }
 

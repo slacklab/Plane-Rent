@@ -11,12 +11,12 @@ import SwiftHTTP
 
 struct RegistrationViewController {
             
-    func addUser(phone: String, name: String, lastName: String, accountType: String, address: String) -> Bool {
+    func addUser(phone: String, name: String, lastName: String, address: String) -> Bool {
         
         var isAddUserSuccess: Bool = false
         var result = ""
         
-        let linkGenerated = Links.generateAddUser(phone: phone, name: name, lastName: lastName, type: accountType, address: address)
+        let linkGenerated = Links.generateAddUser(phone: phone, name: name, lastName: lastName, address: address)
         
         let link = linkGenerated.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
         
