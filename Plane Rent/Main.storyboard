@@ -15,34 +15,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-rect" translatesAutoresizingMaskIntoConstraints="NO" id="mpD-PG-rsc">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-rect" translatesAutoresizingMaskIntoConstraints="NO" id="mpD-PG-rsc">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="812" id="agT-LW-fOL"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="9GL-GD-7bf">
-                                <rect key="frame" x="70" y="266" width="235" height="36.333333333333314"/>
+                                <rect key="frame" x="70" y="266" width="235" height="36"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="LP6-96-ATt">
                                 <rect key="frame" x="16" y="375" width="343" height="1"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpi-l2-6Ea">
-                                <rect key="frame" x="152" y="412" width="72" height="72"/>
-                                <state key="normal" image="plane-button"/>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Номер телефона" textAlignment="center" minimumFontSize="17" background="bg-rect" translatesAutoresizingMaskIntoConstraints="NO" id="EZo-kX-8mk">
-                                <rect key="frame" x="16" y="328" width="343" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Номер телефона" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EZo-kX-8mk">
+                                <rect key="frame" x="16" y="340" width="343" height="22"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpi-l2-6Ea">
+                                <rect key="frame" x="151.66666666666666" y="440" width="72" height="72"/>
+                                <state key="normal" image="plane-button"/>
+                                <connections>
+                                    <segue destination="IGB-OL-qAU" kind="show" id="FHJ-UB-x8x"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qpi-l2-6Ea" secondAttribute="trailing" constant="151" id="1m3-IH-Ytg"/>
                             <constraint firstItem="mpD-PG-rsc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4du-6a-Pq6"/>
                             <constraint firstItem="mpD-PG-rsc" firstAttribute="top" secondItem="LP6-96-ATt" secondAttribute="bottom" constant="-376" id="6f2-hC-ZmC"/>
                             <constraint firstItem="9GL-GD-7bf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="222" id="8w0-8s-1Dt"/>
+                            <constraint firstItem="qpi-l2-6Ea" firstAttribute="top" secondItem="LP6-96-ATt" secondAttribute="bottom" constant="64" id="AC6-8e-wbL"/>
                             <constraint firstItem="EZo-kX-8mk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="APf-kc-8PI"/>
                             <constraint firstItem="9GL-GD-7bf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="K6A-mJ-X85"/>
                             <constraint firstItem="mpD-PG-rsc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LCn-u9-3it"/>
@@ -50,10 +54,9 @@
                             <constraint firstItem="mpD-PG-rsc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-44" id="PSU-Ci-6Mz"/>
                             <constraint firstItem="mpD-PG-rsc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QfX-SD-tSE"/>
                             <constraint firstItem="LP6-96-ATt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="RDj-3w-sIt"/>
-                            <constraint firstItem="qpi-l2-6Ea" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="152" id="SlC-dC-bCh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9GL-GD-7bf" secondAttribute="trailing" constant="70" id="bZH-tN-eB7"/>
                             <constraint firstItem="LP6-96-ATt" firstAttribute="top" secondItem="EZo-kX-8mk" secondAttribute="bottom" constant="13" id="pD6-LY-8bE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qpi-l2-6Ea" secondAttribute="bottom" constant="294" id="yxg-hH-aKO"/>
+                            <constraint firstItem="qpi-l2-6Ea" firstAttribute="centerX" secondItem="mpD-PG-rsc" secondAttribute="centerX" id="rAo-Q0-9uP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -62,6 +65,119 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1080.8" y="85.714285714285722"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qPw-SJ-VfO">
+            <objects>
+                <viewController id="lqw-Ni-pAI" customClass="ViewController" customModule="Plane_rent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Avx-Vd-85M">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-rect" translatesAutoresizingMaskIntoConstraints="NO" id="BE6-vF-yoR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Uwf-ZH-Jfx">
+                                <rect key="frame" x="8" y="328" width="359" height="172"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5h5-IT-yQb">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="57.333333333333336"/>
+                                        <state key="normal" image="round-owner"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQb-eg-HLj">
+                                        <rect key="frame" x="0.0" y="57.333333333333314" width="359" height="57.333333333333343"/>
+                                        <state key="normal" image="round-pilot"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1G-yo-Ygm">
+                                        <rect key="frame" x="0.0" y="114.66666666666667" width="359" height="57.333333333333329"/>
+                                        <state key="normal" image="round-passenger"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Uwf-ZH-Jfx" firstAttribute="leading" secondItem="Wk2-z9-lU4" secondAttribute="leading" constant="8" id="7pO-nT-eLS"/>
+                            <constraint firstItem="BE6-vF-yoR" firstAttribute="centerY" secondItem="Avx-Vd-85M" secondAttribute="centerY" id="CC6-0D-iuS"/>
+                            <constraint firstItem="Uwf-ZH-Jfx" firstAttribute="top" secondItem="Wk2-z9-lU4" secondAttribute="top" constant="284" id="mKA-RG-qjd"/>
+                            <constraint firstItem="Uwf-ZH-Jfx" firstAttribute="leading" secondItem="Wk2-z9-lU4" secondAttribute="leading" constant="8" id="sSS-xp-8Li"/>
+                            <constraint firstItem="BE6-vF-yoR" firstAttribute="centerX" secondItem="Avx-Vd-85M" secondAttribute="centerX" id="vo2-TJ-4lj"/>
+                            <constraint firstItem="Wk2-z9-lU4" firstAttribute="trailing" secondItem="Uwf-ZH-Jfx" secondAttribute="trailing" constant="8" id="yAs-9q-Bh2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Wk2-z9-lU4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XWe-o0-Axq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vRy-xB-83T" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2628" y="85.714285714285722"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="QQY-Sb-7wN">
+            <objects>
+                <viewController id="IGB-OL-qAU" customClass="ViewController" customModule="Plane_rent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nha-vg-ZYw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-rect" translatesAutoresizingMaskIntoConstraints="NO" id="0E7-sZ-qJ1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="812" id="ja2-uH-xKq"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="XGE-uo-288">
+                                <rect key="frame" x="70" y="266" width="235" height="36"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="gey-jg-U6j">
+                                <rect key="frame" x="16" y="375" width="343" height="1"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Код SMS" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3dc-fY-ptt">
+                                <rect key="frame" x="16" y="340" width="343" height="22"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+7 988 340 27 51" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXZ-IV-mwc">
+                                <rect key="frame" x="16" y="314" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K12-91-rQ3">
+                                <rect key="frame" x="151.66666666666666" y="440" width="72" height="72"/>
+                                <state key="normal" image="plane-button"/>
+                                <connections>
+                                    <segue destination="lqw-Ni-pAI" kind="show" id="rZF-7G-6nf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="XXZ-IV-mwc" firstAttribute="leading" secondItem="s5K-xW-n9p" secondAttribute="leading" constant="16" id="0ju-Id-W7J"/>
+                            <constraint firstItem="K12-91-rQ3" firstAttribute="top" secondItem="gey-jg-U6j" secondAttribute="bottom" constant="64" id="2az-4f-g14"/>
+                            <constraint firstItem="0E7-sZ-qJ1" firstAttribute="centerX" secondItem="Nha-vg-ZYw" secondAttribute="centerX" id="AbW-AV-gd2"/>
+                            <constraint firstItem="0E7-sZ-qJ1" firstAttribute="top" secondItem="gey-jg-U6j" secondAttribute="bottom" constant="-376" id="FTQ-8R-cyy"/>
+                            <constraint firstItem="s5K-xW-n9p" firstAttribute="trailing" secondItem="XXZ-IV-mwc" secondAttribute="trailing" constant="16" id="In6-Hp-o0L"/>
+                            <constraint firstItem="s5K-xW-n9p" firstAttribute="trailing" secondItem="XGE-uo-288" secondAttribute="trailing" constant="70" id="MSf-Ef-Qwu"/>
+                            <constraint firstItem="XGE-uo-288" firstAttribute="leading" secondItem="s5K-xW-n9p" secondAttribute="leading" constant="70" id="P9e-Hj-Z85"/>
+                            <constraint firstItem="3dc-fY-ptt" firstAttribute="leading" secondItem="s5K-xW-n9p" secondAttribute="leading" constant="16" id="QXR-wt-82F"/>
+                            <constraint firstItem="0E7-sZ-qJ1" firstAttribute="top" secondItem="XXZ-IV-mwc" secondAttribute="bottom" constant="-335" id="QxJ-u4-fuN"/>
+                            <constraint firstItem="gey-jg-U6j" firstAttribute="leading" secondItem="s5K-xW-n9p" secondAttribute="leading" constant="16" id="RZA-9I-0eh"/>
+                            <constraint firstItem="0E7-sZ-qJ1" firstAttribute="leading" secondItem="s5K-xW-n9p" secondAttribute="leading" id="S69-k0-3Ry"/>
+                            <constraint firstItem="K12-91-rQ3" firstAttribute="centerX" secondItem="0E7-sZ-qJ1" secondAttribute="centerX" id="V8T-gu-nSa"/>
+                            <constraint firstItem="0E7-sZ-qJ1" firstAttribute="top" secondItem="Nha-vg-ZYw" secondAttribute="topMargin" constant="-44" id="W5W-0e-YPf"/>
+                            <constraint firstItem="s5K-xW-n9p" firstAttribute="trailing" secondItem="3dc-fY-ptt" secondAttribute="trailing" constant="16" id="ZLO-Kg-cib"/>
+                            <constraint firstItem="gey-jg-U6j" firstAttribute="top" secondItem="3dc-fY-ptt" secondAttribute="bottom" constant="13" id="esT-8X-Zj7"/>
+                            <constraint firstItem="XGE-uo-288" firstAttribute="top" secondItem="s5K-xW-n9p" secondAttribute="top" constant="222" id="ewe-aP-e33"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="s5K-xW-n9p"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="b3H-aq-FlU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="21M-vU-9fl" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1849" y="86"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="e2q-W8-DqU">
@@ -86,6 +202,9 @@
         <image name="bg-rect" width="375" height="812"/>
         <image name="line" width="343" height="1"/>
         <image name="plane-button" width="72" height="72"/>
+        <image name="round-owner" width="360.33334350585938" height="57.333332061767578"/>
+        <image name="round-passenger" width="360.33334350585938" height="57.333332061767578"/>
+        <image name="round-pilot" width="360.33334350585938" height="57.333332061767578"/>
         <image name="title" width="228.33332824707031" height="36.333332061767578"/>
     </resources>
 </document>
