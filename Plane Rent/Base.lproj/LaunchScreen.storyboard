@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,51 +12,47 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QDT-DF-cH4">
-                                <rect key="frame" x="0.0" y="-44" width="320" height="656"/>
-                                <color key="backgroundColor" red="0.35294117650000001" green="0.4316941352739726" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 1" translatesAutoresizingMaskIntoConstraints="NO" id="k1q-6X-c7K">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plane rent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0Q-Om-s7P">
-                                <rect key="frame" x="30" y="120" width="158" height="62"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paperplane" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8dJ-5w-LSb">
-                                <rect key="frame" x="233" y="85.5" width="57" height="131.5"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="57" id="3Pn-Eb-HZw"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plane rent" translatesAutoresizingMaskIntoConstraints="NO" id="hyX-VY-cjA">
+                                <rect key="frame" x="70" y="279" width="235" height="36.333333333333314"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 3" translatesAutoresizingMaskIntoConstraints="NO" id="VXM-WS-P60">
+                                <rect key="frame" x="62" y="581.66666666666663" width="251" height="76.333333333333371"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="r0Q-Om-s7P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="5aG-56-yth"/>
-                            <constraint firstItem="8dJ-5w-LSb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="85" id="Dhv-jx-ZWQ"/>
-                            <constraint firstItem="QDT-DF-cH4" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="HCT-wV-PdW"/>
-                            <constraint firstItem="QDT-DF-cH4" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="QLk-TN-cpn"/>
-                            <constraint firstItem="r0Q-Om-s7P" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="R4L-cl-LDH"/>
-                            <constraint firstItem="r0Q-Om-s7P" firstAttribute="centerY" secondItem="8dJ-5w-LSb" secondAttribute="centerY" id="Y40-5Y-Oty"/>
-                            <constraint firstItem="8dJ-5w-LSb" firstAttribute="leading" secondItem="r0Q-Om-s7P" secondAttribute="trailing" constant="45" id="Y9A-wW-AUg"/>
-                            <constraint firstItem="8dJ-5w-LSb" firstAttribute="centerY" secondItem="r0Q-Om-s7P" secondAttribute="centerY" id="cQd-6O-LQC"/>
-                            <constraint firstItem="QDT-DF-cH4" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" constant="-44" id="cw4-eC-aXQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8dJ-5w-LSb" secondAttribute="trailing" constant="30" id="dNP-g5-vp9"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="r0Q-Om-s7P" secondAttribute="bottom" constant="386" id="hkq-3t-5yV"/>
-                            <constraint firstItem="QDT-DF-cH4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mwX-BA-KrU"/>
+                            <constraint firstItem="hyX-VY-cjA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="09x-PR-jER"/>
+                            <constraint firstItem="VXM-WS-P60" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="62" id="0hN-Rj-WsS"/>
+                            <constraint firstItem="hyX-VY-cjA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="1dY-0y-7aH"/>
+                            <constraint firstItem="k1q-6X-c7K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Cka-k1-esa"/>
+                            <constraint firstItem="hyX-VY-cjA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="235" id="IaL-2X-3sc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hyX-VY-cjA" secondAttribute="trailing" constant="70" id="Sh1-Ij-cLg"/>
+                            <constraint firstItem="k1q-6X-c7K" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Vfn-22-01x"/>
+                            <constraint firstItem="hyX-VY-cjA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="235" id="f8c-x0-7if"/>
+                            <constraint firstItem="VXM-WS-P60" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="62" id="f91-Gl-ZhW"/>
+                            <constraint firstItem="k1q-6X-c7K" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="fn5-Lg-B7N"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VXM-WS-P60" secondAttribute="bottom" constant="120" id="hu6-rd-Smt"/>
+                            <constraint firstItem="k1q-6X-c7K" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" constant="-44" id="rZm-94-lRO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hyX-VY-cjA" secondAttribute="trailing" constant="70" id="tFu-AP-YBi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VXM-WS-P60" secondAttribute="trailing" constant="62" id="yw7-5b-DOh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="50.625" y="375"/>
+            <point key="canvasLocation" x="50.399999999999999" y="374.6305418719212"/>
         </scene>
     </scenes>
     <resources>
-        <image name="paperplane" catalog="system" width="128" height="121"/>
+        <image name="Group 3" width="251" height="76.333335876464844"/>
+        <image name="Plane rent" width="228.33332824707031" height="36.333332061767578"/>
+        <image name="Rectangle 1" width="375" height="812"/>
     </resources>
 </document>
