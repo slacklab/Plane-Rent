@@ -19,6 +19,8 @@
 		CA780C52245BC8D70052D65B /* SmsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA780C51245BC8D70052D65B /* SmsService.swift */; };
 		CA88E6A3245E56BF00C15809 /* AccountType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA88E6A2245E56BF00C15809 /* AccountType.swift */; };
 		CA88E6A7245F2B1400C15809 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA88E6A6245F2B1400C15809 /* RegistrationViewController.swift */; };
+		CA9A1A3B246A2D8900477EB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA9A1A3A246A2D8900477EB5 /* Main.storyboard */; };
+		CA9A1A3D246A2DE400477EB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9A1A3C246A2DE400477EB5 /* ViewController.swift */; };
 		CA9EBF13245A2EEC00380442 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EBF12245A2EEC00380442 /* R.generated.swift */; };
 		CA9EBF17245A428500380442 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EBF16245A428500380442 /* Colors.swift */; };
 		CAB484D4245E069C00F31870 /* UserDefaultList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB484D3245E069C00F31870 /* UserDefaultList.swift */; };
@@ -53,6 +55,9 @@
 		CA780C51245BC8D70052D65B /* SmsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsService.swift; sourceTree = "<group>"; };
 		CA88E6A2245E56BF00C15809 /* AccountType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountType.swift; sourceTree = "<group>"; };
 		CA88E6A6245F2B1400C15809 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		CA9A1A3A246A2D8900477EB5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		CA9A1A3C246A2DE400477EB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CA9A1A62246A2FB200477EB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Plane Rent/Info.plist"; sourceTree = "<group>"; };
 		CA9EBF12245A2EEC00380442 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		CA9EBF16245A428500380442 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CAB484D3245E069C00F31870 /* UserDefaultList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultList.swift; sourceTree = "<group>"; };
@@ -64,14 +69,14 @@
 		CAC37EB8245E41D800BEB7D6 /* BaseApplyButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApplyButtonView.swift; sourceTree = "<group>"; };
 		CAE0A793245D04E600224FED /* StatusResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusResponse.swift; sourceTree = "<group>"; };
 		CAFC51EA246112C100B7AE12 /* String+StartSym.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+StartSym.swift"; sourceTree = "<group>"; };
-		CAFE7B23245A211100167140 /* Plane Rent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plane Rent.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAFE7B23245A211100167140 /* Plane rent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plane rent.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAFE7B26245A211100167140 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAFE7B28245A211100167140 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CAFE7B2A245A211100167140 /* InputPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPhoneView.swift; sourceTree = "<group>"; };
 		CAFE7B2C245A211300167140 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAFE7B2F245A211300167140 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CAFE7B32245A211300167140 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CAFE7B34245A211300167140 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAFE7B34245A211300167140 /* InfoSwiftUI.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = InfoSwiftUI.plist; sourceTree = "<group>"; };
 		CFC794689D48A2593D75BECE /* Pods_Plane_Rent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plane_Rent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED07593FA36261D73D3F79CE /* Pods-Plane Rent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plane Rent.debug.xcconfig"; path = "Target Support Files/Pods-Plane Rent/Pods-Plane Rent.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -208,6 +213,7 @@
 		CAFE7B1A245A211100167140 = {
 			isa = PBXGroup;
 			children = (
+				CA9A1A62246A2FB200477EB5 /* Info.plist */,
 				CAFE7B25245A211100167140 /* Plane Rent */,
 				CAFE7B24245A211100167140 /* Products */,
 				37DB29307B9358AAF7FBDEB7 /* Pods */,
@@ -218,7 +224,7 @@
 		CAFE7B24245A211100167140 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CAFE7B23245A211100167140 /* Plane Rent.app */,
+				CAFE7B23245A211100167140 /* Plane rent.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -226,6 +232,7 @@
 		CAFE7B25245A211100167140 /* Plane Rent */ = {
 			isa = PBXGroup;
 			children = (
+				CA9A1A3A246A2D8900477EB5 /* Main.storyboard */,
 				CA9EBF11245A2EC200380442 /* Resources */,
 				CA780C47245BC4700052D65B /* Networking */,
 				CA0BA78D245A63AF00A9F992 /* Extensions */,
@@ -233,9 +240,10 @@
 				CA9EBF18245A573200380442 /* Screens */,
 				CAC37EB5245E3F9000BEB7D6 /* UIElement */,
 				CAFE7B2E245A211300167140 /* Preview Content */,
-				CAFE7B34245A211300167140 /* Info.plist */,
+				CAFE7B34245A211300167140 /* InfoSwiftUI.plist */,
 				CAFE7B31245A211300167140 /* LaunchScreen.storyboard */,
 				CAB484D3245E069C00F31870 /* UserDefaultList.swift */,
+				CA9A1A3C246A2DE400477EB5 /* ViewController.swift */,
 			);
 			path = "Plane Rent";
 			sourceTree = "<group>";
@@ -259,9 +267,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CAFE7B22245A211100167140 /* Plane Rent */ = {
+		CAFE7B22245A211100167140 /* Plane rent */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CAFE7B37245A211300167140 /* Build configuration list for PBXNativeTarget "Plane Rent" */;
+			buildConfigurationList = CAFE7B37245A211300167140 /* Build configuration list for PBXNativeTarget "Plane rent" */;
 			buildPhases = (
 				3ADAF9A791CAE594A655FEA6 /* [CP] Check Pods Manifest.lock */,
 				CA9EBF10245A2DC200380442 /* R.swift */,
@@ -274,9 +282,9 @@
 			);
 			dependencies = (
 			);
-			name = "Plane Rent";
+			name = "Plane rent";
 			productName = "Plane Rent";
-			productReference = CAFE7B23245A211100167140 /* Plane Rent.app */;
+			productReference = CAFE7B23245A211100167140 /* Plane rent.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -294,7 +302,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CAFE7B1E245A211100167140 /* Build configuration list for PBXProject "Plane Rent" */;
+			buildConfigurationList = CAFE7B1E245A211100167140 /* Build configuration list for PBXProject "Plane rent" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -307,7 +315,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CAFE7B22245A211100167140 /* Plane Rent */,
+				CAFE7B22245A211100167140 /* Plane rent */,
 			);
 		};
 /* End PBXProject section */
@@ -320,6 +328,7 @@
 				CAFE7B33245A211300167140 /* LaunchScreen.storyboard in Resources */,
 				CAFE7B30245A211300167140 /* Preview Assets.xcassets in Resources */,
 				CAFE7B2D245A211300167140 /* Assets.xcassets in Resources */,
+				CA9A1A3B246A2D8900477EB5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +422,7 @@
 				CA780C50245BC7560052D65B /* Links.swift in Sources */,
 				CAC37EB2245E2D3100BEB7D6 /* ProfilePassengerView.swift in Sources */,
 				CA88E6A7245F2B1400C15809 /* RegistrationViewController.swift in Sources */,
+				CA9A1A3D246A2DE400477EB5 /* ViewController.swift in Sources */,
 				CAFE7B2B245A211100167140 /* InputPhoneView.swift in Sources */,
 				CA9EBF13245A2EEC00380442 /* R.generated.swift in Sources */,
 				CAB484D4245E069C00F31870 /* UserDefaultList.swift in Sources */,
@@ -594,7 +604,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CAFE7B1E245A211100167140 /* Build configuration list for PBXProject "Plane Rent" */ = {
+		CAFE7B1E245A211100167140 /* Build configuration list for PBXProject "Plane rent" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAFE7B35245A211300167140 /* Debug */,
@@ -603,7 +613,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CAFE7B37245A211300167140 /* Build configuration list for PBXNativeTarget "Plane Rent" */ = {
+		CAFE7B37245A211300167140 /* Build configuration list for PBXNativeTarget "Plane rent" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAFE7B38245A211300167140 /* Debug */,
