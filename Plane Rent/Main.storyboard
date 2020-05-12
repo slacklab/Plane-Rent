@@ -197,14 +197,61 @@
             </objects>
             <point key="canvasLocation" x="138.40000000000001" y="85.714285714285722"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="qV2-bC-Zlx">
+            <objects>
+                <viewController id="uiT-WR-N8V" customClass="ViewController" customModule="Plane_rent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xt3-RR-mAM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-rect" translatesAutoresizingMaskIntoConstraints="NO" id="U8p-Cf-1Xa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="f8k-SQ-EAX"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QA2-rn-2S7">
+                                <rect key="frame" x="8" y="328" width="359" height="114.66666666666669"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyI-Ah-SNR">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="57.333333333333336"/>
+                                        <state key="normal" image="round-plane"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ItG-2V-5dR">
+                                        <rect key="frame" x="0.0" y="57.333333333333314" width="359" height="57.333333333333343"/>
+                                        <state key="normal" image="round-helicopter"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="QA2-rn-2S7" firstAttribute="leading" secondItem="5MY-v9-dzO" secondAttribute="leading" constant="8" id="HLv-6w-i3k"/>
+                            <constraint firstItem="QA2-rn-2S7" firstAttribute="top" secondItem="5MY-v9-dzO" secondAttribute="top" constant="284" id="QzH-pa-fj4"/>
+                            <constraint firstItem="U8p-Cf-1Xa" firstAttribute="top" secondItem="Xt3-RR-mAM" secondAttribute="top" id="aFg-Uz-R32"/>
+                            <constraint firstItem="U8p-Cf-1Xa" firstAttribute="centerX" secondItem="QA2-rn-2S7" secondAttribute="centerX" id="dce-At-IVd"/>
+                            <constraint firstItem="QA2-rn-2S7" firstAttribute="leading" secondItem="5MY-v9-dzO" secondAttribute="leading" constant="8" id="isS-In-6Go"/>
+                            <constraint firstItem="5MY-v9-dzO" firstAttribute="trailing" secondItem="QA2-rn-2S7" secondAttribute="trailing" constant="8" id="qCd-Cg-4Ve"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5MY-v9-dzO"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="MSj-NE-vFw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OuB-jx-OFu" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3412" y="85.714285714285722"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bg-rect" width="375" height="812"/>
         <image name="line" width="343" height="1"/>
         <image name="plane-button" width="72" height="72"/>
+        <image name="round-helicopter" width="360.33334350585938" height="57.333332061767578"/>
         <image name="round-owner" width="360.33334350585938" height="57.333332061767578"/>
         <image name="round-passenger" width="360.33334350585938" height="57.333332061767578"/>
         <image name="round-pilot" width="360.33334350585938" height="57.333332061767578"/>
+        <image name="round-plane" width="360.33334350585938" height="57.333332061767578"/>
         <image name="title" width="228.33332824707031" height="36.333332061767578"/>
     </resources>
 </document>
