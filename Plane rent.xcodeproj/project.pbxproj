@@ -57,7 +57,7 @@
 		CA88E6A6245F2B1400C15809 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		CA9A1A3A246A2D8900477EB5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CA9A1A3C246A2DE400477EB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CA9A1A62246A2FB200477EB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Plane Rent/Info.plist"; sourceTree = "<group>"; };
+		CA9A1A62246A2FB200477EB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA9EBF12245A2EEC00380442 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		CA9EBF16245A428500380442 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CAB484D3245E069C00F31870 /* UserDefaultList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultList.swift; sourceTree = "<group>"; };
@@ -158,6 +158,22 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		CA9A1A64246A322C00477EB5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CAB484D3245E069C00F31870 /* UserDefaultList.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CA9A1A65246A324000477EB5 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				CA9A1A3C246A2DE400477EB5 /* ViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		CA9EBF11245A2EC200380442 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,21 +186,25 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		CA9EBF18245A573200380442 /* Screens */ = {
+		CA9EBF18245A573200380442 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				CAFE7B34245A211300167140 /* InfoSwiftUI.plist */,
+				CAFE7B2E245A211300167140 /* Preview Content */,
+				CAC37EB5245E3F9000BEB7D6 /* UIElement */,
 				CA3AAE8A2461111E009AEC64 /* SelectAirType */,
 				CAC37EAC245E2CB400BEB7D6 /* Profiles */,
 				CA63B442245DA02500AFC7EF /* Registration */,
 				CA63B441245DA00A00AFC7EF /* InputSms */,
 				CA38BCFB245D9E6E009EF2EF /* InputPhone */,
 			);
-			path = Screens;
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 		CA9EBF19245A574300380442 /* System */ = {
 			isa = PBXGroup;
 			children = (
+				CA9A1A62246A2FB200477EB5 /* Info.plist */,
 				CAFE7B26245A211100167140 /* AppDelegate.swift */,
 				CAFE7B28245A211100167140 /* SceneDelegate.swift */,
 			);
@@ -213,7 +233,6 @@
 		CAFE7B1A245A211100167140 = {
 			isa = PBXGroup;
 			children = (
-				CA9A1A62246A2FB200477EB5 /* Info.plist */,
 				CAFE7B25245A211100167140 /* Plane Rent */,
 				CAFE7B24245A211100167140 /* Products */,
 				37DB29307B9358AAF7FBDEB7 /* Pods */,
@@ -232,18 +251,15 @@
 		CAFE7B25245A211100167140 /* Plane Rent */ = {
 			isa = PBXGroup;
 			children = (
+				CA9A1A65246A324000477EB5 /* Screens */,
+				CA9A1A64246A322C00477EB5 /* Utils */,
 				CA9A1A3A246A2D8900477EB5 /* Main.storyboard */,
+				CAFE7B31245A211300167140 /* LaunchScreen.storyboard */,
 				CA9EBF11245A2EC200380442 /* Resources */,
 				CA780C47245BC4700052D65B /* Networking */,
 				CA0BA78D245A63AF00A9F992 /* Extensions */,
 				CA9EBF19245A574300380442 /* System */,
-				CA9EBF18245A573200380442 /* Screens */,
-				CAC37EB5245E3F9000BEB7D6 /* UIElement */,
-				CAFE7B2E245A211300167140 /* Preview Content */,
-				CAFE7B34245A211300167140 /* InfoSwiftUI.plist */,
-				CAFE7B31245A211300167140 /* LaunchScreen.storyboard */,
-				CAB484D3245E069C00F31870 /* UserDefaultList.swift */,
-				CA9A1A3C246A2DE400477EB5 /* ViewController.swift */,
+				CA9EBF18245A573200380442 /* SwiftUI */,
 			);
 			path = "Plane Rent";
 			sourceTree = "<group>";
@@ -565,10 +581,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Plane Rent/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = CX8VPR967D;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Plane Rent/Info.plist";
+				INFOPLIST_FILE = "Plane Rent/System/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -586,10 +602,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Plane Rent/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = CX8VPR967D;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Plane Rent/Info.plist";
+				INFOPLIST_FILE = "Plane Rent/System/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
