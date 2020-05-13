@@ -462,16 +462,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CxB-8G-8Qw">
-                                                    <rect key="frame" x="247" y="50" width="113" height="116"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="113" id="8Tm-v3-uWW"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jzq-wH-CK5">
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jzq-wH-CK5">
                                                     <rect key="frame" x="15" y="32" width="224" height="150"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s2l-9j-doh">
+                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s2l-9j-doh">
                                                             <rect key="frame" x="0.0" y="0.0" width="224" height="50"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Модель" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rST-j9-Nep">
@@ -491,7 +485,7 @@
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jfu-QW-baX">
+                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jfu-QW-baX">
                                                             <rect key="frame" x="0.0" y="50" width="224" height="50"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Базирование" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXB-Zn-MHG">
@@ -511,7 +505,7 @@
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hI7-sR-Fzo">
+                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hI7-sR-Fzo">
                                                             <rect key="frame" x="0.0" y="100" width="224" height="50"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Цена за час" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LbC-y4-Dv8">
@@ -537,24 +531,33 @@
                                                         <constraint firstItem="Jfu-QW-baX" firstAttribute="centerY" secondItem="Jzq-wH-CK5" secondAttribute="centerY" id="jQg-jA-iei"/>
                                                     </constraints>
                                                 </stackView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="line-non-active" translatesAutoresizingMaskIntoConstraints="NO" id="jIb-kb-Ika">
-                                                    <rect key="frame" x="15" y="189" width="345" height="27"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line-non-active" translatesAutoresizingMaskIntoConstraints="NO" id="jIb-kb-Ika">
+                                                    <rect key="frame" x="15" y="189" width="343" height="1"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ggY-lr-iRR" userLabel="imagePlane">
+                                                    <rect key="frame" x="260" y="78" width="100" height="59"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="2CX-mJ-zuY"/>
+                                                        <constraint firstAttribute="width" constant="100" id="jp7-5U-0qN"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="59" id="rCw-mO-RtM"/>
+                                                        <constraint firstAttribute="height" constant="100" id="ylr-1K-cZF"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="CxB-8G-8Qw" firstAttribute="leading" secondItem="Jzq-wH-CK5" secondAttribute="trailing" constant="8" id="1tW-Vm-i46"/>
-                                                <constraint firstItem="CxB-8G-8Qw" firstAttribute="trailing" secondItem="iaL-im-7rN" secondAttribute="trailingMargin" id="3RM-pk-g2y"/>
                                                 <constraint firstItem="jIb-kb-Ika" firstAttribute="top" secondItem="Jzq-wH-CK5" secondAttribute="bottom" constant="7" id="BmV-ii-DjK"/>
-                                                <constraint firstItem="CxB-8G-8Qw" firstAttribute="top" secondItem="iaL-im-7rN" secondAttribute="topMargin" constant="39" id="Gyc-SI-aWb"/>
                                                 <constraint firstItem="Jzq-wH-CK5" firstAttribute="leading" secondItem="jIb-kb-Ika" secondAttribute="leading" id="Hk9-9q-ZWs"/>
+                                                <constraint firstItem="ggY-lr-iRR" firstAttribute="trailing" secondItem="iaL-im-7rN" secondAttribute="trailingMargin" id="KaY-xg-HSR"/>
                                                 <constraint firstAttribute="bottom" secondItem="Jzq-wH-CK5" secondAttribute="bottom" constant="34" id="MZo-XS-TtQ"/>
+                                                <constraint firstItem="ggY-lr-iRR" firstAttribute="top" secondItem="iaL-im-7rN" secondAttribute="topMargin" constant="67" id="NEF-G8-PtW"/>
                                                 <constraint firstItem="Jzq-wH-CK5" firstAttribute="leading" secondItem="iaL-im-7rN" secondAttribute="leadingMargin" id="U7E-NY-rpJ"/>
-                                                <constraint firstItem="CxB-8G-8Qw" firstAttribute="centerY" secondItem="iaL-im-7rN" secondAttribute="centerY" id="Wks-T9-AiG"/>
+                                                <constraint firstItem="jIb-kb-Ika" firstAttribute="top" secondItem="ggY-lr-iRR" secondAttribute="bottom" constant="52" id="Z6u-XD-R66"/>
                                                 <constraint firstItem="Jzq-wH-CK5" firstAttribute="top" secondItem="iaL-im-7rN" secondAttribute="topMargin" constant="21" id="jhA-3S-eR9"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="planeAirportLabel" destination="1u6-O3-OGZ" id="Zf5-Lq-tIR"/>
+                                            <outlet property="planeImage" destination="ggY-lr-iRR" id="ZVw-TU-NrF"/>
                                             <outlet property="planeModelLabel" destination="sJU-9w-T5x" id="JEu-eK-MrT"/>
                                             <outlet property="planePriceLabel" destination="uJO-dO-ffn" id="gb5-fA-UJ9"/>
                                         </connections>

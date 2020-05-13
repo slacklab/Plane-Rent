@@ -13,6 +13,7 @@ class PlaneCell: UITableViewCell {
     @IBOutlet weak var planeModelLabel: UILabel!
     @IBOutlet weak var planeAirportLabel: UILabel!
     @IBOutlet weak var planePriceLabel: UILabel!
+    @IBOutlet weak var planeImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

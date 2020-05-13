@@ -20,6 +20,7 @@ class PlaneListVC: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         
         downloadJson()
+        tableView.tableFooterView = UIView()
     }
     
     func downloadJson() {
@@ -41,7 +42,7 @@ class PlaneListVC: UIViewController, UITableViewDataSource {
                                 
                 self.planes = downloadedPlanes.air_airplanes
                 DispatchQueue.main.async {
-                    self.tableView.reloadData()              
+                    self.tableView.reloadData()
                 }
                 
             } catch {
@@ -63,6 +64,18 @@ extension PlaneListVC {
         cell.planeAirportLabel.text = planes[indexPath.row].plane_base
         cell.planeModelLabel.text = planes[indexPath.row].plane_model
         cell.planePriceLabel.text = planes[indexPath.row].plane_price
+        
+        if let imageURL = URL(string: planes[indexPath.row].plane_image) {
+            DispatchQueue.global().async {
+                let data = try? Data(contentsOf: imageURL)
+                if let data = data {
+                    let image = UIImage(data: data)
+                    DispatchQueue.main.async {
+                        cell.planeImage?.image = image
+                    }
+                }
+            }
+        }
         
         return cell
     }
