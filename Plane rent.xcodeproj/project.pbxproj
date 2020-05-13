@@ -19,6 +19,7 @@
 		CA780C52245BC8D70052D65B /* SmsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA780C51245BC8D70052D65B /* SmsService.swift */; };
 		CA88E6A3245E56BF00C15809 /* AccountType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA88E6A2245E56BF00C15809 /* AccountType.swift */; };
 		CA88E6A7245F2B1400C15809 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA88E6A6245F2B1400C15809 /* RegistrationViewController.swift */; };
+		CA91A6C9246B92B800D0D370 /* PlaneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA91A6C8246B92B800D0D370 /* PlaneCell.swift */; };
 		CA9A1A3B246A2D8900477EB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA9A1A3A246A2D8900477EB5 /* Main.storyboard */; };
 		CA9A1A3D246A2DE400477EB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9A1A3C246A2DE400477EB5 /* ViewController.swift */; };
 		CA9EBF13245A2EEC00380442 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EBF12245A2EEC00380442 /* R.generated.swift */; };
@@ -55,6 +56,7 @@
 		CA780C51245BC8D70052D65B /* SmsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsService.swift; sourceTree = "<group>"; };
 		CA88E6A2245E56BF00C15809 /* AccountType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountType.swift; sourceTree = "<group>"; };
 		CA88E6A6245F2B1400C15809 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		CA91A6C8246B92B800D0D370 /* PlaneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneCell.swift; sourceTree = "<group>"; };
 		CA9A1A3A246A2D8900477EB5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CA9A1A3C246A2DE400477EB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CA9A1A62246A2FB200477EB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				CA9A1A3C246A2DE400477EB5 /* ViewController.swift */,
+				CA91A6C8246B92B800D0D370 /* PlaneCell.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 				CA9EBF13245A2EEC00380442 /* R.generated.swift in Sources */,
 				CAB484D4245E069C00F31870 /* UserDefaultList.swift in Sources */,
 				CA63B444245DA04600AFC7EF /* InputSmsView.swift in Sources */,
+				CA91A6C9246B92B800D0D370 /* PlaneCell.swift in Sources */,
 				CA88E6A3245E56BF00C15809 /* AccountType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
