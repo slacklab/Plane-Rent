@@ -77,19 +77,19 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-rect" translatesAutoresizingMaskIntoConstraints="NO" id="BE6-vF-yoR">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Uwf-ZH-Jfx">
-                                <rect key="frame" x="8" y="328" width="359" height="172"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Uwf-ZH-Jfx">
+                                <rect key="frame" x="8" y="328" width="359" height="212"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5h5-IT-yQb">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="57.333333333333336"/>
                                         <state key="normal" image="round-owner"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQb-eg-HLj">
-                                        <rect key="frame" x="0.0" y="57.333333333333314" width="359" height="57.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="77.333333333333314" width="359" height="57.333333333333343"/>
                                         <state key="normal" image="round-pilot"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1G-yo-Ygm">
-                                        <rect key="frame" x="0.0" y="114.66666666666667" width="359" height="57.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="154.66666666666669" width="359" height="57.333333333333343"/>
                                         <state key="normal" image="round-passenger"/>
                                     </button>
                                 </subviews>
@@ -110,7 +110,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vRy-xB-83T" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2628" y="85.714285714285722"/>
+            <point key="canvasLocation" x="2716" y="-230"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="QQY-Sb-7wN">
@@ -147,9 +147,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K12-91-rQ3">
                                 <rect key="frame" x="151.66666666666666" y="440" width="72" height="72"/>
                                 <state key="normal" image="plane-button"/>
-                                <connections>
-                                    <segue destination="lqw-Ni-pAI" kind="show" id="rZF-7G-6nf"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -240,13 +237,84 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OuB-jx-OFu" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3412" y="85.714285714285722"/>
+            <point key="canvasLocation" x="4558" y="86"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qJd-hS-jUi">
+            <objects>
+                <viewController id="ven-IU-Mep" customClass="ViewController" customModule="Plane_rent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qtc-10-XzK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-rect" translatesAutoresizingMaskIntoConstraints="NO" id="CP7-GH-UXr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="0dX-2S-6d8"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RVf-Gn-i0k">
+                                <rect key="frame" x="8" y="381" width="359" height="128"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ho7-QM-0ii">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="128"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание кабинета" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDE-a7-8J7">
+                                <rect key="frame" x="108.66666666666669" y="63.000000000000007" width="158" height="20.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация ЛК" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSr-I5-9ln">
+                                <rect key="frame" x="123.00000000000001" y="40" width="129.33333333333337" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11H-tI-PTO">
+                                <rect key="frame" x="83.333333333333329" y="224" width="208.66666666666669" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="0.35294117650000001" green="0.4316941353" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Om-eE-5nC">
+                                <rect key="frame" x="8" y="658" width="415" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="reg-button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="CP7-GH-UXr" firstAttribute="centerX" secondItem="RVf-Gn-i0k" secondAttribute="centerX" id="BTV-ev-YdO"/>
+                            <constraint firstItem="sSr-I5-9ln" firstAttribute="top" secondItem="Qtc-10-XzK" secondAttribute="top" constant="40" id="CuI-rW-NhI"/>
+                            <constraint firstItem="CP7-GH-UXr" firstAttribute="top" secondItem="Qtc-10-XzK" secondAttribute="top" id="Sna-f8-8Dl"/>
+                            <constraint firstItem="F7F-EU-22F" firstAttribute="trailing" secondItem="RVf-Gn-i0k" secondAttribute="trailing" constant="8" id="aoD-7B-NBL"/>
+                            <constraint firstItem="JDE-a7-8J7" firstAttribute="centerX" secondItem="CP7-GH-UXr" secondAttribute="centerX" id="gL4-oH-FTj"/>
+                            <constraint firstItem="11H-tI-PTO" firstAttribute="centerX" secondItem="F7F-EU-22F" secondAttribute="centerX" id="j0u-U0-g2W"/>
+                            <constraint firstItem="RVf-Gn-i0k" firstAttribute="leading" secondItem="F7F-EU-22F" secondAttribute="leading" constant="8" id="j30-Dj-bIr"/>
+                            <constraint firstItem="RVf-Gn-i0k" firstAttribute="top" secondItem="F7F-EU-22F" secondAttribute="top" constant="284" id="nH6-L2-j50"/>
+                            <constraint firstItem="RVf-Gn-i0k" firstAttribute="leading" secondItem="F7F-EU-22F" secondAttribute="leading" constant="8" id="oHD-AX-hsZ"/>
+                            <constraint firstItem="sSr-I5-9ln" firstAttribute="centerX" secondItem="CP7-GH-UXr" secondAttribute="centerX" id="qwu-WZ-IRC"/>
+                            <constraint firstItem="11H-tI-PTO" firstAttribute="top" secondItem="CP7-GH-UXr" secondAttribute="bottom" constant="136" id="t0C-Vx-g5a"/>
+                            <constraint firstItem="JDE-a7-8J7" firstAttribute="top" secondItem="Qtc-10-XzK" secondAttribute="top" constant="63" id="tAC-HV-XuD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="F7F-EU-22F"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="p8h-YN-mTw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lg8-He-9By" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2716" y="460.34482758620692"/>
         </scene>
     </scenes>
     <resources>
         <image name="bg-rect" width="375" height="812"/>
         <image name="line" width="343" height="1"/>
         <image name="plane-button" width="72" height="72"/>
+        <image name="reg-button" width="360.33334350585938" height="57.333332061767578"/>
         <image name="round-helicopter" width="360.33334350585938" height="57.333332061767578"/>
         <image name="round-owner" width="360.33334350585938" height="57.333332061767578"/>
         <image name="round-passenger" width="360.33334350585938" height="57.333332061767578"/>
