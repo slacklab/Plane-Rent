@@ -8,12 +8,13 @@
 
 import UIKit
 
-class PlaneListVC: UIViewController {
-    
+class PlaneListVC: UIViewController, UITableViewDataSource {
+
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
     final let url = URL(string: "http://big-marka.xyz/DB_SELECT_AIRPLANES.php?where=none")
-    var planes = [Plane]()
+    private var planes = [Plane]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +40,9 @@ class PlaneListVC: UIViewController {
                 let downloadedPlanes = try decoder.decode(Planes.self, from: data)
                                 
                 self.planes = downloadedPlanes.air_airplanes
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()              
+                }
                 
             } catch {
                 print("smth wrong after download")
@@ -46,6 +50,20 @@ class PlaneListVC: UIViewController {
             
         }.resume()
     }
+}
+
+extension PlaneListVC {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return planes.count
+    }
     
-    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PlaneCell") as? PlaneCell else { return UITableViewCell() }
+        
+        cell.planeAirportLabel.text = planes[indexPath.row].plane_base
+        cell.planeModelLabel.text = planes[indexPath.row].plane_model
+        cell.planePriceLabel.text = planes[indexPath.row].plane_price
+        
+        return cell
+    }
 }

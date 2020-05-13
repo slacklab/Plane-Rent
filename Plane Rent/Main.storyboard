@@ -560,6 +560,9 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="hcd-Zc-Cze" id="IgD-zC-pED"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -579,6 +582,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="20b-2S-lAf"/>
                     <connections>
+                        <outlet property="tableView" destination="sEN-Go-P9m" id="46f-4Q-qLO"/>
                         <outlet property="titleLabel" destination="Jzr-hm-0Gz" id="Jw5-Uh-yE2"/>
                     </connections>
                 </viewController>
