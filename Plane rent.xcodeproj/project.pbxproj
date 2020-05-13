@@ -17,6 +17,7 @@
 		CA454252246B9E89002178EF /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA454251246B9E89002178EF /* RegistrationVC.swift */; };
 		CA454254246B9FA9002178EF /* SelectAirTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA454253246B9FA9002178EF /* SelectAirTypeVC.swift */; };
 		CA454256246BA069002178EF /* PlaneListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA454255246BA069002178EF /* PlaneListVC.swift */; };
+		CA454259246BA897002178EF /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA454258246BA897002178EF /* Plane.swift */; };
 		CA63B444245DA04600AFC7EF /* InputSmsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA63B443245DA04600AFC7EF /* InputSmsView.swift */; };
 		CA63B446245DA05F00AFC7EF /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA63B445245DA05F00AFC7EF /* RegistrationView.swift */; };
 		CA63B448245DA60600AFC7EF /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA63B447245DA60600AFC7EF /* Color+Hex.swift */; };
@@ -59,6 +60,7 @@
 		CA454251246B9E89002178EF /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
 		CA454253246B9FA9002178EF /* SelectAirTypeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAirTypeVC.swift; sourceTree = "<group>"; };
 		CA454255246BA069002178EF /* PlaneListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneListVC.swift; sourceTree = "<group>"; };
+		CA454258246BA897002178EF /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
 		CA63B443245DA04600AFC7EF /* InputSmsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSmsView.swift; sourceTree = "<group>"; };
 		CA63B445245DA05F00AFC7EF /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		CA63B447245DA60600AFC7EF /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
@@ -141,6 +143,14 @@
 				CA3AAE8B24611145009AEC64 /* SelectAirTypeView.swift */,
 			);
 			path = SelectAirType;
+			sourceTree = "<group>";
+		};
+		CA454257246BA870002178EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CA454258246BA897002178EF /* Plane.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		CA63B441245DA00A00AFC7EF /* InputSms */ = {
@@ -271,6 +281,7 @@
 			children = (
 				CA9A1A3A246A2D8900477EB5 /* Main.storyboard */,
 				CAFE7B31245A211300167140 /* LaunchScreen.storyboard */,
+				CA454257246BA870002178EF /* Model */,
 				CA9A1A65246A324000477EB5 /* Screens */,
 				CA9A1A64246A322C00477EB5 /* Utils */,
 				CA9EBF11245A2EC200380442 /* Resources */,
@@ -439,6 +450,7 @@
 				CAC37EAB245E287F00BEB7D6 /* String+Random.swift in Sources */,
 				CA3AAE8C24611145009AEC64 /* SelectAirTypeView.swift in Sources */,
 				CAC37EB4245E2E1700BEB7D6 /* ProfileTemplateDelete.swift in Sources */,
+				CA454259246BA897002178EF /* Plane.swift in Sources */,
 				CA45424E246B9A25002178EF /* InputSMSCodeVC.swift in Sources */,
 				CAC37EB9245E41D800BEB7D6 /* BaseApplyButtonView.swift in Sources */,
 				CAC37EB0245E2D2200BEB7D6 /* ProfileOwnerView.swift in Sources */,
