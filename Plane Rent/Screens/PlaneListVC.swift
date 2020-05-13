@@ -13,6 +13,7 @@ class PlaneListVC: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     
     final let url = URL(string: "http://big-marka.xyz/DB_SELECT_AIRPLANES.php?where=none")
+    var planes = [Plane]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,10 +36,10 @@ class PlaneListVC: UIViewController {
             do {
                 let decoder = JSONDecoder()
                 
-                let planes = try decoder.decode(Planes.self, from: data)
+                let downloadedPlanes = try decoder.decode(Planes.self, from: data)
+                                
+                self.planes = downloadedPlanes.air_airplanes
                 
-                print(planes)
-                print(planes.air_airplanes[0].plane_image)
             } catch {
                 print("smth wrong after download")
             }
