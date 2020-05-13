@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Input PhoneVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Plane_rent" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="InputPhoneVC" customModule="Plane_rent" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,16 +27,17 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="LP6-96-ATt">
                                 <rect key="frame" x="16" y="375" width="343" height="1"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Номер телефона" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EZo-kX-8mk">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Номер телефона" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EZo-kX-8mk" userLabel="phoneNumber">
                                 <rect key="frame" x="16" y="340" width="343" height="22"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpi-l2-6Ea">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpi-l2-6Ea" userLabel="done">
                                 <rect key="frame" x="151.66666666666666" y="440" width="72" height="72"/>
                                 <state key="normal" image="plane-button"/>
                                 <connections>
+                                    <action selector="doneButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bMT-Y4-ZvN"/>
                                     <segue destination="IGB-OL-qAU" kind="show" id="FHJ-UB-x8x"/>
                                 </connections>
                             </button>
@@ -61,15 +62,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="mEq-UO-L8C"/>
+                    <connections>
+                        <outlet property="phoneNumberTextField" destination="EZo-kX-8mk" id="1h0-6o-XoC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1080.8" y="85.714285714285722"/>
         </scene>
-        <!--View Controller-->
+        <!--Select RoleVC-->
         <scene sceneID="qPw-SJ-VfO">
             <objects>
-                <viewController id="lqw-Ni-pAI" customClass="ViewController" customModule="Plane_rent" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lqw-Ni-pAI" customClass="SelectRoleVC" customModule="Plane_rent" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Avx-Vd-85M">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,17 +84,27 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Uwf-ZH-Jfx">
                                 <rect key="frame" x="8" y="328" width="359" height="212"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5h5-IT-yQb">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5h5-IT-yQb" userLabel="owner">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="57.333333333333336"/>
                                         <state key="normal" image="round-owner"/>
+                                        <connections>
+                                            <action selector="ownerButton:" destination="lqw-Ni-pAI" eventType="touchUpInside" id="iQp-Nc-M4b"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQb-eg-HLj">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQb-eg-HLj" userLabel="pilot">
                                         <rect key="frame" x="0.0" y="77.333333333333314" width="359" height="57.333333333333343"/>
                                         <state key="normal" image="round-pilot"/>
+                                        <connections>
+                                            <action selector="pilotButton:" destination="lqw-Ni-pAI" eventType="touchUpInside" id="iK2-VI-heI"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1G-yo-Ygm">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1G-yo-Ygm" userLabel="passenger">
                                         <rect key="frame" x="0.0" y="154.66666666666669" width="359" height="57.333333333333343"/>
                                         <state key="normal" image="round-passenger"/>
+                                        <connections>
+                                            <action selector="passengerButton:" destination="lqw-Ni-pAI" eventType="touchUpInside" id="20f-VU-jWb"/>
+                                            <segue destination="uiT-WR-N8V" kind="show" id="m4I-zl-A58"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -110,12 +124,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vRy-xB-83T" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2716" y="-230"/>
+            <point key="canvasLocation" x="2716" y="-231"/>
         </scene>
-        <!--View Controller-->
+        <!--InputSMS CodeVC-->
         <scene sceneID="QQY-Sb-7wN">
             <objects>
-                <viewController id="IGB-OL-qAU" customClass="ViewController" customModule="Plane_rent" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="IGB-OL-qAU" customClass="InputSMSCodeVC" customModule="Plane_rent" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nha-vg-ZYw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -132,21 +146,25 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="gey-jg-U6j">
                                 <rect key="frame" x="16" y="375" width="343" height="1"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Код SMS" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3dc-fY-ptt">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Код SMS" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3dc-fY-ptt" userLabel="codeSMSTextField">
                                 <rect key="frame" x="16" y="340" width="343" height="22"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+7 988 340 27 51" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXZ-IV-mwc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+7 988 340 27 51" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXZ-IV-mwc" userLabel="phoneLabel">
                                 <rect key="frame" x="16" y="314" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K12-91-rQ3">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K12-91-rQ3" userLabel="doneButton">
                                 <rect key="frame" x="151.66666666666666" y="440" width="72" height="72"/>
                                 <state key="normal" image="plane-button"/>
+                                <connections>
+                                    <action selector="doneButton:" destination="IGB-OL-qAU" eventType="touchUpInside" id="b8C-sN-vmp"/>
+                                    <segue destination="lqw-Ni-pAI" kind="show" id="ZTu-0U-zU5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -171,6 +189,10 @@
                         <viewLayoutGuide key="safeArea" id="s5K-xW-n9p"/>
                     </view>
                     <navigationItem key="navigationItem" id="b3H-aq-FlU"/>
+                    <connections>
+                        <outlet property="phoneLabel" destination="XXZ-IV-mwc" id="cWL-VZ-5ds"/>
+                        <outlet property="smsCodeTextfield" destination="3dc-fY-ptt" id="qjP-zi-Lu5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="21M-vU-9fl" sceneMemberID="firstResponder"/>
             </objects>
@@ -194,10 +216,10 @@
             </objects>
             <point key="canvasLocation" x="138.40000000000001" y="85.714285714285722"/>
         </scene>
-        <!--View Controller-->
+        <!--Select Air TypeVC-->
         <scene sceneID="qV2-bC-Zlx">
             <objects>
-                <viewController id="uiT-WR-N8V" customClass="ViewController" customModule="Plane_rent" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uiT-WR-N8V" customClass="SelectAirTypeVC" customModule="Plane_rent" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xt3-RR-mAM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -214,10 +236,17 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyI-Ah-SNR">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="57.333333333333336"/>
                                         <state key="normal" image="round-plane"/>
+                                        <connections>
+                                            <action selector="planeButton:" destination="uiT-WR-N8V" eventType="touchUpInside" id="KXs-e7-2LE"/>
+                                            <segue destination="hcd-Zc-Cze" kind="show" id="XRJ-N1-qte"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ItG-2V-5dR">
                                         <rect key="frame" x="0.0" y="67.333333333333314" width="359" height="57.333333333333343"/>
                                         <state key="normal" image="round-helicopter"/>
+                                        <connections>
+                                            <action selector="helicopterButton:" destination="uiT-WR-N8V" eventType="touchUpInside" id="bHo-gR-tvi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -248,10 +277,10 @@
             </objects>
             <point key="canvasLocation" x="3858" y="-231"/>
         </scene>
-        <!--View Controller-->
+        <!--RegistrationVC-->
         <scene sceneID="qJd-hS-jUi">
             <objects>
-                <viewController id="ven-IU-Mep" customClass="ViewController" customModule="Plane_rent" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ven-IU-Mep" customClass="RegistrationVC" customModule="Plane_rent" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qtc-10-XzK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -348,13 +377,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание кабинета" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDE-a7-8J7">
                                 <rect key="frame" x="108.66666666666669" y="63.000000000000007" width="158" height="20.333333333333336"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация ЛК" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSr-I5-9ln">
                                 <rect key="frame" x="123.00000000000001" y="40" width="129.33333333333337" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11H-tI-PTO">
@@ -363,10 +392,13 @@
                                 <color key="textColor" red="0.35294117650000001" green="0.4316941353" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Om-eE-5nC">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Om-eE-5nC" userLabel="done">
                                 <rect key="frame" x="8" y="658" width="415" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="reg-button"/>
+                                <connections>
+                                    <action selector="doneButton:" destination="ven-IU-Mep" eventType="touchUpInside" id="ZVW-rG-NNl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -387,15 +419,22 @@
                         <viewLayoutGuide key="safeArea" id="F7F-EU-22F"/>
                     </view>
                     <navigationItem key="navigationItem" id="p8h-YN-mTw"/>
+                    <connections>
+                        <outlet property="addressTextfield" destination="QV0-vA-six" id="isv-td-nde"/>
+                        <outlet property="lastNameTextfield" destination="RFD-2k-xI2" id="Ij9-uk-rB8"/>
+                        <outlet property="nameTextfield" destination="7UC-fD-q2e" id="Smp-h9-w80"/>
+                        <outlet property="subTitleCabinetLabel" destination="sSr-I5-9ln" id="hKX-FE-kF4"/>
+                        <outlet property="titleCabinetLabel" destination="JDE-a7-8J7" id="2mc-Iu-FtO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lg8-He-9By" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2716" y="460.34482758620692"/>
         </scene>
-        <!--View Controller-->
+        <!--Plane ListVC-->
         <scene sceneID="JPR-cS-DAv">
             <objects>
-                <viewController id="hcd-Zc-Cze" customClass="ViewController" customModule="Plane_rent" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hcd-Zc-Cze" customClass="PlaneListVC" customModule="Plane_rent" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UA3-2M-6SV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -539,6 +578,9 @@
                         <viewLayoutGuide key="safeArea" id="8mc-Vo-6cZ"/>
                     </view>
                     <navigationItem key="navigationItem" id="20b-2S-lAf"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="Jzr-hm-0Gz" id="Jw5-Uh-yE2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AvU-Dv-Nao" sceneMemberID="firstResponder"/>
             </objects>

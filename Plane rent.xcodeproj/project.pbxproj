@@ -12,6 +12,11 @@
 		CA312654245FB68400343CC8 /* RegistrationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA312653245FB68400343CC8 /* RegistrationData.swift */; };
 		CA38BCFA245D9E25009EF2EF /* InputPhoneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA38BCF9245D9E25009EF2EF /* InputPhoneController.swift */; };
 		CA3AAE8C24611145009AEC64 /* SelectAirTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3AAE8B24611145009AEC64 /* SelectAirTypeView.swift */; };
+		CA45424E246B9A25002178EF /* InputSMSCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA45424D246B9A25002178EF /* InputSMSCodeVC.swift */; };
+		CA454250246B9DEB002178EF /* SelectRoleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA45424F246B9DEB002178EF /* SelectRoleVC.swift */; };
+		CA454252246B9E89002178EF /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA454251246B9E89002178EF /* RegistrationVC.swift */; };
+		CA454254246B9FA9002178EF /* SelectAirTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA454253246B9FA9002178EF /* SelectAirTypeVC.swift */; };
+		CA454256246BA069002178EF /* PlaneListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA454255246BA069002178EF /* PlaneListVC.swift */; };
 		CA63B444245DA04600AFC7EF /* InputSmsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA63B443245DA04600AFC7EF /* InputSmsView.swift */; };
 		CA63B446245DA05F00AFC7EF /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA63B445245DA05F00AFC7EF /* RegistrationView.swift */; };
 		CA63B448245DA60600AFC7EF /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA63B447245DA60600AFC7EF /* Color+Hex.swift */; };
@@ -21,7 +26,7 @@
 		CA88E6A7245F2B1400C15809 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA88E6A6245F2B1400C15809 /* RegistrationViewController.swift */; };
 		CA91A6C9246B92B800D0D370 /* PlaneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA91A6C8246B92B800D0D370 /* PlaneCell.swift */; };
 		CA9A1A3B246A2D8900477EB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA9A1A3A246A2D8900477EB5 /* Main.storyboard */; };
-		CA9A1A3D246A2DE400477EB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9A1A3C246A2DE400477EB5 /* ViewController.swift */; };
+		CA9A1A3D246A2DE400477EB5 /* InputPhoneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9A1A3C246A2DE400477EB5 /* InputPhoneVC.swift */; };
 		CA9EBF13245A2EEC00380442 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EBF12245A2EEC00380442 /* R.generated.swift */; };
 		CA9EBF17245A428500380442 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EBF16245A428500380442 /* Colors.swift */; };
 		CAB484D4245E069C00F31870 /* UserDefaultList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB484D3245E069C00F31870 /* UserDefaultList.swift */; };
@@ -49,6 +54,11 @@
 		CA312653245FB68400343CC8 /* RegistrationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationData.swift; sourceTree = "<group>"; };
 		CA38BCF9245D9E25009EF2EF /* InputPhoneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPhoneController.swift; sourceTree = "<group>"; };
 		CA3AAE8B24611145009AEC64 /* SelectAirTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAirTypeView.swift; sourceTree = "<group>"; };
+		CA45424D246B9A25002178EF /* InputSMSCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSMSCodeVC.swift; sourceTree = "<group>"; };
+		CA45424F246B9DEB002178EF /* SelectRoleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRoleVC.swift; sourceTree = "<group>"; };
+		CA454251246B9E89002178EF /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
+		CA454253246B9FA9002178EF /* SelectAirTypeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAirTypeVC.swift; sourceTree = "<group>"; };
+		CA454255246BA069002178EF /* PlaneListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneListVC.swift; sourceTree = "<group>"; };
 		CA63B443245DA04600AFC7EF /* InputSmsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSmsView.swift; sourceTree = "<group>"; };
 		CA63B445245DA05F00AFC7EF /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		CA63B447245DA60600AFC7EF /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
@@ -58,7 +68,7 @@
 		CA88E6A6245F2B1400C15809 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		CA91A6C8246B92B800D0D370 /* PlaneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneCell.swift; sourceTree = "<group>"; };
 		CA9A1A3A246A2D8900477EB5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		CA9A1A3C246A2DE400477EB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CA9A1A3C246A2DE400477EB5 /* InputPhoneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPhoneVC.swift; sourceTree = "<group>"; };
 		CA9A1A62246A2FB200477EB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA9EBF12245A2EEC00380442 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		CA9EBF16245A428500380442 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -171,8 +181,13 @@
 		CA9A1A65246A324000477EB5 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				CA9A1A3C246A2DE400477EB5 /* ViewController.swift */,
 				CA91A6C8246B92B800D0D370 /* PlaneCell.swift */,
+				CA9A1A3C246A2DE400477EB5 /* InputPhoneVC.swift */,
+				CA45424D246B9A25002178EF /* InputSMSCodeVC.swift */,
+				CA45424F246B9DEB002178EF /* SelectRoleVC.swift */,
+				CA454251246B9E89002178EF /* RegistrationVC.swift */,
+				CA454253246B9FA9002178EF /* SelectAirTypeVC.swift */,
+				CA454255246BA069002178EF /* PlaneListVC.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -424,8 +439,12 @@
 				CAC37EAB245E287F00BEB7D6 /* String+Random.swift in Sources */,
 				CA3AAE8C24611145009AEC64 /* SelectAirTypeView.swift in Sources */,
 				CAC37EB4245E2E1700BEB7D6 /* ProfileTemplateDelete.swift in Sources */,
+				CA45424E246B9A25002178EF /* InputSMSCodeVC.swift in Sources */,
 				CAC37EB9245E41D800BEB7D6 /* BaseApplyButtonView.swift in Sources */,
 				CAC37EB0245E2D2200BEB7D6 /* ProfileOwnerView.swift in Sources */,
+				CA454256246BA069002178EF /* PlaneListVC.swift in Sources */,
+				CA454254246B9FA9002178EF /* SelectAirTypeVC.swift in Sources */,
+				CA454252246B9E89002178EF /* RegistrationVC.swift in Sources */,
 				CA0BA78F245A63FB00A9F992 /* UIApplication+endEditing.swift in Sources */,
 				CA38BCFA245D9E25009EF2EF /* InputPhoneController.swift in Sources */,
 				CA63B446245DA05F00AFC7EF /* RegistrationView.swift in Sources */,
@@ -437,11 +456,12 @@
 				CA9EBF17245A428500380442 /* Colors.swift in Sources */,
 				CAFE7B29245A211100167140 /* SceneDelegate.swift in Sources */,
 				CA312654245FB68400343CC8 /* RegistrationData.swift in Sources */,
+				CA454250246B9DEB002178EF /* SelectRoleVC.swift in Sources */,
 				CA0BA791245A6CBF00A9F992 /* DismissingKeyboard.swift in Sources */,
 				CA780C50245BC7560052D65B /* Links.swift in Sources */,
 				CAC37EB2245E2D3100BEB7D6 /* ProfilePassengerView.swift in Sources */,
 				CA88E6A7245F2B1400C15809 /* RegistrationViewController.swift in Sources */,
-				CA9A1A3D246A2DE400477EB5 /* ViewController.swift in Sources */,
+				CA9A1A3D246A2DE400477EB5 /* InputPhoneVC.swift in Sources */,
 				CAFE7B2B245A211100167140 /* InputPhoneView.swift in Sources */,
 				CA9EBF13245A2EEC00380442 /* R.generated.swift in Sources */,
 				CAB484D4245E069C00F31870 /* UserDefaultList.swift in Sources */,

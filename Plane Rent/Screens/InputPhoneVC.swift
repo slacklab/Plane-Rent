@@ -11,6 +11,11 @@ import UIKit
 
 class InputPhoneVC: UIViewController {
 
+    @IBOutlet weak var phoneNumberTextField: UITextField!
+    
+    @IBAction func doneButton(_ sender: Any) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
