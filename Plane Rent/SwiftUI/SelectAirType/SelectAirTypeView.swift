@@ -13,7 +13,7 @@ struct SelectAirTypeView: View {
         
         ZStack {
             
-            Colors.bgColor.edgesIgnoringSafeArea(.all)
+//            Colors.bgColor.edgesIgnoringSafeArea(.all)
             
             VStack(alignment: .center) {
                 

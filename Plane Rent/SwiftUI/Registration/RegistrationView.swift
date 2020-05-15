@@ -31,7 +31,6 @@ struct RegistrationView: View {
             
             ZStack {
                 
-                Colors.bgColor
                 
                 // MARK: - Textfield, text
                 
@@ -72,7 +71,6 @@ struct RegistrationView: View {
                         }
                         .keyboardType(.default)
                             .font(.title)
-                            .background(Colors.bgColor)
                             .multilineTextAlignment(.center)
                         
                         Divider()
@@ -210,14 +208,12 @@ struct RegistrationView: View {
 //                    }
                     
                 }
-                .background(Colors.bgColor)
                 
             }
             
         }
         .edgesIgnoringSafeArea(.all)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Colors.bgColor)
         .modifier(DismissingKeyboard())
         .navigationBarTitle("Регистрация")
     }
@@ -250,7 +246,6 @@ struct RegistrationViewTitle: View {
         Text("Plane rent")
             .font(.system(size: 50))
             .foregroundColor(Color.white)
-            .background(Colors.bgColor)
     }
 }
 

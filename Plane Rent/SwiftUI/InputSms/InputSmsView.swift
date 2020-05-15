@@ -21,7 +21,6 @@ struct InputSmsView: View {
         NavigationView {
             
             ZStack {
-                Colors.bgColor
                 VStack(alignment: .center) {
                     Text("Введите код")
                         .font(.largeTitle)
@@ -47,7 +46,7 @@ struct InputSmsView: View {
                         CheckCodeButtonView()
                     }
                     
-                }.background(Colors.bgColor)
+                }
             }.onAppear {
                 print(self.generatedCode)
                 // TODO: - uncomment this
@@ -55,7 +54,6 @@ struct InputSmsView: View {
             }
             .edgesIgnoringSafeArea(.all)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Colors.bgColor)
             .modifier(DismissingKeyboard())
         }
         
@@ -70,6 +68,5 @@ struct CheckCodeButtonView: View {
             .frame(width: 50, height: 50)
             .aspectRatio(contentMode: .fill)
             .clipped()
-            .background(Colors.bgColor)
     }
 }

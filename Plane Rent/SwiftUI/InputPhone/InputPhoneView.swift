@@ -24,7 +24,6 @@ struct InputPhoneView: View {
             
             ZStack {
                 
-                Colors.bgColor.edgesIgnoringSafeArea(.all)
                 
                 VStack(alignment: .center) {
                                         
@@ -71,7 +70,6 @@ struct InputPhoneView: View {
                 .padding(300)
                 .edgesIgnoringSafeArea(.all)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Colors.bgColor)
                 .modifier(DismissingKeyboard())
                 .navigationBarTitle("Вход")
             }

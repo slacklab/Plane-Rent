@@ -17,6 +17,5 @@ struct BaseApplyButtonView: View {
             .frame(width: 50, height: 50)
             .aspectRatio(contentMode: .fill)
             .clipped()
-            .background(Colors.bgColor)
     }
 }
