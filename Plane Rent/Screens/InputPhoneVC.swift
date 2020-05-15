@@ -23,36 +23,32 @@ class InputPhoneVC: UIViewController {
         
         guard let phoneNumberTextFieldText = phoneNumberTextField.text else { return }
         
-        if isAccountExist {
-            let smsCodeViewController = self.storyboard?.instantiateViewController(
-                withIdentifier: "InputSMSCodeVC"
-                ) as! InputSMSCodeVC
+        DispatchQueue.main.async {
+            self.isAccountExist = RequestList.isAccountExist(phone: phoneNumberTextFieldText)
             
-            self.navigationController!.pushViewController(smsCodeViewController, animated: true)
-        } else {
-            let registrationVC = self.storyboard?.instantiateViewController(
-                withIdentifier: "RegistrationVC"
-                ) as! RegistrationVC
             
-            self.navigationController!.pushViewController(registrationVC, animated: true)
+            if self.isAccountExist {
+                let smsCodeViewController = self.storyboard?.instantiateViewController(
+                    withIdentifier: "InputSMSCodeVC"
+                    ) as! InputSMSCodeVC
+                
+                self.navigationController!.pushViewController(smsCodeViewController, animated: true)
+            } else {
+                let registrationVC = self.storyboard?.instantiateViewController(
+                    withIdentifier: "RegistrationVC"
+                    ) as! RegistrationVC
+                
+                self.navigationController!.pushViewController(registrationVC, animated: true)
+            }
         }
     }
     
     // MARK: - System
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toSmsCodeVC" {
-            let vc = segue.destination as! InputSMSCodeVC
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    
-    
-    
 }
 
 
