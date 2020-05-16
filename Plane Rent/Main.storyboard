@@ -439,20 +439,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg-rect" translatesAutoresizingMaskIntoConstraints="NO" id="89z-ZA-wGO">
-                                <rect key="frame" x="-47" y="0.0" width="422" height="88"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="88" id="9Gq-HE-7zW"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ЛА в аренду" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jzr-hm-0Gz">
-                                <rect key="frame" x="91" y="54" width="192" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sEN-Go-P9m">
-                                <rect key="frame" x="0.0" y="38.5" width="414" height="803.5"/>
+                                <rect key="frame" x="0.0" y="96" width="414" height="746"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaneCell" rowHeight="216" id="vO9-El-Aef" userLabel="PlaneCell" customClass="PlaneCell" customModule="Plane_rent" customModuleProvider="target">
@@ -462,11 +450,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="216"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jzq-wH-CK5">
-                                                    <rect key="frame" x="15" y="32" width="224" height="150"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jzq-wH-CK5">
+                                                    <rect key="frame" x="20" y="32" width="219" height="150"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s2l-9j-doh">
-                                                            <rect key="frame" x="0.0" y="0.0" width="224" height="50"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s2l-9j-doh">
+                                                            <rect key="frame" x="0.0" y="0.0" width="219" height="50"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Модель:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rST-j9-Nep">
                                                                     <rect key="frame" x="8" y="3" width="185" height="21"/>
@@ -485,8 +473,8 @@
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         </view>
-                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jfu-QW-baX">
-                                                            <rect key="frame" x="0.0" y="50" width="224" height="50"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jfu-QW-baX">
+                                                            <rect key="frame" x="0.0" y="50" width="219" height="50"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Базирование:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXB-Zn-MHG">
                                                                     <rect key="frame" x="8" y="3" width="185" height="21"/>
@@ -505,8 +493,8 @@
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         </view>
-                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hI7-sR-Fzo">
-                                                            <rect key="frame" x="0.0" y="100" width="224" height="50"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hI7-sR-Fzo">
+                                                            <rect key="frame" x="0.0" y="100" width="219" height="50"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Цена за час:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LbC-y4-Dv8">
                                                                     <rect key="frame" x="8" y="3" width="185" height="21"/>
@@ -542,16 +530,10 @@
                                                         <constraint firstAttribute="width" secondItem="ggY-lr-iRR" secondAttribute="height" multiplier="140:137" id="mh7-li-JmA"/>
                                                     </constraints>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgT-xi-afe">
-                                                    <rect key="frame" x="42" y="11" width="318" height="171"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <connections>
-                                                        <segue destination="t1D-EZ-Cu1" kind="show" id="Dl1-aI-pIf"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="jIb-kb-Ika" firstAttribute="top" secondItem="ggY-lr-iRR" secondAttribute="bottom" constant="14" id="6hX-Gg-3aW"/>
+                                                <constraint firstAttribute="trailing" secondItem="Jzq-wH-CK5" secondAttribute="trailing" constant="175" id="7Sn-Wz-dUR"/>
                                                 <constraint firstItem="ggY-lr-iRR" firstAttribute="centerY" secondItem="Jzq-wH-CK5" secondAttribute="centerY" id="B2Y-7A-IuZ"/>
                                                 <constraint firstItem="jIb-kb-Ika" firstAttribute="top" secondItem="Jzq-wH-CK5" secondAttribute="bottom" constant="7" id="BmV-ii-DjK"/>
                                                 <constraint firstItem="Jzq-wH-CK5" firstAttribute="leading" secondItem="jIb-kb-Ika" secondAttribute="leading" id="Hk9-9q-ZWs"/>
@@ -573,18 +555,32 @@
                                     <outlet property="dataSource" destination="hcd-Zc-Cze" id="IgD-zC-pED"/>
                                 </connections>
                             </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-rect" translatesAutoresizingMaskIntoConstraints="NO" id="89z-ZA-wGO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="9Gq-HE-7zW"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Самолеты в аренду" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1s-mr-udW">
+                                <rect key="frame" x="128.5" y="34" width="157" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="sEN-Go-P9m" firstAttribute="centerX" secondItem="UA3-2M-6SV" secondAttribute="centerX" id="BaE-mC-ic4"/>
+                            <constraint firstItem="E1s-mr-udW" firstAttribute="centerY" secondItem="89z-ZA-wGO" secondAttribute="centerY" id="272-Ez-fzi"/>
+                            <constraint firstItem="89z-ZA-wGO" firstAttribute="top" secondItem="8mc-Vo-6cZ" secondAttribute="top" id="3Qv-bb-LD4"/>
                             <constraint firstItem="89z-ZA-wGO" firstAttribute="top" secondItem="UA3-2M-6SV" secondAttribute="top" id="DYH-dE-7fV"/>
-                            <constraint firstItem="sEN-Go-P9m" firstAttribute="top" secondItem="Jzr-hm-0Gz" secondAttribute="bottom" constant="8" id="Jjh-5K-Tji"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="sEN-Go-P9m" secondAttribute="bottom" constant="-34" id="LrN-EC-Ic8"/>
-                            <constraint firstItem="Jzr-hm-0Gz" firstAttribute="top" secondItem="8mc-Vo-6cZ" secondAttribute="top" constant="10" id="Tn9-sw-Z3c"/>
-                            <constraint firstItem="sEN-Go-P9m" firstAttribute="centerX" secondItem="Jzr-hm-0Gz" secondAttribute="centerX" id="U1v-Ir-RNN"/>
-                            <constraint firstItem="Jzr-hm-0Gz" firstAttribute="leading" secondItem="8mc-Vo-6cZ" secondAttribute="leading" constant="91" id="Ud0-Oz-lMi"/>
+                            <constraint firstItem="89z-ZA-wGO" firstAttribute="trailing" secondItem="8mc-Vo-6cZ" secondAttribute="trailing" id="KY2-RI-chM"/>
+                            <constraint firstAttribute="bottom" secondItem="sEN-Go-P9m" secondAttribute="bottom" id="MFS-aL-fB7"/>
+                            <constraint firstItem="E1s-mr-udW" firstAttribute="centerX" secondItem="89z-ZA-wGO" secondAttribute="centerX" id="P5n-sG-0th"/>
+                            <constraint firstItem="89z-ZA-wGO" firstAttribute="leading" secondItem="8mc-Vo-6cZ" secondAttribute="leading" id="Zgr-jM-IbR"/>
                             <constraint firstItem="sEN-Go-P9m" firstAttribute="trailing" secondItem="89z-ZA-wGO" secondAttribute="trailing" id="kTk-4D-rgc"/>
-                            <constraint firstItem="Jzr-hm-0Gz" firstAttribute="centerX" secondItem="89z-ZA-wGO" secondAttribute="centerX" constant="23" id="rqC-Pu-nu4"/>
+                            <constraint firstItem="89z-ZA-wGO" firstAttribute="leading" secondItem="8mc-Vo-6cZ" secondAttribute="leading" id="lQd-Ae-nSY"/>
+                            <constraint firstItem="89z-ZA-wGO" firstAttribute="trailing" secondItem="8mc-Vo-6cZ" secondAttribute="trailing" id="m0y-6L-gKg"/>
+                            <constraint firstItem="sEN-Go-P9m" firstAttribute="top" secondItem="89z-ZA-wGO" secondAttribute="bottom" constant="8" id="sWd-fC-xTd"/>
                             <constraint firstItem="sEN-Go-P9m" firstAttribute="leading" secondItem="8mc-Vo-6cZ" secondAttribute="leading" id="wWA-Ku-W4i"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8mc-Vo-6cZ"/>
@@ -592,19 +588,18 @@
                     <navigationItem key="navigationItem" id="20b-2S-lAf"/>
                     <connections>
                         <outlet property="tableView" destination="sEN-Go-P9m" id="46f-4Q-qLO"/>
-                        <outlet property="titleLabel" destination="Jzr-hm-0Gz" id="Jw5-Uh-yE2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AvU-Dv-Nao" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5024.8000000000002" y="85.714285714285722"/>
+            <point key="canvasLocation" x="5024.6376811594209" y="85.714285714285708"/>
         </scene>
         <!--Rent PlaneVC-->
         <scene sceneID="aGp-V8-NJO">
             <objects>
                 <viewController storyboardIdentifier="RentPlaneVC" id="t1D-EZ-Cu1" customClass="RentPlaneVC" customModule="Plane_rent" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dx4-PW-mdP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-rect" translatesAutoresizingMaskIntoConstraints="NO" id="Kcz-bi-OVR">
@@ -613,8 +608,8 @@
                                     <constraint firstAttribute="height" constant="88" id="6js-K8-Qz2"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбор типа транспорта" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wE-FR-WGw">
-                                <rect key="frame" x="91" y="10" width="232" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Аренда" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wE-FR-WGw">
+                                <rect key="frame" x="91" y="54" width="232" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>

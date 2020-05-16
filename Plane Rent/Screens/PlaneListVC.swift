@@ -9,7 +9,7 @@
 import UIKit
 
 class PlaneListVC: BaseViewController, UITableViewDataSource {
-
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
@@ -34,12 +34,12 @@ class PlaneListVC: BaseViewController, UITableViewDataSource {
             }
             
             print("downloaded")
-
+            
             do {
                 let decoder = JSONDecoder()
                 
                 let downloadedPlanes = try decoder.decode(Planes.self, from: data)
-                                
+                
                 self.planes = downloadedPlanes.air_airplanes
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
@@ -64,8 +64,14 @@ extension PlaneListVC {
         cell.planeAirportLabel.text = planes[indexPath.row].plane_base
         cell.planeModelLabel.text = planes[indexPath.row].plane_model
         cell.planePriceLabel.text = planes[indexPath.row].plane_price
+        // TODO: del debug
         
-        if let imageURL = URL(string: planes[indexPath.row].plane_image) {
+        let planeImagesDir = "http://big-marka.xyz/plane_images/"
+        
+        if let imageURL = URL(string:
+            ((planeImagesDir + planes[indexPath.row].plane_image)
+                .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+        )) {
             DispatchQueue.global().async {
                 let data = try? Data(contentsOf: imageURL)
                 if let data = data {
