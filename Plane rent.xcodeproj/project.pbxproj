@@ -14,6 +14,7 @@
 		CA2F152B246F82F400446A1B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2F152A246F82F400446A1B /* BaseViewController.swift */; };
 		CA312654245FB68400343CC8 /* RegistrationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA312653245FB68400343CC8 /* RegistrationData.swift */; };
 		CA38BCFA245D9E25009EF2EF /* InputPhoneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA38BCF9245D9E25009EF2EF /* InputPhoneController.swift */; };
+		CA3A9A5E246FD5630079FA89 /* Helicopter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A9A5D246FD5630079FA89 /* Helicopter.swift */; };
 		CA3AAE8C24611145009AEC64 /* SelectAirTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3AAE8B24611145009AEC64 /* SelectAirTypeView.swift */; };
 		CA3D14D8246FB0F200BBCD05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3D14D6246FB0F200BBCD05 /* LaunchScreen.storyboard */; };
 		CA45424E246B9A25002178EF /* InputSMSCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA45424D246B9A25002178EF /* InputSMSCodeVC.swift */; };
@@ -43,6 +44,7 @@
 		CAC37EB4245E2E1700BEB7D6 /* ProfileTemplateDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC37EB3245E2E1700BEB7D6 /* ProfileTemplateDelete.swift */; };
 		CAC37EB9245E41D800BEB7D6 /* BaseApplyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC37EB8245E41D800BEB7D6 /* BaseApplyButtonView.swift */; };
 		CAE0A794245D04E600224FED /* StatusResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE0A793245D04E600224FED /* StatusResponse.swift */; };
+		CAEFE7CC246FD27C00FAC7D8 /* HelicopterListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEFE7CB246FD27C00FAC7D8 /* HelicopterListVC.swift */; };
 		CAF00690246E3A8C00F09524 /* UIView+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF0068F246E3A8C00F09524 /* UIView+Rotate.swift */; };
 		CAF00692246E553300F09524 /* BookedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF00691246E553300F09524 /* BookedVC.swift */; };
 		CAFC51EB246112C100B7AE12 /* String+StartSym.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFC51EA246112C100B7AE12 /* String+StartSym.swift */; };
@@ -66,6 +68,7 @@
 		CA2F152A246F82F400446A1B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CA312653245FB68400343CC8 /* RegistrationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationData.swift; sourceTree = "<group>"; };
 		CA38BCF9245D9E25009EF2EF /* InputPhoneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPhoneController.swift; sourceTree = "<group>"; };
+		CA3A9A5D246FD5630079FA89 /* Helicopter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helicopter.swift; sourceTree = "<group>"; };
 		CA3AAE8B24611145009AEC64 /* SelectAirTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAirTypeView.swift; sourceTree = "<group>"; };
 		CA3D14D7246FB0F200BBCD05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA45424D246B9A25002178EF /* InputSMSCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSMSCodeVC.swift; sourceTree = "<group>"; };
@@ -96,6 +99,7 @@
 		CAC37EB3245E2E1700BEB7D6 /* ProfileTemplateDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTemplateDelete.swift; sourceTree = "<group>"; };
 		CAC37EB8245E41D800BEB7D6 /* BaseApplyButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApplyButtonView.swift; sourceTree = "<group>"; };
 		CAE0A793245D04E600224FED /* StatusResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusResponse.swift; sourceTree = "<group>"; };
+		CAEFE7CB246FD27C00FAC7D8 /* HelicopterListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelicopterListVC.swift; sourceTree = "<group>"; };
 		CAF0068F246E3A8C00F09524 /* UIView+Rotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Rotate.swift"; sourceTree = "<group>"; };
 		CAF00691246E553300F09524 /* BookedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookedVC.swift; sourceTree = "<group>"; };
 		CAFC51EA246112C100B7AE12 /* String+StartSym.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+StartSym.swift"; sourceTree = "<group>"; };
@@ -172,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				CA454258246BA897002178EF /* Plane.swift */,
+				CA3A9A5D246FD5630079FA89 /* Helicopter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -223,6 +228,7 @@
 				CA454251246B9E89002178EF /* RegistrationVC.swift */,
 				CA454253246B9FA9002178EF /* SelectAirTypeVC.swift */,
 				CA454255246BA069002178EF /* PlaneListVC.swift */,
+				CAEFE7CB246FD27C00FAC7D8 /* HelicopterListVC.swift */,
 				CA5CE1FA246BD05400D597CA /* RentPlaneVC.swift */,
 				CAF00691246E553300F09524 /* BookedVC.swift */,
 			);
@@ -478,8 +484,10 @@
 			files = (
 				CAFE7B27245A211100167140 /* AppDelegate.swift in Sources */,
 				CAC37EAB245E287F00BEB7D6 /* String+Random.swift in Sources */,
+				CA3A9A5E246FD5630079FA89 /* Helicopter.swift in Sources */,
 				CA3AAE8C24611145009AEC64 /* SelectAirTypeView.swift in Sources */,
 				CAC37EB4245E2E1700BEB7D6 /* ProfileTemplateDelete.swift in Sources */,
+				CAEFE7CC246FD27C00FAC7D8 /* HelicopterListVC.swift in Sources */,
 				CA454259246BA897002178EF /* Plane.swift in Sources */,
 				CA2F152B246F82F400446A1B /* BaseViewController.swift in Sources */,
 				CA45424E246B9A25002178EF /* InputSMSCodeVC.swift in Sources */,
