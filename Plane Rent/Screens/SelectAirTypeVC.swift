@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SelectAirTypeVC: UIViewController {
+class SelectAirTypeVC: BaseViewController {
 
     @IBAction func planeButton(_ sender: Any) {
     }

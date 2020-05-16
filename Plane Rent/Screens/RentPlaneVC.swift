@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RentPlaneVC: UIViewController {
+class RentPlaneVC: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

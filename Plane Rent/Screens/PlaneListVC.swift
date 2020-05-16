@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PlaneListVC: UIViewController, UITableViewDataSource {
+class PlaneListVC: BaseViewController, UITableViewDataSource {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!

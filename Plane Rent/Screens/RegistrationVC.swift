@@ -8,7 +8,9 @@
 
 import UIKit
 
-class RegistrationVC: UIViewController {
+class RegistrationVC: BaseViewController {
+    var inputedPhone = ""
+    
     @IBOutlet weak var titleCabinetLabel: UILabel!
     @IBOutlet weak var subTitleCabinetLabel: UILabel!
     
@@ -17,23 +19,34 @@ class RegistrationVC: UIViewController {
     @IBOutlet weak var addressTextfield: UITextField!
     
     @IBAction func doneButton(_ sender: Any) {
+        guard let nameTextfieldText = nameTextfield.text else { return }
+        guard let lastNameTextfieldText = lastNameTextfield.text else { return }
+        guard let addressTextfieldtext = addressTextfield.text else { return }
+        
+        DispatchQueue.main.async {
+            let isRegisterSuccess = RequestList.register(phone: self.inputedPhone,
+                                                         name: nameTextfieldText,
+                                                         lastName: lastNameTextfieldText,
+                                                         address: addressTextfieldtext)
+            if isRegisterSuccess {
+                let inputSMSCodeVC = self.storyboard?.instantiateViewController(
+                    withIdentifier: "InputSMSCodeVC"
+                    ) as! InputSMSCodeVC
+                
+                self.navigationController!.pushViewController(inputSMSCodeVC, animated: true)
+            } else {
+                print("register - unsuccess")
+            }
+            
+            
+        }
+        
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

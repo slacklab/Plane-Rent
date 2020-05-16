@@ -9,9 +9,10 @@
 import Foundation
 import UIKit
 
-class InputPhoneVC: UIViewController {
+class InputPhoneVC: BaseViewController {
     
     var isAccountExist = false
+    var inputedPhone = ""
     
     var group = DispatchGroup()
     
@@ -22,23 +23,27 @@ class InputPhoneVC: UIViewController {
     @IBAction func doneButton(_ sender: Any) {
         
         guard let phoneNumberTextFieldText = phoneNumberTextField.text else { return }
-        
+        inputedPhone = phoneNumberTextFieldText
+
         DispatchQueue.main.async {
             self.isAccountExist = RequestList.isAccountExist(phone: phoneNumberTextFieldText)
             
-            
             if self.isAccountExist {
-                let smsCodeViewController = self.storyboard?.instantiateViewController(
+                let inputSMSCodeVC = self.storyboard?.instantiateViewController(
                     withIdentifier: "InputSMSCodeVC"
                     ) as! InputSMSCodeVC
+
+                self.navigationController!.pushViewController(inputSMSCodeVC, animated: true)
                 
-                self.navigationController!.pushViewController(smsCodeViewController, animated: true)
+                inputSMSCodeVC.inputedPhone = self.inputedPhone
             } else {
                 let registrationVC = self.storyboard?.instantiateViewController(
                     withIdentifier: "RegistrationVC"
                     ) as! RegistrationVC
                 
                 self.navigationController!.pushViewController(registrationVC, animated: true)
+                
+                registrationVC.inputedPhone = self.inputedPhone
             }
         }
     }
@@ -48,6 +53,10 @@ class InputPhoneVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        setupUI()
+    }
+    
+    func setupUI() {
+        navigationController?.isToolbarHidden = false
     }
 }

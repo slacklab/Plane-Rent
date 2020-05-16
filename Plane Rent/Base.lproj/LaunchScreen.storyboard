@@ -10,49 +10,31 @@
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-rect" translatesAutoresizingMaskIntoConstraints="NO" id="k1q-6X-c7K">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-launch-plane" translatesAutoresizingMaskIntoConstraints="NO" id="k1q-6X-c7K">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="hyX-VY-cjA">
-                                <rect key="frame" x="70" y="279" width="235" height="36.333333333333314"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="copyright" translatesAutoresizingMaskIntoConstraints="NO" id="VXM-WS-P60">
-                                <rect key="frame" x="62" y="581.66666666666663" width="251" height="76.333333333333371"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="hyX-VY-cjA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="09x-PR-jER"/>
-                            <constraint firstItem="VXM-WS-P60" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="62" id="0hN-Rj-WsS"/>
-                            <constraint firstItem="hyX-VY-cjA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="1dY-0y-7aH"/>
                             <constraint firstItem="k1q-6X-c7K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Cka-k1-esa"/>
-                            <constraint firstItem="hyX-VY-cjA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="235" id="IaL-2X-3sc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hyX-VY-cjA" secondAttribute="trailing" constant="70" id="Sh1-Ij-cLg"/>
                             <constraint firstItem="k1q-6X-c7K" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Vfn-22-01x"/>
-                            <constraint firstItem="hyX-VY-cjA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="235" id="f8c-x0-7if"/>
-                            <constraint firstItem="VXM-WS-P60" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="62" id="f91-Gl-ZhW"/>
                             <constraint firstItem="k1q-6X-c7K" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="fn5-Lg-B7N"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VXM-WS-P60" secondAttribute="bottom" constant="120" id="hu6-rd-Smt"/>
                             <constraint firstItem="k1q-6X-c7K" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" constant="-44" id="rZm-94-lRO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hyX-VY-cjA" secondAttribute="trailing" constant="70" id="tFu-AP-YBi"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VXM-WS-P60" secondAttribute="trailing" constant="62" id="yw7-5b-DOh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="50.399999999999999" y="374.6305418719212"/>
         </scene>
     </scenes>
     <resources>
-        <image name="bg-rect" width="375" height="812"/>
-        <image name="copyright" width="251" height="76.333335876464844"/>
-        <image name="title" width="228.33332824707031" height="36.333332061767578"/>
+        <image name="bg-launch-plane" width="899.66668701171875" height="1199.6666259765625"/>
     </resources>
 </document>

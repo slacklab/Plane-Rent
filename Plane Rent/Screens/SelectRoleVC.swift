@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SelectRoleVC: UIViewController {
+class SelectRoleVC: BaseViewController {
 
     @IBAction func ownerButton(_ sender: Any) {
     }
