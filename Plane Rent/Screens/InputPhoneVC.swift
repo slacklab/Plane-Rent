@@ -47,46 +47,7 @@ class InputPhoneVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
     }
 }
-
-
-
-
-//    if Validate.phone(phoneNumberTextFieldText) {
-//        print("ok")
-//
-//
-//
-//        DispatchQueue.main.async {
-//            self.isAccountExist = RequestList.isAccountExist(phone: phoneNumberTextFieldText)
-//        }
-//
-//        // when request will be done
-//        group.notify(queue: .main) {
-//
-//            if self.isAccountExist {
-//                let inputSMSCodeVC = self.storyboard?.instantiateViewController(withIdentifier: "InputSMSCodeVC")
-//                self.navigationController?.pushViewController(inputSMSCodeVC!, animated: true)
-//
-//
-//                self.navigationController?.pushViewController(SelectRoleVC(), animated: true)
-//            } else {
-//                // open RegistrationVC
-//                self.navigationController?.pushViewController(RegistrationVC(), animated: true)
-//            }
-//
-//
-//        }
-//
-//
-//    } else {
-//        print("nope")
-//        self.doneButtonOutlet.imageView?.rotate()
-//    }         // validate.phone
-//
-//
-//
-//
-//}
