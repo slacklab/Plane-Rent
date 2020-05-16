@@ -225,7 +225,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-rect" translatesAutoresizingMaskIntoConstraints="NO" id="U8p-Cf-1Xa">
-                                <rect key="frame" x="19.5" y="0.0" width="375" height="88"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="88" id="f8k-SQ-EAX"/>
                                 </constraints>
@@ -251,8 +251,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Выбор типа транспорта" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDs-fw-SdK">
-                                <rect key="frame" x="91" y="54" width="192" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбор типа транспорта" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDs-fw-SdK">
+                                <rect key="frame" x="111.5" y="34" width="191.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -260,12 +260,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="5MY-v9-dzO" firstAttribute="trailing" secondItem="U8p-Cf-1Xa" secondAttribute="trailing" id="1UN-r1-v6V"/>
+                            <constraint firstItem="MDs-fw-SdK" firstAttribute="centerX" secondItem="U8p-Cf-1Xa" secondAttribute="centerX" id="24d-FZ-6by"/>
                             <constraint firstItem="QA2-rn-2S7" firstAttribute="leading" secondItem="5MY-v9-dzO" secondAttribute="leading" constant="8" id="HLv-6w-i3k"/>
-                            <constraint firstItem="MDs-fw-SdK" firstAttribute="leading" secondItem="5MY-v9-dzO" secondAttribute="leading" constant="91" id="JmV-iA-oXu"/>
-                            <constraint firstItem="MDs-fw-SdK" firstAttribute="centerX" secondItem="U8p-Cf-1Xa" secondAttribute="centerX" id="L41-gL-mJd"/>
+                            <constraint firstItem="U8p-Cf-1Xa" firstAttribute="leading" secondItem="5MY-v9-dzO" secondAttribute="leading" id="Ppq-oP-Aqw"/>
                             <constraint firstItem="QA2-rn-2S7" firstAttribute="top" secondItem="5MY-v9-dzO" secondAttribute="top" constant="284" id="QzH-pa-fj4"/>
-                            <constraint firstItem="MDs-fw-SdK" firstAttribute="top" secondItem="5MY-v9-dzO" secondAttribute="top" constant="10" id="a7q-Xw-Saj"/>
                             <constraint firstItem="U8p-Cf-1Xa" firstAttribute="top" secondItem="Xt3-RR-mAM" secondAttribute="top" id="aFg-Uz-R32"/>
+                            <constraint firstItem="MDs-fw-SdK" firstAttribute="centerY" secondItem="U8p-Cf-1Xa" secondAttribute="centerY" id="b7z-63-ajQ"/>
                             <constraint firstItem="U8p-Cf-1Xa" firstAttribute="centerX" secondItem="QA2-rn-2S7" secondAttribute="centerX" id="dce-At-IVd"/>
                             <constraint firstItem="QA2-rn-2S7" firstAttribute="leading" secondItem="5MY-v9-dzO" secondAttribute="leading" constant="8" id="isS-In-6Go"/>
                             <constraint firstItem="5MY-v9-dzO" firstAttribute="trailing" secondItem="QA2-rn-2S7" secondAttribute="trailing" constant="8" id="qCd-Cg-4Ve"/>
@@ -276,7 +277,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OuB-jx-OFu" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3882" y="-231"/>
+            <point key="canvasLocation" x="3881.1594202898555" y="-231.02678571428569"/>
         </scene>
         <!--RegistrationVC-->
         <scene sceneID="qJd-hS-jUi">
@@ -604,7 +605,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-rect" translatesAutoresizingMaskIntoConstraints="NO" id="Kcz-bi-OVR">
-                                <rect key="frame" x="19.5" y="0.0" width="375" height="88"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="88" id="6js-K8-Qz2"/>
                                 </constraints>
@@ -625,7 +626,7 @@
                                     <segue destination="6KL-IM-xuL" kind="show" id="6qa-xn-3gN"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boeing_747_24" translatesAutoresizingMaskIntoConstraints="NO" id="zDd-qW-IjM">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="done-blue" translatesAutoresizingMaskIntoConstraints="NO" id="zDd-qW-IjM">
                                 <rect key="frame" x="20" y="96" width="374" height="201"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="201" id="bqe-F9-ieP"/>
@@ -738,6 +739,7 @@
                             <constraint firstItem="yKb-BH-Uid" firstAttribute="centerX" secondItem="3ys-AT-1wg" secondAttribute="centerX" id="6hu-gW-dwY"/>
                             <constraint firstItem="zDd-qW-IjM" firstAttribute="top" secondItem="Kcz-bi-OVR" secondAttribute="bottom" constant="8" id="Dxc-G6-AGx"/>
                             <constraint firstItem="Kcz-bi-OVR" firstAttribute="top" secondItem="dx4-PW-mdP" secondAttribute="top" id="KC5-ev-fEe"/>
+                            <constraint firstItem="ayi-bB-GIz" firstAttribute="trailing" secondItem="Kcz-bi-OVR" secondAttribute="trailing" id="Qfm-M3-m8y"/>
                             <constraint firstItem="3ys-AT-1wg" firstAttribute="centerX" secondItem="zDd-qW-IjM" secondAttribute="centerX" id="QzT-R3-Y2N"/>
                             <constraint firstItem="5wE-FR-WGw" firstAttribute="leading" secondItem="ayi-bB-GIz" secondAttribute="leading" constant="91" id="TQJ-Vf-yMi"/>
                             <constraint firstItem="5wE-FR-WGw" firstAttribute="top" secondItem="ayi-bB-GIz" secondAttribute="top" constant="10" id="Tjx-Jq-rPT"/>
@@ -745,6 +747,7 @@
                             <constraint firstItem="zDd-qW-IjM" firstAttribute="centerX" secondItem="5wE-FR-WGw" secondAttribute="centerX" id="ZTf-WN-grc"/>
                             <constraint firstItem="ayi-bB-GIz" firstAttribute="bottom" secondItem="3ys-AT-1wg" secondAttribute="bottom" constant="102" id="kTf-4u-fQV"/>
                             <constraint firstItem="zDd-qW-IjM" firstAttribute="leading" secondItem="dx4-PW-mdP" secondAttribute="leadingMargin" id="lj1-pb-0GM"/>
+                            <constraint firstItem="Kcz-bi-OVR" firstAttribute="leading" secondItem="ayi-bB-GIz" secondAttribute="leading" id="ofZ-ck-Qyy"/>
                             <constraint firstItem="yKb-BH-Uid" firstAttribute="leading" secondItem="ayi-bB-GIz" secondAttribute="leading" constant="67" id="r6h-cW-xcu"/>
                             <constraint firstItem="yKb-BH-Uid" firstAttribute="top" secondItem="zDd-qW-IjM" secondAttribute="bottom" constant="45" id="uyq-4y-2PJ"/>
                             <constraint firstItem="3ys-AT-1wg" firstAttribute="leading" secondItem="ayi-bB-GIz" secondAttribute="leading" constant="149" id="y92-cz-lWU"/>
@@ -752,6 +755,12 @@
                         <viewLayoutGuide key="safeArea" id="ayi-bB-GIz"/>
                     </view>
                     <navigationItem key="navigationItem" id="FaR-7x-1L9"/>
+                    <connections>
+                        <outlet property="baseLabel" destination="Hb4-Ag-wF8" id="rrn-dx-Fgr"/>
+                        <outlet property="mainImage" destination="zDd-qW-IjM" id="Xb2-fF-kZF"/>
+                        <outlet property="modelLabel" destination="KFi-5d-PGX" id="wsB-Ld-sxe"/>
+                        <outlet property="priceLabel" destination="T7z-WZ-I0f" id="r02-Vm-2RA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3gN-YT-E0y" sceneMemberID="firstResponder"/>
             </objects>
@@ -969,7 +978,6 @@
     </scenes>
     <resources>
         <image name="bg-rect" width="375" height="812"/>
-        <image name="boeing_747_24" width="1800" height="1200"/>
         <image name="done-blue" width="72" height="72"/>
         <image name="line" width="343" height="1"/>
         <image name="line-non-active" width="343" height="1"/>

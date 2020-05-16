@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class HelicopterListVC: BaseViewController, UITableViewDataSource {
+class HelicopterListVC: BaseViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -22,6 +22,13 @@ class HelicopterListVC: BaseViewController, UITableViewDataSource {
         
         downloadJson()
         tableView.tableFooterView = UIView()
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+    }
+    
+    // disable this, cos only long taps on cell worked
+    override func dismissKeyboardOnTap() {
+        
     }
     
     func downloadJson() {
@@ -52,9 +59,8 @@ class HelicopterListVC: BaseViewController, UITableViewDataSource {
             
         }.resume()
     }
-}
-
-extension HelicopterListVC {
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return helicopters.count
     }
@@ -85,4 +91,59 @@ extension HelicopterListVC {
         
         return cell
     }
+    
+    // UITableViewDelegate Methods
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //will be handled later
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let row = indexPath.row
+        print(helicopters[row])
+        
+        let rentPlaneVC = self.storyboard?.instantiateViewController(
+            withIdentifier: "RentPlaneVC"
+            ) as! RentPlaneVC
+        
+        self.navigationController!.pushViewController(rentPlaneVC, animated: true)
+        
+        rentPlaneVC.selectedCell = indexPath.row
+        rentPlaneVC.helicopters = helicopters
+    }
+    
+    
 }
+
+extension HelicopterListVC {
+    
+    
+}
+
+//
+//class HelicopterListVC1: BaseViewController, UITableViewDataSource, UITableViewDelegate {
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        // downloadJson()
+//        tableView.delegate = self
+//        tableView.dataSource = self
+//    }
+//
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return helicopters.count // array from json
+//    }
+//    
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PlaneCell") as? PlaneCell else { return UITableViewCell() }
+//        // fill cell from json
+//        return cell
+//    }
+//    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        tableView.deselectRow(at: indexPath, animated: true)
+//        let row = indexPath.row
+//        print("cell tapped")
+//    }
+//}
+//
+//
+//
+//

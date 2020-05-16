@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// TODO: - now this cell is universall for plane and helicopter
 class PlaneCell: UITableViewCell {
 
     @IBOutlet weak var planeModelLabel: UILabel!
