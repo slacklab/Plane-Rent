@@ -52,6 +52,4 @@ class InputSMSCodeVC: BaseViewController {
             SmsService.send(phone: self.inputedPhone, message: self.generatedCode)
         }
     }
-
-
 }

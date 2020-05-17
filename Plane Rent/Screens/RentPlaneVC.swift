@@ -10,18 +10,24 @@ import UIKit
 
 class RentPlaneVC: BaseViewController {
     
+    
     @IBOutlet weak var mainImage: UIImageView!
     
     @IBOutlet weak var modelLabel: UILabel!
     @IBOutlet weak var baseLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     
+    @IBOutlet weak var rentDatePicker: UIDatePicker!
     
     var selectedCell: Int = 0
     var helicopters = [Helicopter]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//
+//        rentDatePicker.addTarget(self, action: Selector("handler:"), for: UIControl.Event.valueChanged)
+
+        
         // TODO: extra code
         print(selectedCell)
         
@@ -46,18 +52,27 @@ class RentPlaneVC: BaseViewController {
                 }
             }
         }
-        // Do any additional setup after loading the view.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func dismissKeyboardOnTap() {
+        
     }
-    */
-
+    
+//    func handler(sender: UIDatePicker) {
+////        var timeFormatter = DateFormatter()
+////        timeFormatter.timeStyle = DateFormatter.Style.short
+////
+////        var strDate = timeFormatter.string(from: rentDatePicker.date)
+////        // do what you want to do with the string.
+////
+//        let formatter = DateFormatter()
+//        formatter.dateStyle = DateFormatter.Style.medium
+//        var strDate = formatter.string(from: sender.date)
+//
+//
+//
+//        print(strDate)
+//    }
+    
 }

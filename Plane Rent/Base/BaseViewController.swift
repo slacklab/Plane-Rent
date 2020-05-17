@@ -15,6 +15,8 @@ class BaseViewController: UIViewController {
         
         dismissKeyboardOnTap()
         
+        setupStatusBar()
+        
         setupNavigationBar()
     }
     
