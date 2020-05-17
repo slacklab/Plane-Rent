@@ -13,7 +13,7 @@ class InputSMSCodeVC: BaseViewController {
     
     var inputedPhone = ""
     
-    var generatedCode = String.random(length: 4)
+    var generatedCode = String.random(length: 6)
     var inputedCode = ""
 
     @IBOutlet weak var phoneLabel: UILabel!
@@ -23,8 +23,7 @@ class InputSMSCodeVC: BaseViewController {
         inputedPhone = smsCodeTextfieldText
         
         // TODO: uncomment
-        let isInputedCodeRight = true
-//        let isInputedCodeRight = self.generatedCode == self.inputedPhone
+        let isInputedCodeRight = self.generatedCode == self.inputedPhone
         
         if isInputedCodeRight {
             let selectRoleVC = self.storyboard?.instantiateViewController(
@@ -42,14 +41,17 @@ class InputSMSCodeVC: BaseViewController {
         
         phoneLabel.text = inputedPhone
         
-        // TODO: uncomment
-//        sendSmsCode()
+        #if DEBUG
+        print("Generated: \(generatedCode) code")
+        #endif
         
+        sendSmsCode()
     }
     
     func sendSmsCode() {
         DispatchQueue.main.async {
-            SmsService.send(phone: self.inputedPhone, message: self.generatedCode)
+            SmsService.send(phone: self.inputedPhone,
+                            message: Constant.appName + self.generatedCode)
         }
     }
 }

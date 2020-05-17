@@ -64,7 +64,6 @@ extension PlaneListVC {
         cell.planeAirportLabel.text = planes[indexPath.row].plane_base
         cell.planeModelLabel.text = planes[indexPath.row].plane_model
         cell.planePriceLabel.text = planes[indexPath.row].plane_price
-        // TODO: del debug
         
         let planeImagesDir = "http://big-marka.xyz/plane_images/"
         

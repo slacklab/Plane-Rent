@@ -67,11 +67,16 @@ struct RequestList {
             }
             let result = (String(data: data, encoding: .utf8)!)
             
-            if result.contains(StatusResponse.success.rawValue) {
+            #if DEBUG
+            print(result)
+            #endif
+            
+            if result.contains(StatusResponse.regSuccess.rawValue) ||
+                result.contains(StatusResponse.regSuccess2.rawValue) {
                 isSuccess = true
             }
             
-            if result.contains(StatusResponse.error.rawValue) {
+            if result.contains(StatusResponse.regError.rawValue) {
                 isSuccess = false
             }
             

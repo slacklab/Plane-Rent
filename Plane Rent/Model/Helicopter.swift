@@ -34,6 +34,11 @@ class Helicopter: Codable {
     let ts_check_flight: String
     let ts_flight_to_airfields: String
     let helicopter_image: String
+    let user_id: String
+    let user_phone: String
+    let user_name: String
+    let user_lastname: String
+    let user_address: String
     
     init(helicopter_id: String,
          helicopter_model: String,
@@ -47,7 +52,12 @@ class Helicopter: Codable {
          ts_min_this_type_flight: String,
          ts_check_flight: String,
          ts_flight_to_airfields: String,
-         helicopter_image: String) {
+         helicopter_image: String,
+         user_id: String,
+         user_phone: String,
+         user_name: String,
+         user_lastname: String,
+         user_address: String) {
         
         self.helicopter_id = helicopter_id
         self.helicopter_model = helicopter_model
@@ -62,6 +72,11 @@ class Helicopter: Codable {
         self.ts_check_flight = ts_check_flight
         self.ts_flight_to_airfields = ts_flight_to_airfields
         self.helicopter_image = helicopter_image
+        self.user_id = user_id
+        self.user_phone = user_phone
+        self.user_name = user_name
+        self.user_lastname = user_lastname
+        self.user_address = user_address
     }
 }
 

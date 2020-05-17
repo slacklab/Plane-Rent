@@ -68,8 +68,8 @@ class HelicopterListVC: BaseViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "PlaneCell") as? PlaneCell else { return UITableViewCell() }
         
-        cell.planeAirportLabel.text = helicopters[indexPath.row].helicopter_price
-        cell.planeModelLabel.text = helicopters[indexPath.row].helicopter_price
+        cell.planeAirportLabel.text = helicopters[indexPath.row].helicopter_base    
+        cell.planeModelLabel.text = helicopters[indexPath.row].helicopter_model
         cell.planePriceLabel.text = helicopters[indexPath.row].helicopter_price
         
         let helicopterImagesDir = "http://big-marka.xyz/helicopter_images/"

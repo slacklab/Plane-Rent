@@ -34,6 +34,8 @@ class RegistrationVC: BaseViewController {
                     ) as! InputSMSCodeVC
                 
                 self.navigationController!.pushViewController(inputSMSCodeVC, animated: true)
+                
+                inputSMSCodeVC.inputedPhone = self.inputedPhone
             } else {
                 print("register - unsuccess")
             }

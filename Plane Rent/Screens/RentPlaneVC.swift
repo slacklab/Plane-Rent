@@ -10,7 +10,6 @@ import UIKit
 
 class RentPlaneVC: BaseViewController {
     
-    
     @IBOutlet weak var mainImage: UIImageView!
     
     @IBOutlet weak var modelLabel: UILabel!
@@ -19,22 +18,38 @@ class RentPlaneVC: BaseViewController {
     
     @IBOutlet weak var rentDatePicker: UIDatePicker!
     
+    let localeId = Locale.preferredLanguages.first
+    var dateRent = ""
+    
     var selectedCell: Int = 0
     var helicopters = [Helicopter]()
-    
+
+    @IBAction func doneButton(_ sender: Any) {
+        let isDateRentRight = !dateRent.isEmpty
+        
+        if isDateRentRight {
+            let bookedVC = self.storyboard?.instantiateViewController(
+                withIdentifier: "BookedVC"
+                ) as! BookedVC
+            
+            self.navigationController!.pushViewController(bookedVC, animated: true)
+            
+            SmsService.send(phone: helicopters[selectedCell].user_phone, message: Constant.appName + Constant.msgRented)
+            
+        } else {
+            print("rent date wrong")
+        }
+    }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-//
-//        rentDatePicker.addTarget(self, action: Selector("handler:"), for: UIControl.Event.valueChanged)
 
-        
-        // TODO: extra code
-        print(selectedCell)
+        rentDatePicker.locale = Locale(identifier: localeId ?? "")
+        rentDatePicker.addTarget(self, action: #selector(datePickerChanged), for: .valueChanged)
         
         modelLabel.text = helicopters[selectedCell].helicopter_model
         baseLabel.text = helicopters[selectedCell].helicopter_base
         priceLabel.text = helicopters[selectedCell].helicopter_price
-        
         
         let helicopterImagesDir = "http://big-marka.xyz/helicopter_images/"
         
@@ -52,27 +67,21 @@ class RentPlaneVC: BaseViewController {
                 }
             }
         }
-        
     }
     
     override func dismissKeyboardOnTap() {
         
     }
     
-//    func handler(sender: UIDatePicker) {
-////        var timeFormatter = DateFormatter()
-////        timeFormatter.timeStyle = DateFormatter.Style.short
-////
-////        var strDate = timeFormatter.string(from: rentDatePicker.date)
-////        // do what you want to do with the string.
-////
-//        let formatter = DateFormatter()
-//        formatter.dateStyle = DateFormatter.Style.medium
-//        var strDate = formatter.string(from: sender.date)
-//
-//
-//
-//        print(strDate)
-//    }
+    @objc func datePickerChanged(_: Any) {
+        getDateFromPicker()
+    }
     
+    func getDateFromPicker() {
+        let formatter = DateFormatter()
+        
+        formatter.dateFormat = "dd.MM.yyyy HH:MM"
+        
+        dateRent = formatter.string(from: rentDatePicker.date)
+    }
 }

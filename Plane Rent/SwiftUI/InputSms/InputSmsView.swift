@@ -49,8 +49,7 @@ struct InputSmsView: View {
                 }
             }.onAppear {
                 print(self.generatedCode)
-                // TODO: - uncomment this
-//                SmsService.send(phone: self.phoneNumber.startSym("7"), message: self.generatedCode)
+//                SmsService.send(phone: self.phoneNumber.startSym("7"), message:  self.generatedCode)
             }
             .edgesIgnoringSafeArea(.all)
             .frame(maxWidth: .infinity, maxHeight: .infinity)

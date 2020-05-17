@@ -151,7 +151,7 @@
                                 <rect key="frame" x="16" y="340" width="382" height="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+7 988 340 27 51" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXZ-IV-mwc" userLabel="phoneLabel">
                                 <rect key="frame" x="16" y="314" width="382" height="21"/>
@@ -737,7 +737,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="done-blue"/>
                                 <connections>
-                                    <segue destination="6KL-IM-xuL" kind="show" id="6qa-xn-3gN"/>
+                                    <action selector="doneButton:" destination="t1D-EZ-Cu1" eventType="touchUpInside" id="dmd-by-wTQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -785,17 +785,17 @@
             <objects>
                 <viewController storyboardIdentifier="BookedVC" id="6KL-IM-xuL" customClass="BookedVC" customModule="Plane_rent" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="czW-mt-OQU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-rect" translatesAutoresizingMaskIntoConstraints="NO" id="GLM-RC-3RF">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="xLq-C6-lm3">
-                                <rect key="frame" x="70" y="222" width="274" height="36"/>
+                                <rect key="frame" x="70" y="266" width="274" height="36"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Воздушное судно заказано. Пожалуйста, ждите подтверждения" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5bR-5A-pQZ">
-                                <rect key="frame" x="51" y="338" width="298" height="162"/>
+                                <rect key="frame" x="51" y="382" width="298" height="172"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -806,11 +806,14 @@
                             <constraint firstItem="GLM-RC-3RF" firstAttribute="leading" secondItem="7Is-pj-YVH" secondAttribute="leading" id="1wq-co-G1u"/>
                             <constraint firstItem="GLM-RC-3RF" firstAttribute="centerX" secondItem="czW-mt-OQU" secondAttribute="centerX" id="3zC-vs-tbh"/>
                             <constraint firstAttribute="bottom" secondItem="GLM-RC-3RF" secondAttribute="bottom" id="A5u-x5-TpN"/>
+                            <constraint firstItem="GLM-RC-3RF" firstAttribute="trailing" secondItem="7Is-pj-YVH" secondAttribute="trailing" id="D0d-Yh-vSY"/>
                             <constraint firstItem="GLM-RC-3RF" firstAttribute="leading" secondItem="7Is-pj-YVH" secondAttribute="leading" id="Glj-gC-7DN"/>
                             <constraint firstItem="7Is-pj-YVH" firstAttribute="bottom" secondItem="5bR-5A-pQZ" secondAttribute="bottom" constant="308" id="HH6-Cp-iMh"/>
                             <constraint firstItem="xLq-C6-lm3" firstAttribute="top" secondItem="7Is-pj-YVH" secondAttribute="top" constant="222" id="IIF-08-kaO"/>
                             <constraint firstAttribute="bottom" secondItem="GLM-RC-3RF" secondAttribute="bottom" id="MOj-Ym-NAu"/>
                             <constraint firstItem="xLq-C6-lm3" firstAttribute="leading" secondItem="7Is-pj-YVH" secondAttribute="leading" constant="70" id="MZl-16-Opm"/>
+                            <constraint firstAttribute="bottom" secondItem="GLM-RC-3RF" secondAttribute="bottom" id="NDh-NO-8h1"/>
+                            <constraint firstItem="GLM-RC-3RF" firstAttribute="top" secondItem="7Is-pj-YVH" secondAttribute="top" id="Njk-AH-0F3"/>
                             <constraint firstItem="5bR-5A-pQZ" firstAttribute="top" secondItem="xLq-C6-lm3" secondAttribute="bottom" constant="80" id="OCd-ov-gZy"/>
                             <constraint firstItem="GLM-RC-3RF" firstAttribute="centerY" secondItem="czW-mt-OQU" secondAttribute="centerY" id="OGn-Vu-eOc"/>
                             <constraint firstItem="7Is-pj-YVH" firstAttribute="trailing" secondItem="xLq-C6-lm3" secondAttribute="trailing" constant="70" id="SSS-bc-QZh"/>
@@ -819,6 +822,7 @@
                             <constraint firstItem="5bR-5A-pQZ" firstAttribute="leading" secondItem="7Is-pj-YVH" secondAttribute="leading" constant="51" id="dwk-V5-ngP"/>
                             <constraint firstItem="GLM-RC-3RF" firstAttribute="trailing" secondItem="7Is-pj-YVH" secondAttribute="trailing" id="hZz-Il-QK0"/>
                             <constraint firstItem="7Is-pj-YVH" firstAttribute="trailing" secondItem="5bR-5A-pQZ" secondAttribute="trailing" constant="65" id="sRo-rE-1de"/>
+                            <constraint firstItem="GLM-RC-3RF" firstAttribute="leading" secondItem="7Is-pj-YVH" secondAttribute="leading" id="uDt-VQ-73G"/>
                             <constraint firstItem="GLM-RC-3RF" firstAttribute="trailing" secondItem="7Is-pj-YVH" secondAttribute="trailing" id="xUY-ie-9bN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7Is-pj-YVH"/>
@@ -918,27 +922,28 @@
                                                     </constraints>
                                                 </stackView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line-non-active" translatesAutoresizingMaskIntoConstraints="NO" id="xag-mW-HOn">
-                                                    <rect key="frame" x="20" y="189" width="343" height="1"/>
+                                                    <rect key="frame" x="20" y="189" width="362" height="1"/>
                                                 </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="waQ-i9-FQw" userLabel="imagePlane">
-                                                    <rect key="frame" x="220" y="38" width="140" height="137"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="waQ-i9-FQw" userLabel="imagePlane">
+                                                    <rect key="frame" x="208" y="41" width="171" height="134"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="137" id="A36-hX-Xzo"/>
-                                                        <constraint firstAttribute="width" secondItem="waQ-i9-FQw" secondAttribute="height" multiplier="140:137" id="ej9-A1-1WA"/>
-                                                        <constraint firstAttribute="width" constant="140" id="iUh-Gb-YZZ"/>
+                                                        <constraint firstAttribute="width" constant="171" id="SHa-RC-WfG"/>
+                                                        <constraint firstAttribute="width" secondItem="waQ-i9-FQw" secondAttribute="height" multiplier="140:137" constant="31" id="ej9-A1-1WA"/>
+                                                        <constraint firstAttribute="height" constant="137" id="oh3-dY-YZj"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="xTf-2U-7Y5" secondAttribute="trailing" constant="175" id="0SG-3E-3eY"/>
-                                                <constraint firstItem="waQ-i9-FQw" firstAttribute="centerY" secondItem="xTf-2U-7Y5" secondAttribute="centerY" id="4Do-Kt-qao"/>
                                                 <constraint firstItem="xTf-2U-7Y5" firstAttribute="leading" secondItem="xag-mW-HOn" secondAttribute="leading" id="9ZS-Sh-DZk"/>
                                                 <constraint firstItem="xag-mW-HOn" firstAttribute="top" secondItem="xTf-2U-7Y5" secondAttribute="bottom" constant="7" id="FfO-It-7cW"/>
-                                                <constraint firstItem="waQ-i9-FQw" firstAttribute="trailing" secondItem="xag-mW-HOn" secondAttribute="trailing" constant="2" id="Nzn-jd-UBF"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="waQ-i9-FQw" secondAttribute="trailing" constant="15" id="Fts-tm-6ND"/>
+                                                <constraint firstItem="waQ-i9-FQw" firstAttribute="trailing" secondItem="xag-mW-HOn" secondAttribute="trailing" constant="-3" id="Nzn-jd-UBF"/>
                                                 <constraint firstItem="xTf-2U-7Y5" firstAttribute="leading" secondItem="o1c-0l-01C" secondAttribute="leadingMargin" id="QOT-pL-7Z6"/>
                                                 <constraint firstAttribute="bottom" secondItem="xTf-2U-7Y5" secondAttribute="bottom" constant="34" id="V2V-b3-K5k"/>
                                                 <constraint firstItem="xag-mW-HOn" firstAttribute="top" secondItem="waQ-i9-FQw" secondAttribute="bottom" constant="14" id="YjM-wZ-8dN"/>
                                                 <constraint firstItem="xTf-2U-7Y5" firstAttribute="top" secondItem="o1c-0l-01C" secondAttribute="topMargin" constant="21" id="dbf-IJ-HnB"/>
+                                                <constraint firstItem="waQ-i9-FQw" firstAttribute="centerY" secondItem="o1c-0l-01C" secondAttribute="centerY" id="oal-bU-LcL"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -990,7 +995,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FZr-1n-Ral" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5099" y="217"/>
+            <point key="canvasLocation" x="5098.5507246376819" y="216.96428571428569"/>
         </scene>
     </scenes>
     <resources>

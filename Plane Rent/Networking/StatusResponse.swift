@@ -19,4 +19,9 @@ enum StatusResponse: String {
     // Sms.ru
     case ok = "\"OK\""
     
+    // Registration
+    case regSuccess = "\"success\"\"error\""
+    case regSuccess2 = "\"success\"\"success\""
+    case regError = "\"error\"\"error\""
+    
 }
