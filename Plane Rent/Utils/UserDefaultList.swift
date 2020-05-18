@@ -9,5 +9,12 @@
 import Foundation
 
 struct UserDefaultList {
-    static let firstAuth = "firstAuth"
+    static let hasFirstAuth = "hasFirstAuth"
+    
+    // for send messages when rent aircraft
+    static let currentAccountType = "currentAccountType"
+    static let currentPhoneNumberOfUser = "currentPhoneNumberOfUser"
+    
+    static let currentAccountName = "currentAccountName"
+    static let currentAccountLastName = "currentAccountLastName"
 }

@@ -32,11 +32,11 @@ struct RequestList {
             if result.contains(error) {
                 print("User not exist: open registration screen")
                 isExist = false
-                defaults.set(false, forKey: UserDefaultList.firstAuth)
+                defaults.set(false, forKey: UserDefaultList.hasFirstAuth)
             } else {
                 print("User exist: Login with sms")
                 isExist = true
-                defaults.set(true, forKey: UserDefaultList.firstAuth)
+                defaults.set(true, forKey: UserDefaultList.hasFirstAuth)
             }
             
             semaphore.signal()

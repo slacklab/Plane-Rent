@@ -11,8 +11,7 @@ import Foundation
 struct Constant {
         
     static let appName = "Plane\(UrlEncoding.br)rent\(UrlEncoding.br)"
-    
-    static let msgRented = "Ваше\(UrlEncoding.br)ТС\(UrlEncoding.br)было\(UrlEncoding.br)заказано"
+
 }
 
 struct UrlEncoding {

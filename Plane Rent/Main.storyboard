@@ -806,20 +806,21 @@
                             <constraint firstItem="GLM-RC-3RF" firstAttribute="centerX" secondItem="czW-mt-OQU" secondAttribute="centerX" id="3zC-vs-tbh"/>
                             <constraint firstAttribute="bottom" secondItem="GLM-RC-3RF" secondAttribute="bottom" id="A5u-x5-TpN"/>
                             <constraint firstItem="GLM-RC-3RF" firstAttribute="trailing" secondItem="7Is-pj-YVH" secondAttribute="trailing" id="D0d-Yh-vSY"/>
+                            <constraint firstItem="GLM-RC-3RF" firstAttribute="leading" secondItem="7Is-pj-YVH" secondAttribute="leading" id="FEE-il-gnO"/>
                             <constraint firstItem="GLM-RC-3RF" firstAttribute="leading" secondItem="7Is-pj-YVH" secondAttribute="leading" id="Glj-gC-7DN"/>
                             <constraint firstItem="7Is-pj-YVH" firstAttribute="bottom" secondItem="5bR-5A-pQZ" secondAttribute="bottom" constant="308" id="HH6-Cp-iMh"/>
                             <constraint firstItem="xLq-C6-lm3" firstAttribute="top" secondItem="7Is-pj-YVH" secondAttribute="top" constant="222" id="IIF-08-kaO"/>
+                            <constraint firstItem="GLM-RC-3RF" firstAttribute="top" secondItem="7Is-pj-YVH" secondAttribute="top" id="KEE-32-Ghl"/>
                             <constraint firstAttribute="bottom" secondItem="GLM-RC-3RF" secondAttribute="bottom" id="MOj-Ym-NAu"/>
                             <constraint firstItem="xLq-C6-lm3" firstAttribute="leading" secondItem="7Is-pj-YVH" secondAttribute="leading" constant="70" id="MZl-16-Opm"/>
                             <constraint firstAttribute="bottom" secondItem="GLM-RC-3RF" secondAttribute="bottom" id="NDh-NO-8h1"/>
-                            <constraint firstItem="GLM-RC-3RF" firstAttribute="top" secondItem="7Is-pj-YVH" secondAttribute="top" id="Njk-AH-0F3"/>
                             <constraint firstItem="5bR-5A-pQZ" firstAttribute="top" secondItem="xLq-C6-lm3" secondAttribute="bottom" constant="80" id="OCd-ov-gZy"/>
-                            <constraint firstItem="GLM-RC-3RF" firstAttribute="centerY" secondItem="czW-mt-OQU" secondAttribute="centerY" id="OGn-Vu-eOc"/>
                             <constraint firstItem="7Is-pj-YVH" firstAttribute="trailing" secondItem="xLq-C6-lm3" secondAttribute="trailing" constant="70" id="SSS-bc-QZh"/>
                             <constraint firstItem="GLM-RC-3RF" firstAttribute="leading" secondItem="7Is-pj-YVH" secondAttribute="leading" id="WjA-4e-PhG"/>
-                            <constraint firstItem="GLM-RC-3RF" firstAttribute="top" secondItem="7Is-pj-YVH" secondAttribute="top" id="cda-0B-TGi"/>
+                            <constraint firstItem="GLM-RC-3RF" firstAttribute="trailing" secondItem="7Is-pj-YVH" secondAttribute="trailing" id="box-Zr-NSr"/>
                             <constraint firstItem="5bR-5A-pQZ" firstAttribute="leading" secondItem="7Is-pj-YVH" secondAttribute="leading" constant="51" id="dwk-V5-ngP"/>
                             <constraint firstItem="GLM-RC-3RF" firstAttribute="trailing" secondItem="7Is-pj-YVH" secondAttribute="trailing" id="hZz-Il-QK0"/>
+                            <constraint firstAttribute="bottom" secondItem="GLM-RC-3RF" secondAttribute="bottom" id="p5j-PP-w9k"/>
                             <constraint firstItem="7Is-pj-YVH" firstAttribute="trailing" secondItem="5bR-5A-pQZ" secondAttribute="trailing" constant="65" id="sRo-rE-1de"/>
                             <constraint firstItem="GLM-RC-3RF" firstAttribute="leading" secondItem="7Is-pj-YVH" secondAttribute="leading" id="uDt-VQ-73G"/>
                             <constraint firstItem="GLM-RC-3RF" firstAttribute="trailing" secondItem="7Is-pj-YVH" secondAttribute="trailing" id="xUY-ie-9bN"/>
@@ -830,7 +831,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="24a-RV-Vbe" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6712.8000000000002" y="85.714285714285722"/>
+            <point key="canvasLocation" x="6711.594202898551" y="85.714285714285708"/>
         </scene>
         <!--Helicopter ListVC-->
         <scene sceneID="zzI-eY-pU0">

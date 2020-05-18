@@ -36,6 +36,9 @@ class InputSMSCodeVC: BaseViewController {
                 ) as! SelectRoleVC
             
             self.navigationController!.pushViewController(selectRoleVC, animated: true)
+            
+            recordCurrentAccountPhoneNumber()
+            
         } else {
             print("code - wrong")
         }
@@ -58,5 +61,10 @@ class InputSMSCodeVC: BaseViewController {
             SmsService.send(phone: self.inputedPhone,
                             message: Constant.appName + self.generatedCode)
         }
+    }
+    
+    func recordCurrentAccountPhoneNumber() {
+        let defaults = UserDefaults.standard
+        defaults.set(self.inputedPhone, forKey: UserDefaultList.currentPhoneNumberOfUser)
     }
 }

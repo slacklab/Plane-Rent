@@ -9,6 +9,7 @@
 import UIKit
 
 class RentPlaneVC: BaseViewController {
+    let defaults = UserDefaults.standard
     
     @IBOutlet weak var mainImage: UIImageView!
     
@@ -23,7 +24,9 @@ class RentPlaneVC: BaseViewController {
     
     var selectedCell: Int = 0
     var helicopters = [Helicopter]()
-
+    let helicopterImagesDir = "http://big-marka.xyz/helicopter_images/"
+    
+    
     @IBAction func doneButton(_ sender: Any) {
         let isDateRentRight = !dateRent.isEmpty
         
@@ -34,16 +37,16 @@ class RentPlaneVC: BaseViewController {
             
             self.navigationController!.pushViewController(bookedVC, animated: true)
             
-            SmsService.send(phone: helicopters[selectedCell].user_phone, message: Constant.appName + Constant.msgRented)
+            sendNeedMessage()
             
         } else {
             print("rent date wrong")
         }
     }
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         rentDatePicker.locale = Locale(identifier: localeId ?? "")
         rentDatePicker.addTarget(self, action: #selector(datePickerChanged), for: .valueChanged)
         
@@ -51,22 +54,8 @@ class RentPlaneVC: BaseViewController {
         baseLabel.text = helicopters[selectedCell].helicopter_base
         priceLabel.text = helicopters[selectedCell].helicopter_price
         
-        let helicopterImagesDir = "http://big-marka.xyz/helicopter_images/"
+        downloadImageAndSet()
         
-        if let imageURL = URL(string:
-            ((helicopterImagesDir + helicopters[selectedCell].helicopter_image)
-                .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
-        )) {
-            DispatchQueue.global().async {
-                let data = try? Data(contentsOf: imageURL)
-                if let data = data {
-                    let image = UIImage(data: data)
-                    DispatchQueue.main.async {
-                        self.mainImage.image = image
-                    }
-                }
-            }
-        }
     }
     
     override func dismissKeyboardOnTap() {
@@ -87,5 +76,43 @@ class RentPlaneVC: BaseViewController {
         #if DEBUG
         print(dateRent)
         #endif
+    }
+    
+    func downloadImageAndSet() {
+        if let imageURL = URL(string:
+            ((helicopterImagesDir + helicopters[selectedCell].helicopter_image)
+                .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+        )) {
+            DispatchQueue.global().async {
+                let data = try? Data(contentsOf: imageURL)
+                if let data = data {
+                    let image = UIImage(data: data)
+                    DispatchQueue.main.async {
+                        self.mainImage.image = image
+                    }
+                }
+            }
+        }
+    }
+    
+    func sendNeedMessage() {
+        let valueCurrentAccountType = defaults.string(forKey:
+            UserDefaultList.currentAccountType)
+        let valuePhoneNumberOfCurrentUser = defaults.string(forKey: UserDefaultList.currentPhoneNumberOfUser)
+        
+        #if DEBUG
+        print(valueCurrentAccountType)
+        print(valuePhoneNumberOfCurrentUser)
+        #endif
+        
+        switch valueCurrentAccountType {
+        case AccountType.passenger:
+            SmsService.send(phone: helicopters[selectedCell].user_phone,
+                            message: Constant.appName + "")
+        default:
+            print("not set send sms!!!")
+        }
+        
+        
     }
 }

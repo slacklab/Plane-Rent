@@ -9,31 +9,37 @@
 import UIKit
 
 class SelectRoleVC: BaseViewController {
+    
+    let defaults = UserDefaults.standard
 
     @IBAction func ownerButton(_ sender: Any) {
+        recordAccountTypeOwner()
     }
     
     @IBAction func pilotButton(_ sender: Any) {
+        recordAccountTypePilot()
     }
     
     @IBAction func passengerButton(_ sender: Any) {
+        recordAccountTypePassenger()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Record current type of account to UserDefaults
+    
+    func recordAccountTypePassenger() {
+        defaults.set(AccountType.passenger, forKey: UserDefaultList.currentAccountType)
     }
-    */
-
+    
+    func recordAccountTypePilot() {
+        defaults.set(AccountType.pilot, forKey: UserDefaultList.currentAccountType)
+    }
+    
+    func recordAccountTypeOwner() {
+        defaults.set(AccountType.owner, forKey: UserDefaultList.currentAccountType)
+    }
 }
