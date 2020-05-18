@@ -100,8 +100,8 @@ class HelicopterListVC: BaseViewController, UITableViewDataSource, UITableViewDe
         print(helicopters[row])
         
         let rentPlaneVC = self.storyboard?.instantiateViewController(
-            withIdentifier: "RentPlaneVC"
-            ) as! RentPlaneVC
+            withIdentifier: "RentHelicopterVC"
+            ) as! RentHelicopterVC
         
         self.navigationController!.pushViewController(rentPlaneVC, animated: true)
         
