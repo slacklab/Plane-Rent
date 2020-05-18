@@ -83,5 +83,9 @@ class RentPlaneVC: BaseViewController {
         formatter.dateFormat = "dd.MM.yyyy HH:MM"
         
         dateRent = formatter.string(from: rentDatePicker.date)
+        
+        #if DEBUG
+        print(dateRent)
+        #endif
     }
 }

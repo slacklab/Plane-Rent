@@ -13,17 +13,22 @@ class InputSMSCodeVC: BaseViewController {
     
     var inputedPhone = ""
     
-    var generatedCode = String.random(length: 6)
+    // TODO: replace to 6 digits
+    var generatedCode = String.random(length: 4)
     var inputedCode = ""
 
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var smsCodeTextfield: UITextField!
     @IBAction func doneButton(_ sender: Any) {
         guard let smsCodeTextfieldText = smsCodeTextfield.text else { return }
-        inputedPhone = smsCodeTextfieldText
+        
+        #if DEBUG
+        print(smsCodeTextfieldText)
+        print(self.generatedCode)
+        #endif
         
         // TODO: uncomment
-        let isInputedCodeRight = self.generatedCode == self.inputedPhone
+        let isInputedCodeRight = self.generatedCode == smsCodeTextfieldText
         
         if isInputedCodeRight {
             let selectRoleVC = self.storyboard?.instantiateViewController(

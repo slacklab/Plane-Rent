@@ -19,22 +19,22 @@ struct SmsService {
         #endif
         
         // TODO: uncomment
-        HTTP.GET(link) { response in
-            if let err = response.error {
-                print("error: \(err.localizedDescription)")
-                return
-            }
-
-            let result = response.text ?? "nil"
-            let statusOk = StatusResponse.ok.rawValue
-
-            print("value: \(result)")
-
-            if result.contains(statusOk) {
-                print("Sms sended")
-            } else {
-                print("Sms error")
-            }
-        }
+//        HTTP.GET(link) { response in
+//            if let err = response.error {
+//                print("error: \(err.localizedDescription)")
+//                return
+//            }
+//
+//            let result = response.text ?? "nil"
+//            let statusOk = StatusResponse.ok.rawValue
+//
+//            print("value: \(result)")
+//
+//            if result.contains(statusOk) {
+//                print("Sms sended")
+//            } else {
+//                print("Sms error")
+//            }
+//        }
     }
 }
