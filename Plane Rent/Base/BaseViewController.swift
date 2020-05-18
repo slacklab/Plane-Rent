@@ -17,7 +17,11 @@ class BaseViewController: UIViewController {
         
         setupStatusBar()
         
+        setupTabBar()
+
         setupNavigationBar()
+        
+        self.tabBarController?.tabBar.isHidden = true
     }
     
     func setupNavigationBar() {
@@ -36,8 +40,14 @@ class BaseViewController: UIViewController {
         UITabBar.appearance().backgroundImage = UIImage()
     }
     
+    func setupTabBar() {
+        self.hidesBottomBarWhenPushed = true
+        // try do disable at first controller 
+        self.tabBarController?.tabBar.isHidden = true
+        self.tabBarController?.tabBar.layer.zPosition = -1
+    }
+    
     func dismissKeyboardOnTap() {
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
     }
-    
 }
