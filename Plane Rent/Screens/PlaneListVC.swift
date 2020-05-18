@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PlaneListVC: BaseViewController, UITableViewDataSource {
+class PlaneListVC: BaseViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -21,6 +21,13 @@ class PlaneListVC: BaseViewController, UITableViewDataSource {
         
         downloadJson()
         tableView.tableFooterView = UIView()
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+    }
+    
+    // disable this, cos only long taps on cell worked
+    override func dismissKeyboardOnTap() {
+        
     }
     
     func downloadJson() {
@@ -83,5 +90,23 @@ extension PlaneListVC {
         }
         
         return cell
+    }
+    
+    // UITableViewDelegate Methods
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //will be handled later
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let row = indexPath.row
+        print(planes[row])
+        
+        let rentPlaneVC = self.storyboard?.instantiateViewController(
+            withIdentifier: "RentPlaneVC"
+            ) as! RentPlaneVC
+        
+        self.navigationController!.pushViewController(rentPlaneVC, animated: true)
+        
+        rentPlaneVC.selectedCell = indexPath.row
+        rentPlaneVC.planes = planes
     }
 }

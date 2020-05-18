@@ -99,50 +99,15 @@ class HelicopterListVC: BaseViewController, UITableViewDataSource, UITableViewDe
         let row = indexPath.row
         print(helicopters[row])
         
-        let rentPlaneVC = self.storyboard?.instantiateViewController(
+        let rentHelicopterVC = self.storyboard?.instantiateViewController(
             withIdentifier: "RentHelicopterVC"
             ) as! RentHelicopterVC
         
-        self.navigationController!.pushViewController(rentPlaneVC, animated: true)
+        self.navigationController!.pushViewController(rentHelicopterVC, animated: true)
         
-        rentPlaneVC.selectedCell = indexPath.row
-        rentPlaneVC.helicopters = helicopters
+        rentHelicopterVC.selectedCell = indexPath.row
+        rentHelicopterVC.helicopters = helicopters
     }
     
     
 }
-
-extension HelicopterListVC {
-    
-    
-}
-
-//
-//class HelicopterListVC1: BaseViewController, UITableViewDataSource, UITableViewDelegate {
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        // downloadJson()
-//        tableView.delegate = self
-//        tableView.dataSource = self
-//    }
-//
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return helicopters.count // array from json
-//    }
-//    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PlaneCell") as? PlaneCell else { return UITableViewCell() }
-//        // fill cell from json
-//        return cell
-//    }
-//    
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
-//        let row = indexPath.row
-//        print("cell tapped")
-//    }
-//}
-//
-//
-//
-//

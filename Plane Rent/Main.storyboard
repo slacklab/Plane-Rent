@@ -997,7 +997,7 @@
         <!--Rent PlaneVC-->
         <scene sceneID="Sgm-fu-XQc">
             <objects>
-                <viewController storyboardIdentifier="RentPlaneVC" id="wgY-dc-sDw" customClass="RentPlaneVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RentPlaneVC" id="wgY-dc-sDw" customClass="RentPlaneVC" customModule="Plane_rent" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7iu-sE-Mcw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
