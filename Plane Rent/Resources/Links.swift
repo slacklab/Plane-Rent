@@ -31,6 +31,6 @@ struct Links {
         lastName: String,
         address: String) -> String {
         
-        return "http://big-marka.xyz/DB_REGISTER.php?select=addUser&phone=" + phone + "&name=" + name + "&lastName=" + lastName + "&address=" + address
+        return apiPath + "DB_REGISTER.php?select=addUser&phone=" + phone + "&name=" + name + "&lastName=" + lastName + "&address=" + address
     }
 }

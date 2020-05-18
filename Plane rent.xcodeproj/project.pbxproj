@@ -32,6 +32,7 @@
 		CA9EBF13245A2EEC00380442 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EBF12245A2EEC00380442 /* R.generated.swift */; };
 		CA9EBF17245A428500380442 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EBF16245A428500380442 /* Colors.swift */; };
 		CAB484D4245E069C00F31870 /* UserDefaultList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB484D3245E069C00F31870 /* UserDefaultList.swift */; };
+		CAB529C3247230860057966C /* AirUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB529C2247230860057966C /* AirUser.swift */; };
 		CAC37EAB245E287F00BEB7D6 /* String+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC37EAA245E287F00BEB7D6 /* String+Random.swift */; };
 		CAE0A794245D04E600224FED /* StatusResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE0A793245D04E600224FED /* StatusResponse.swift */; };
 		CAEFE7CC246FD27C00FAC7D8 /* HelicopterListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEFE7CB246FD27C00FAC7D8 /* HelicopterListVC.swift */; };
@@ -76,6 +77,7 @@
 		CA9EBF12245A2EEC00380442 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		CA9EBF16245A428500380442 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CAB484D3245E069C00F31870 /* UserDefaultList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultList.swift; sourceTree = "<group>"; };
+		CAB529C2247230860057966C /* AirUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirUser.swift; sourceTree = "<group>"; };
 		CAC37EAA245E287F00BEB7D6 /* String+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Random.swift"; sourceTree = "<group>"; };
 		CAE0A793245D04E600224FED /* StatusResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusResponse.swift; sourceTree = "<group>"; };
 		CAEFE7CB246FD27C00FAC7D8 /* HelicopterListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelicopterListVC.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			children = (
 				CA454258246BA897002178EF /* Plane.swift */,
 				CA3A9A5D246FD5630079FA89 /* Helicopter.swift */,
+				CAB529C2247230860057966C /* AirUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				CAC37EAB245E287F00BEB7D6 /* String+Random.swift in Sources */,
 				CA3A9A5E246FD5630079FA89 /* Helicopter.swift in Sources */,
 				CAEFE7CC246FD27C00FAC7D8 /* HelicopterListVC.swift in Sources */,
+				CAB529C3247230860057966C /* AirUser.swift in Sources */,
 				CA454259246BA897002178EF /* Plane.swift in Sources */,
 				CA2F152B246F82F400446A1B /* BaseViewController.swift in Sources */,
 				CA45424E246B9A25002178EF /* InputSMSCodeVC.swift in Sources */,

@@ -10,7 +10,7 @@ import Foundation
 
 struct Constant {
         
-    static let appName = "Plane\(UrlEncoding.br)rent\(UrlEncoding.br)"
+    static let appName = "Plane rent. "
 
 }
 

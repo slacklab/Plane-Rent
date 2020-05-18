@@ -26,7 +26,6 @@ class RentPlaneVC: BaseViewController {
     var helicopters = [Helicopter]()
     let helicopterImagesDir = "http://big-marka.xyz/helicopter_images/"
     
-    
     @IBAction func doneButton(_ sender: Any) {
         let isDateRentRight = !dateRent.isEmpty
         
@@ -36,7 +35,7 @@ class RentPlaneVC: BaseViewController {
                 ) as! BookedVC
             
             self.navigationController!.pushViewController(bookedVC, animated: true)
-            
+            // TODO: add ban for send sms
             sendNeedMessage()
             
         } else {
@@ -96,23 +95,31 @@ class RentPlaneVC: BaseViewController {
     }
     
     func sendNeedMessage() {
-        let valueCurrentAccountType = defaults.string(forKey:
-            UserDefaultList.currentAccountType)
-        let valuePhoneNumberOfCurrentUser = defaults.string(forKey: UserDefaultList.currentPhoneNumberOfUser)
+        
+        // MARK: - Get values from UserDefaults
+        
+        guard let valueCurrentAccountType = defaults.string(forKey:
+            UserDefaultList.currentAccountType) else { return }
+        guard let valuePhoneNumberOfCurrentUser = defaults.string(forKey: UserDefaultList.currentPhoneNumberOfUser) else { return }
+        
+        guard let valueCurrentUserName = defaults.string(forKey: UserDefaultList.currentAccountName) else { return }
+        
+        guard let valueCurrentUserLastName = defaults.string(forKey: UserDefaultList.currentAccountLastName) else { return }
         
         #if DEBUG
         print(valueCurrentAccountType)
         print(valuePhoneNumberOfCurrentUser)
+        print(valueCurrentUserName)
+        print(valueCurrentUserLastName)
         #endif
+        
         
         switch valueCurrentAccountType {
         case AccountType.passenger:
             SmsService.send(phone: helicopters[selectedCell].user_phone,
-                            message: Constant.appName + "")
+                            message: Constant.appName + "\(valueCurrentUserName) \(valueCurrentUserLastName) хочет арендовать у вас \(helicopters[selectedCell].helicopter_model) \(dateRent) в качестве пассажира. Телефон: \(valuePhoneNumberOfCurrentUser)")
         default:
-            print("not set send sms!!!")
+            print("not set for send sms")
         }
-        
-        
     }
 }
