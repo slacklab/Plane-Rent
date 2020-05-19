@@ -31,14 +31,7 @@ class RentPlaneVC: BaseViewController {
         let isDateRentRight = !dateRent.isEmpty
         
         if isDateRentRight {
-            let bookedVC = self.storyboard?.instantiateViewController(
-                withIdentifier: "BookedVC"
-                ) as! BookedVC
-            
-            self.navigationController!.pushViewController(bookedVC, animated: true)
-            // TODO: add ban for send sms
-            sendNeedMessage()
-            
+            submitBookThenNotifyOwner()
         } else {
             print("rent date wrong")
         }
@@ -69,7 +62,7 @@ class RentPlaneVC: BaseViewController {
     func getDateFromPicker() {
         let formatter = DateFormatter()
         
-        formatter.dateFormat = "dd.MM.yyyy HH:MM"
+        formatter.dateFormat = "dd.MM.yyyy"
         
         dateRent = formatter.string(from: rentDatePicker.date)
         
@@ -95,7 +88,7 @@ class RentPlaneVC: BaseViewController {
         }
     }
     
-    func sendNeedMessage() {
+    func submitBookThenNotifyOwner() {
         
         // MARK: - Get values from UserDefaults
         
@@ -117,8 +110,29 @@ class RentPlaneVC: BaseViewController {
         
         switch valueCurrentAccountType {
         case AccountType.passenger:
-            SmsService.send(phone: planes[selectedCell].user_phone,
-                            message: Constant.appName + "\(valueCurrentUserName) \(valueCurrentUserLastName) хочет арендовать у вас \(planes[selectedCell].plane_model) \(dateRent) в качестве пассажира. Телефон: \(valuePhoneNumberOfCurrentUser)")
+            
+            // MARK: - Submit alert and send message to owner
+            
+            let submitAlert = UIAlertController(title: "Подтвердите", message: "Заказать выбранное воздушное судно на \(self.dateRent)? Владельцу будет отправлена информация о вас и ваш номер телефона", preferredStyle: UIAlertController.Style.alert)
+            
+            submitAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction!) in
+                print("Handle Ok logic here")
+                
+                SmsService.send(phone: self.planes[self.selectedCell].user_phone,
+                                message: Constant.appName + "\(valueCurrentUserName) \(valueCurrentUserLastName) хочет арендовать у вас \(self.planes[self.selectedCell].plane_model) \(self.dateRent) в качестве пассажира. Телефон: \(valuePhoneNumberOfCurrentUser)")
+                 let bookedVC = self.storyboard?.instantiateViewController(
+                     withIdentifier: "BookedVC"
+                     ) as! BookedVC
+                 
+                 self.navigationController!.pushViewController(bookedVC, animated: true)
+            }))
+            
+            submitAlert.addAction(UIAlertAction(title: "Отмена", style: .cancel, handler: { (action: UIAlertAction!) in
+                print("Handle Cancel Logic here")
+            }))
+            
+            self.present(submitAlert, animated: true, completion: nil)
+            
         default:
             print("not set for send sms")
         }

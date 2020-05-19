@@ -21,6 +21,7 @@
 		CA454254246B9FA9002178EF /* SelectAirTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA454253246B9FA9002178EF /* SelectAirTypeVC.swift */; };
 		CA454256246BA069002178EF /* PlaneListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA454255246BA069002178EF /* PlaneListVC.swift */; };
 		CA454259246BA897002178EF /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA454258246BA897002178EF /* Plane.swift */; };
+		CA5BCBE724736C2600CF9D7F /* RentHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5BCBE624736C2600CF9D7F /* RentHelper.swift */; };
 		CA5CE1FB246BD05400D597CA /* RentHelicopterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5CE1FA246BD05400D597CA /* RentHelicopterVC.swift */; };
 		CA63B448245DA60600AFC7EF /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA63B447245DA60600AFC7EF /* Color+Hex.swift */; };
 		CA6AAF6624725EDE00DE3EC1 /* RentPlaneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6AAF6524725EDE00DE3EC1 /* RentPlaneVC.swift */; };
@@ -66,6 +67,7 @@
 		CA454253246B9FA9002178EF /* SelectAirTypeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAirTypeVC.swift; sourceTree = "<group>"; };
 		CA454255246BA069002178EF /* PlaneListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneListVC.swift; sourceTree = "<group>"; };
 		CA454258246BA897002178EF /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
+		CA5BCBE624736C2600CF9D7F /* RentHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentHelper.swift; sourceTree = "<group>"; };
 		CA5CE1FA246BD05400D597CA /* RentHelicopterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentHelicopterVC.swift; sourceTree = "<group>"; };
 		CA63B447245DA60600AFC7EF /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
 		CA6AAF6524725EDE00DE3EC1 /* RentPlaneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentPlaneVC.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			children = (
 				CAB484D3245E069C00F31870 /* UserDefaultList.swift */,
 				CA2ADAF8246E29CF0010F2CB /* Validate.swift */,
+				CA5BCBE624736C2600CF9D7F /* RentHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				CA5CE1FB246BD05400D597CA /* RentHelicopterVC.swift in Sources */,
 				CAB484D4245E069C00F31870 /* UserDefaultList.swift in Sources */,
 				CA91A6C9246B92B800D0D370 /* PlaneCell.swift in Sources */,
+				CA5BCBE724736C2600CF9D7F /* RentHelper.swift in Sources */,
 				CA88E6A3245E56BF00C15809 /* AccountType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

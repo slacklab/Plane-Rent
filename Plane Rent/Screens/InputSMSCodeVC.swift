@@ -41,12 +41,16 @@ class InputSMSCodeVC: BaseViewController {
             self.navigationController!.pushViewController(selectRoleVC, animated: true)
             
             recordCurrentAccountPhoneNumber()
+            
+            defaults.set(true, forKey: UserDefaultList.hasFirstAuth)
+
             DispatchQueue.main.async {
 //                self.downloadJsonUserInfoByPhoneAsync()
                 self.getInfoAboutUser()
                 self.recordUserInfoToUserDefaults()
             }
         } else {
+            defaults.set(false, forKey: UserDefaultList.hasFirstAuth)
             print("code - wrong")
         }
     }

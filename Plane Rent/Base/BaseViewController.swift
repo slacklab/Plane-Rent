@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class BaseViewController: UIViewController {
     
@@ -18,7 +19,7 @@ class BaseViewController: UIViewController {
         setupStatusBar()
         
         setupTabBar()
-
+        
         setupNavigationBar()
         
         self.tabBarController?.tabBar.isHidden = true
@@ -33,6 +34,12 @@ class BaseViewController: UIViewController {
         navigationController?.navigationBar.tintColor = .white
         // dismiss "Back" text
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        // set custom image for left button
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: R.image.backArrowPdf(), style: .plain, target: self, action: #selector(backToPreviousVC))
+    }
+    
+    @objc func backToPreviousVC() {
+        navigationController?.popViewController(animated: true)
     }
     
     func setupStatusBar() {
