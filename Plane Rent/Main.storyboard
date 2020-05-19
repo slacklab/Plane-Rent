@@ -10,7 +10,7 @@
         <!--Input PhoneVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="InputPhoneVC" customModule="Plane_rent" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InputPhoneVC" id="BYZ-38-t0r" customClass="InputPhoneVC" customModule="Plane_rent" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -205,7 +205,7 @@
         <!--Navigation Controller-->
         <scene sceneID="e2q-W8-DqU">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Mp-d3-ybo" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="UINavigationController" automaticallyAdjustsScrollViewInsets="NO" id="3Mp-d3-ybo" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BE2-eG-EUk">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

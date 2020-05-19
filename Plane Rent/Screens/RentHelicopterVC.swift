@@ -111,7 +111,7 @@ class RentHelicopterVC: BaseViewController {
         
         
         switch valueCurrentAccountType {
-        case AccountType.passenger:  
+        case AccountType.passenger:
             
             // MARK: - Submit alert and send message to owner
             
