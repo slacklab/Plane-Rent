@@ -90,6 +90,7 @@
                                         <state key="normal" image="round-owner"/>
                                         <connections>
                                             <action selector="ownerButton:" destination="lqw-Ni-pAI" eventType="touchUpInside" id="iQp-Nc-M4b"/>
+                                            <segue destination="8x3-Gz-Mh6" kind="show" id="e9J-vN-XVW"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQb-eg-HLj" userLabel="pilot">
@@ -97,6 +98,7 @@
                                         <state key="normal" image="round-pilot"/>
                                         <connections>
                                             <action selector="pilotButton:" destination="lqw-Ni-pAI" eventType="touchUpInside" id="iK2-VI-heI"/>
+                                            <segue destination="sEC-zc-MUc" kind="show" id="KQo-hu-2Um"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1G-yo-Ygm" userLabel="passenger">
@@ -288,7 +290,7 @@
             <objects>
                 <viewController storyboardIdentifier="PilotVC" id="sEC-zc-MUc" customClass="PilotVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9fW-2R-Bga">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-rect" translatesAutoresizingMaskIntoConstraints="NO" id="Hw5-GN-ayW">
@@ -325,7 +327,7 @@
             <objects>
                 <viewController storyboardIdentifier="OwnerVC" id="8x3-Gz-Mh6" customClass="OwnerVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="svg-qQ-b7q">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-rect" translatesAutoresizingMaskIntoConstraints="NO" id="rFu-I5-fud">
@@ -340,22 +342,43 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y8M-Vg-kqG">
+                                <rect key="frame" x="0.0" y="96" width="414" height="746"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="tBB-TI-Myi">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tBB-TI-Myi" id="zYK-ka-HTX">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="y8M-Vg-kqG" firstAttribute="leading" secondItem="g2s-em-Acs" secondAttribute="leading" id="6On-Eg-PNZ"/>
+                            <constraint firstAttribute="bottom" secondItem="y8M-Vg-kqG" secondAttribute="bottom" id="DJV-Uz-A44"/>
+                            <constraint firstItem="y8M-Vg-kqG" firstAttribute="top" secondItem="rFu-I5-fud" secondAttribute="bottom" constant="8" id="HF4-Pr-Y4P"/>
                             <constraint firstItem="iEa-Av-Fzu" firstAttribute="centerX" secondItem="rFu-I5-fud" secondAttribute="centerX" id="Ihk-Wr-mG7"/>
                             <constraint firstItem="iEa-Av-Fzu" firstAttribute="centerY" secondItem="rFu-I5-fud" secondAttribute="centerY" id="KqL-OV-LMx"/>
                             <constraint firstItem="g2s-em-Acs" firstAttribute="trailing" secondItem="rFu-I5-fud" secondAttribute="trailing" id="bVn-2m-BXF"/>
+                            <constraint firstItem="y8M-Vg-kqG" firstAttribute="trailing" secondItem="g2s-em-Acs" secondAttribute="trailing" id="hja-ZD-HTA"/>
                             <constraint firstItem="rFu-I5-fud" firstAttribute="top" secondItem="svg-qQ-b7q" secondAttribute="top" id="ltf-9S-XyN"/>
                             <constraint firstItem="rFu-I5-fud" firstAttribute="leading" secondItem="g2s-em-Acs" secondAttribute="leading" id="wSB-zw-5Oq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="g2s-em-Acs"/>
                     </view>
                     <navigationItem key="navigationItem" id="OpD-2T-40S"/>
+                    <connections>
+                        <outlet property="tableView" destination="y8M-Vg-kqG" id="R6Z-7o-5yW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4M-b0-cwE" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2716" y="-1057"/>
+            <point key="canvasLocation" x="2715.9420289855075" y="-1057.3660714285713"/>
         </scene>
         <!--RegistrationVC-->
         <scene sceneID="qJd-hS-jUi">

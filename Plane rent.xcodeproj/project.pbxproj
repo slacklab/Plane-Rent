@@ -40,6 +40,10 @@
 		CAEFE7CC246FD27C00FAC7D8 /* HelicopterListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEFE7CB246FD27C00FAC7D8 /* HelicopterListVC.swift */; };
 		CAF00690246E3A8C00F09524 /* UIView+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF0068F246E3A8C00F09524 /* UIView+Rotate.swift */; };
 		CAF00692246E553300F09524 /* BookedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF00691246E553300F09524 /* BookedVC.swift */; };
+		CAF2DBFB2473B9E30037D37D /* OwnerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF2DBFA2473B9E30037D37D /* OwnerVC.swift */; };
+		CAF2DBFD2473BA7B0037D37D /* ProfileNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF2DBFC2473BA7B0037D37D /* ProfileNameCell.swift */; };
+		CAF2DBFF2473BADB0037D37D /* ProfileButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF2DBFE2473BADB0037D37D /* ProfileButtonCell.swift */; };
+		CAF2DC012473BB050037D37D /* ProfileLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF2DC002473BB050037D37D /* ProfileLabelCell.swift */; };
 		CAFC51EB246112C100B7AE12 /* String+StartSym.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFC51EA246112C100B7AE12 /* String+StartSym.swift */; };
 		CAFE7B27245A211100167140 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE7B26245A211100167140 /* AppDelegate.swift */; };
 		CAFE7B29245A211100167140 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE7B28245A211100167140 /* SceneDelegate.swift */; };
@@ -87,6 +91,10 @@
 		CAEFE7CB246FD27C00FAC7D8 /* HelicopterListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelicopterListVC.swift; sourceTree = "<group>"; };
 		CAF0068F246E3A8C00F09524 /* UIView+Rotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Rotate.swift"; sourceTree = "<group>"; };
 		CAF00691246E553300F09524 /* BookedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookedVC.swift; sourceTree = "<group>"; };
+		CAF2DBFA2473B9E30037D37D /* OwnerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerVC.swift; sourceTree = "<group>"; };
+		CAF2DBFC2473BA7B0037D37D /* ProfileNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNameCell.swift; sourceTree = "<group>"; };
+		CAF2DBFE2473BADB0037D37D /* ProfileButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileButtonCell.swift; sourceTree = "<group>"; };
+		CAF2DC002473BB050037D37D /* ProfileLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLabelCell.swift; sourceTree = "<group>"; };
 		CAFC51EA246112C100B7AE12 /* String+StartSym.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+StartSym.swift"; sourceTree = "<group>"; };
 		CAFE7B23245A211100167140 /* Plane rent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plane rent.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAFE7B26245A211100167140 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -172,14 +180,14 @@
 		CA9A1A65246A324000477EB5 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				CA91A6C8246B92B800D0D370 /* PlaneCell.swift */,
+				CAF2DC032473BB5E0037D37D /* Owner */,
+				CAF2DC022473BB340037D37D /* Cells */,
+				CAF2DBF82473B8F60037D37D /* AircraftLists */,
 				CA9A1A3C246A2DE400477EB5 /* InputPhoneVC.swift */,
 				CA45424D246B9A25002178EF /* InputSMSCodeVC.swift */,
 				CA45424F246B9DEB002178EF /* SelectRoleVC.swift */,
 				CA454251246B9E89002178EF /* RegistrationVC.swift */,
 				CA454253246B9FA9002178EF /* SelectAirTypeVC.swift */,
-				CA454255246BA069002178EF /* PlaneListVC.swift */,
-				CAEFE7CB246FD27C00FAC7D8 /* HelicopterListVC.swift */,
 				CA5CE1FA246BD05400D597CA /* RentHelicopterVC.swift */,
 				CAF00691246E553300F09524 /* BookedVC.swift */,
 				CA6AAF6524725EDE00DE3EC1 /* RentPlaneVC.swift */,
@@ -217,6 +225,42 @@
 				CAFE7B28245A211100167140 /* SceneDelegate.swift */,
 			);
 			path = System;
+			sourceTree = "<group>";
+		};
+		CAF2DBF82473B8F60037D37D /* AircraftLists */ = {
+			isa = PBXGroup;
+			children = (
+				CA454255246BA069002178EF /* PlaneListVC.swift */,
+				CAEFE7CB246FD27C00FAC7D8 /* HelicopterListVC.swift */,
+			);
+			path = AircraftLists;
+			sourceTree = "<group>";
+		};
+		CAF2DBF92473B9620037D37D /* OwnerCells */ = {
+			isa = PBXGroup;
+			children = (
+				CAF2DBFC2473BA7B0037D37D /* ProfileNameCell.swift */,
+				CAF2DBFE2473BADB0037D37D /* ProfileButtonCell.swift */,
+				CAF2DC002473BB050037D37D /* ProfileLabelCell.swift */,
+			);
+			path = OwnerCells;
+			sourceTree = "<group>";
+		};
+		CAF2DC022473BB340037D37D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CAF2DBF92473B9620037D37D /* OwnerCells */,
+				CA91A6C8246B92B800D0D370 /* PlaneCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CAF2DC032473BB5E0037D37D /* Owner */ = {
+			isa = PBXGroup;
+			children = (
+				CAF2DBFA2473B9E30037D37D /* OwnerVC.swift */,
+			);
+			path = Owner;
 			sourceTree = "<group>";
 		};
 		CAFE7B1A245A211100167140 = {
@@ -416,6 +460,7 @@
 				CAEFE7CC246FD27C00FAC7D8 /* HelicopterListVC.swift in Sources */,
 				CAB529C3247230860057966C /* AirUser.swift in Sources */,
 				CA454259246BA897002178EF /* Plane.swift in Sources */,
+				CAF2DBFB2473B9E30037D37D /* OwnerVC.swift in Sources */,
 				CA2F152B246F82F400446A1B /* BaseViewController.swift in Sources */,
 				CA45424E246B9A25002178EF /* InputSMSCodeVC.swift in Sources */,
 				CA454256246BA069002178EF /* PlaneListVC.swift in Sources */,
@@ -439,6 +484,9 @@
 				CA424E8F2470E4490082FDEF /* Constant.swift in Sources */,
 				CA2ADAF9246E29CF0010F2CB /* Validate.swift in Sources */,
 				CA9EBF13245A2EEC00380442 /* R.generated.swift in Sources */,
+				CAF2DC012473BB050037D37D /* ProfileLabelCell.swift in Sources */,
+				CAF2DBFD2473BA7B0037D37D /* ProfileNameCell.swift in Sources */,
+				CAF2DBFF2473BADB0037D37D /* ProfileButtonCell.swift in Sources */,
 				CA5CE1FB246BD05400D597CA /* RentHelicopterVC.swift in Sources */,
 				CAB484D4245E069C00F31870 /* UserDefaultList.swift in Sources */,
 				CA91A6C9246B92B800D0D370 /* PlaneCell.swift in Sources */,
