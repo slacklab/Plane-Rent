@@ -69,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1052.1739130434783" y="388.39285714285711"/>
+            <point key="canvasLocation" x="-257" y="185"/>
         </scene>
         <!--Select RoleVC-->
         <scene sceneID="qPw-SJ-VfO">
@@ -200,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="21M-vU-9fl" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1847.826086956522" y="85.714285714285708"/>
+            <point key="canvasLocation" x="1229" y="-483"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="e2q-W8-DqU">
@@ -218,7 +218,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xtM-Yp-MIi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.40000000000001" y="85.714285714285722"/>
+            <point key="canvasLocation" x="-1138" y="185"/>
         </scene>
         <!--Select Air TypeVC-->
         <scene sceneID="qV2-bC-Zlx">
@@ -281,7 +281,81 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OuB-jx-OFu" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3881.1594202898555" y="-231.02678571428569"/>
+            <point key="canvasLocation" x="3938" y="-231"/>
+        </scene>
+        <!--PilotVC-->
+        <scene sceneID="PaF-Bp-h8a">
+            <objects>
+                <viewController storyboardIdentifier="PilotVC" id="sEC-zc-MUc" customClass="PilotVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9fW-2R-Bga">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-rect" translatesAutoresizingMaskIntoConstraints="NO" id="Hw5-GN-ayW">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="qEy-JU-mYn"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пилот. Хочу взять в аренду" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpC-Zt-Xdu">
+                                <rect key="frame" x="98" y="34" width="218.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hpC-Zt-Xdu" firstAttribute="centerX" secondItem="Hw5-GN-ayW" secondAttribute="centerX" id="EAv-9h-wvY"/>
+                            <constraint firstItem="Hw5-GN-ayW" firstAttribute="top" secondItem="9fW-2R-Bga" secondAttribute="top" id="FAA-Mo-a8I"/>
+                            <constraint firstItem="ms4-kL-jpN" firstAttribute="trailing" secondItem="Hw5-GN-ayW" secondAttribute="trailing" id="OU0-Rg-xgW"/>
+                            <constraint firstItem="Hw5-GN-ayW" firstAttribute="leading" secondItem="ms4-kL-jpN" secondAttribute="leading" id="Ylo-UZ-zK8"/>
+                            <constraint firstItem="hpC-Zt-Xdu" firstAttribute="centerY" secondItem="Hw5-GN-ayW" secondAttribute="centerY" id="d2R-lm-aGB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ms4-kL-jpN"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="neI-aM-44T"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c5b-Mh-tod" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2716" y="565"/>
+        </scene>
+        <!--OwnerVC-->
+        <scene sceneID="urq-uc-7Rj">
+            <objects>
+                <viewController storyboardIdentifier="OwnerVC" id="8x3-Gz-Mh6" customClass="OwnerVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="svg-qQ-b7q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-rect" translatesAutoresizingMaskIntoConstraints="NO" id="rFu-I5-fud">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="89l-WA-t7b"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Владелец. Хочу сдать в аренду" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEa-Av-Fzu">
+                                <rect key="frame" x="82" y="34" width="250.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="iEa-Av-Fzu" firstAttribute="centerX" secondItem="rFu-I5-fud" secondAttribute="centerX" id="Ihk-Wr-mG7"/>
+                            <constraint firstItem="iEa-Av-Fzu" firstAttribute="centerY" secondItem="rFu-I5-fud" secondAttribute="centerY" id="KqL-OV-LMx"/>
+                            <constraint firstItem="g2s-em-Acs" firstAttribute="trailing" secondItem="rFu-I5-fud" secondAttribute="trailing" id="bVn-2m-BXF"/>
+                            <constraint firstItem="rFu-I5-fud" firstAttribute="top" secondItem="svg-qQ-b7q" secondAttribute="top" id="ltf-9S-XyN"/>
+                            <constraint firstItem="rFu-I5-fud" firstAttribute="leading" secondItem="g2s-em-Acs" secondAttribute="leading" id="wSB-zw-5Oq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="g2s-em-Acs"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OpD-2T-40S"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B4M-b0-cwE" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2716" y="-1057"/>
         </scene>
         <!--RegistrationVC-->
         <scene sceneID="qJd-hS-jUi">
@@ -437,7 +511,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lg8-He-9By" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2716" y="460.34482758620692"/>
+            <point key="canvasLocation" x="1229" y="217"/>
         </scene>
         <!--Plane ListVC-->
         <scene sceneID="JPR-cS-DAv">
