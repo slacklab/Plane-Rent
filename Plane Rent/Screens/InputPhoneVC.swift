@@ -54,9 +54,15 @@ class InputPhoneVC: BaseViewController {
         super.viewDidLoad()
         
         setupUI()
+        disableNavBar()
     }
     
     func setupUI() {
         navigationController?.isToolbarHidden = false
+    }
+    
+    /// Use clear pixel for it and no actions
+    func disableNavBar() {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: R.image.clearPixel(), style: .plain, target: nil, action: nil)
     }
 }
