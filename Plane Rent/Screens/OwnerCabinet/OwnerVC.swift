@@ -8,49 +8,32 @@
 
 import UIKit
 
-//class OwnerVC: UIViewController {
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        // Do any additional setup after loading the view.
-//    }
-//
-//
-//    /*
-//    // MARK: - Navigation
-//
-//    // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        // Get the new view controller using segue.destination.
-//        // Pass the selected object to the new view controller.
-//    }
-//    */
-//
-//}
-
-class OwnerVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class OwnerVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
-    let houseData = ["Arryn", "Baratheon", "Greyjoy", "Lannister", "Martell", "Stark", "Targaryen", "Tully", "Tyrell"]
-
+    var name: String = ""
+    var lastName: String = ""
+    
+//    let houseData = ["Arryn", "Baratheon", "Greyjoy", "Lannister", "Martell", "Stark", "Targaryen", "Tully", "Tyrell"]
+    let houseData = ["Arryn", "Baratheon"]
         
     let wordsData = ["As high as honor", "Ours is the fury", "We do not sow", "Hear me roar", "Unbowed, unbent, unbroken", "Winter is coming", "fire and blood", "Family, duty, honor", "Growing strong"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "UITableView"
+        self.title = "Хочу сдать в аренду"
         
         tableView.dataSource = self
         tableView.delegate = self
         
+        let nibNameRight = UINib(nibName: "ProfileCell", bundle: nil)
+        tableView.register(nibNameRight, forCellReuseIdentifier: "ProfileCell")
+        
         let nibName = UINib(nibName: "TypeTitleCell", bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: "tableViewCell")
         
-        let nibNameRight = UINib(nibName: "ProfileCell", bundle: nil)
-        tableView.register(nibNameRight, forCellReuseIdentifier: "ProfileCell")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -61,7 +44,7 @@ class OwnerVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         if (indexPath.item % 2 == 0) {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath) as! ProfileCell
-            cell.commonInit("got_\(indexPath.item)", title: houseData[indexPath.item], sub: wordsData[indexPath.item])
+            cell.commonInit("got_\(indexPath.item)", title: houseData[indexPath.item], sub: wordsData[indexPath.item], buttonImage: R.image.doneBlue()!)
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as! TypeTitleCell
@@ -86,6 +69,10 @@ class OwnerVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    override func dismissKeyboardOnTap() {
+        
+    }
 
 }
 

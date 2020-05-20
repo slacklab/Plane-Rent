@@ -16,6 +16,7 @@ class ProfileCell: UITableViewCell {
     
     @IBOutlet weak var subLabel: UILabel!
 
+    @IBOutlet weak var actionButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,9 +29,10 @@ class ProfileCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func commonInit(_ imageName: String, title: String, sub: String) {
+    func commonInit(_ imageName: String, title: String, sub: String, buttonImage: UIImage) {
         logoImage.image = UIImage(named: imageName)
         titleLabel.text = title
         subLabel.text = sub
+        actionButton.setImage(buttonImage, for: .normal)
     }
 }

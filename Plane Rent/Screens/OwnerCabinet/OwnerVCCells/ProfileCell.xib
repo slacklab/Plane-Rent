@@ -58,6 +58,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="actionButton" destination="qhs-PB-Yl0" id="xH6-J5-HKx"/>
                 <outlet property="logoImage" destination="3tB-0p-YgQ" id="zQN-No-91w"/>
                 <outlet property="subLabel" destination="Kpq-IB-tjQ" id="qNh-T5-BdC"/>
                 <outlet property="titleLabel" destination="BBK-08-l50" id="QuZ-YF-9FN"/>
