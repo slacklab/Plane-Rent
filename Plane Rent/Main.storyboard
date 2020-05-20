@@ -285,10 +285,10 @@
             </objects>
             <point key="canvasLocation" x="3938" y="-231"/>
         </scene>
-        <!--View Controller-->
+        <!--PilotVC-->
         <scene sceneID="PaF-Bp-h8a">
             <objects>
-                <viewController id="sEC-zc-MUc" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PilotVC" id="sEC-zc-MUc" customClass="PilotVC" customModule="Plane_rent" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9fW-2R-Bga">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -322,10 +322,10 @@
             </objects>
             <point key="canvasLocation" x="2716" y="565"/>
         </scene>
-        <!--View Controller-->
+        <!--OwnerVC-->
         <scene sceneID="urq-uc-7Rj">
             <objects>
-                <viewController id="8x3-Gz-Mh6" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OwnerVC" id="8x3-Gz-Mh6" customClass="OwnerVC" customModule="Plane_rent" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="svg-qQ-b7q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

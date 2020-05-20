@@ -12,6 +12,8 @@
 		CA2ADAF9246E29CF0010F2CB /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2ADAF8246E29CF0010F2CB /* Validate.swift */; };
 		CA2ADAFB246E2EFB0010F2CB /* RequestList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2ADAFA246E2EFB0010F2CB /* RequestList.swift */; };
 		CA2F152B246F82F400446A1B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2F152A246F82F400446A1B /* BaseViewController.swift */; };
+		CA37BFF22474D09000ADB2CF /* OwnerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37BFF12474D09000ADB2CF /* OwnerVC.swift */; };
+		CA37BFF42474D0A800ADB2CF /* PilotVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37BFF32474D0A800ADB2CF /* PilotVC.swift */; };
 		CA3A9A5E246FD5630079FA89 /* Helicopter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A9A5D246FD5630079FA89 /* Helicopter.swift */; };
 		CA3D14D8246FB0F200BBCD05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3D14D6246FB0F200BBCD05 /* LaunchScreen.storyboard */; };
 		CA424E8F2470E4490082FDEF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA424E8E2470E4490082FDEF /* Constant.swift */; };
@@ -58,6 +60,8 @@
 		CA2ADAF8246E29CF0010F2CB /* Validate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
 		CA2ADAFA246E2EFB0010F2CB /* RequestList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestList.swift; sourceTree = "<group>"; };
 		CA2F152A246F82F400446A1B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		CA37BFF12474D09000ADB2CF /* OwnerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerVC.swift; sourceTree = "<group>"; };
+		CA37BFF32474D0A800ADB2CF /* PilotVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilotVC.swift; sourceTree = "<group>"; };
 		CA3A9A5D246FD5630079FA89 /* Helicopter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helicopter.swift; sourceTree = "<group>"; };
 		CA3D14D7246FB0F200BBCD05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA424E8E2470E4490082FDEF /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -139,6 +143,22 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		CA37BFEF2474D04D00ADB2CF /* OwnerCabinet */ = {
+			isa = PBXGroup;
+			children = (
+				CA37BFF12474D09000ADB2CF /* OwnerVC.swift */,
+			);
+			path = OwnerCabinet;
+			sourceTree = "<group>";
+		};
+		CA37BFF02474D05D00ADB2CF /* PilotCabinet */ = {
+			isa = PBXGroup;
+			children = (
+				CA37BFF32474D0A800ADB2CF /* PilotVC.swift */,
+			);
+			path = PilotCabinet;
+			sourceTree = "<group>";
+		};
 		CA454257246BA870002178EF /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +192,8 @@
 		CA9A1A65246A324000477EB5 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				CA37BFF02474D05D00ADB2CF /* PilotCabinet */,
+				CA37BFEF2474D04D00ADB2CF /* OwnerCabinet */,
 				CAF2DBF82473B8F60037D37D /* AircraftLists */,
 				CA9A1A3C246A2DE400477EB5 /* InputPhoneVC.swift */,
 				CA45424D246B9A25002178EF /* InputSMSCodeVC.swift */,
@@ -424,6 +446,7 @@
 				CAEFE7CC246FD27C00FAC7D8 /* HelicopterListVC.swift in Sources */,
 				CAB529C3247230860057966C /* AirUser.swift in Sources */,
 				CA454259246BA897002178EF /* Plane.swift in Sources */,
+				CA37BFF22474D09000ADB2CF /* OwnerVC.swift in Sources */,
 				CA2F152B246F82F400446A1B /* BaseViewController.swift in Sources */,
 				CA45424E246B9A25002178EF /* InputSMSCodeVC.swift in Sources */,
 				CA454256246BA069002178EF /* PlaneListVC.swift in Sources */,
@@ -442,6 +465,7 @@
 				CA454250246B9DEB002178EF /* SelectRoleVC.swift in Sources */,
 				CA2ADAFB246E2EFB0010F2CB /* RequestList.swift in Sources */,
 				CA0BA791245A6CBF00A9F992 /* DismissingKeyboard.swift in Sources */,
+				CA37BFF42474D0A800ADB2CF /* PilotVC.swift in Sources */,
 				CA780C50245BC7560052D65B /* Links.swift in Sources */,
 				CA9A1A3D246A2DE400477EB5 /* InputPhoneVC.swift in Sources */,
 				CA424E8F2470E4490082FDEF /* Constant.swift in Sources */,
