@@ -9,15 +9,20 @@
 import UIKit
 
 class OwnerVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     var name: String = ""
     var lastName: String = ""
     
-//    let houseData = ["Arryn", "Baratheon", "Greyjoy", "Lannister", "Martell", "Stark", "Targaryen", "Tully", "Tyrell"]
+    final let url = URL(string: "http://big-marka.xyz/DB_SELECT_AIRPLANES_BY_PHONE.php?where=none")
+    
+    private var planes = [Plane]()
+    
+    var cell : UITableViewCell = UITableViewCell()
+
     let houseData = ["Arryn", "Baratheon"]
-        
+    
     let wordsData = ["As high as honor", "Ours is the fury", "We do not sow", "Hear me roar", "Unbowed, unbent, unbroken", "Winter is coming", "fire and blood", "Family, duty, honor", "Growing strong"]
     
     override func viewDidLoad() {
@@ -25,8 +30,12 @@ class OwnerVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
         
         self.title = "Хочу сдать в аренду"
         
+        
+        
         tableView.dataSource = self
         tableView.delegate = self
+        
+        // Register all cells storyboards too
         
         let nibNameRight = UINib(nibName: "ProfileCell", bundle: nil)
         tableView.register(nibNameRight, forCellReuseIdentifier: "ProfileCell")
@@ -34,46 +43,129 @@ class OwnerVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
         let nibName = UINib(nibName: "TypeTitleCell", bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: "tableViewCell")
         
+//        tableView.register(cell.classForCoder, forCellWithReuseIdentifier: "PlaneCell")
+//        tableView.register(<#T##cellClass: AnyClass?##AnyClass?#>, forCellReuseIdentifier: <#T##String#>)
+//        
+//        tableView.register(<#T##aClass: AnyClass?##AnyClass?#>, forHeaderFooterViewReuseIdentifier: <#T##String#>)
+
+        
+        downloadJson()
+        tableView.tableFooterView = UIView()
+        
+        
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return houseData.count
+        return houseData.count + planes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if (indexPath.item % 2 == 0) {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath) as! ProfileCell
-            cell.commonInit("got_\(indexPath.item)", title: houseData[indexPath.item], sub: wordsData[indexPath.item], buttonImage: R.image.doneBlue()!)
-            return cell
-        } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as! TypeTitleCell
-            cell.commonInit(title: houseData[indexPath.item])
-            return cell
+        print("in cellForRowAt")
+        
+        //        if (indexPath.item == 0) {
+        //            let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath) as! ProfileCell
+        //            cell.commonInit("got_\(indexPath.item)", title: houseData[indexPath.item], sub: wordsData[indexPath.item], buttonImage: R.image.doneBlue()!)
+        //            return cell
+        //        } else if (indexPath.item == 1){
+        //            let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as! TypeTitleCell
+        //            cell.commonInit(title: houseData[indexPath.item])
+        //            return cell
+        //        } else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PlaneCell", for: indexPath) as? PlaneCell else { return UITableViewCell() }
+        
+        
+        print("after cell")
+        
+        print(planes[indexPath.row].plane_base)
+        
+        cell.planeAirportLabel.text = planes[indexPath.row].plane_base
+        cell.planeModelLabel.text = planes[indexPath.row].plane_model
+        cell.planePriceLabel.text = planes[indexPath.row].plane_price
+        
+        let planeImagesDir = "http://big-marka.xyz/plane_images/"
+        
+        if let imageURL = URL(string:
+            ((planeImagesDir + planes[indexPath.row].plane_image)
+                .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+        )) {
+            DispatchQueue.global().async {
+                let data = try? Data(contentsOf: imageURL)
+                if let data = data {
+                    let image = UIImage(data: data)
+                    DispatchQueue.main.async {
+                        cell.planeImage?.image = image
+                    }
+                }
+            }
         }
+        
+        return cell
+        //        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 86
+        //        if indexPath.row == 0 {
+        //            return 225
+        //        }
+        //
+        //        if indexPath.row == 1 {
+        //            return 50
+        //        }
+        
+        return 225
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let vc = DetailVC()
-//        vc.commonInit("got_bg_\(indexPath.item)", title: houseData[indexPath.item])
-//        self.navigationController?.pushViewController(vc, animated: true)
-//        self.tableView.deselectRow(at: indexPath, animated: true)
-//    }
-
+    //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    //        let vc = DetailVC()
+    //        vc.commonInit("got_bg_\(indexPath.item)", title: houseData[indexPath.item])
+    //        self.navigationController?.pushViewController(vc, animated: true)
+    //        self.tableView.deselectRow(at: indexPath, animated: true)
+    //    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     
     override func dismissKeyboardOnTap() {
         
     }
-
+    
+    // MARK: - donwload planes by phone
+    
+    func downloadJson() {
+        guard let downloadUrl = url else { return }
+        
+        URLSession.shared.dataTask(with: downloadUrl) { data, urlResponse, error in
+            
+            guard let data = data, error == nil, urlResponse != nil else {
+                print("smth wrong")
+                return
+            }
+            
+            print("downloaded")
+            
+            do {
+                let decoder = JSONDecoder()
+                
+                let downloadedPlanes = try decoder.decode(Planes.self, from: data)
+                
+                self.planes = downloadedPlanes.air_airplanes
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+                
+            } catch {
+                print("smth wrong after download")
+            }
+            
+        }.resume()
+    }
+    
+    
 }
 
 
