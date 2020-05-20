@@ -342,18 +342,29 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rfl-FN-u6n">
+                                <rect key="frame" x="0.0" y="96" width="414" height="746"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="rfl-FN-u6n" secondAttribute="bottom" id="GBh-jd-7qO"/>
+                            <constraint firstItem="rfl-FN-u6n" firstAttribute="top" secondItem="rFu-I5-fud" secondAttribute="bottom" constant="8" id="IfU-WL-TjR"/>
                             <constraint firstItem="iEa-Av-Fzu" firstAttribute="centerX" secondItem="rFu-I5-fud" secondAttribute="centerX" id="Ihk-Wr-mG7"/>
                             <constraint firstItem="iEa-Av-Fzu" firstAttribute="centerY" secondItem="rFu-I5-fud" secondAttribute="centerY" id="KqL-OV-LMx"/>
                             <constraint firstItem="g2s-em-Acs" firstAttribute="trailing" secondItem="rFu-I5-fud" secondAttribute="trailing" id="bVn-2m-BXF"/>
                             <constraint firstItem="rFu-I5-fud" firstAttribute="top" secondItem="svg-qQ-b7q" secondAttribute="top" id="ltf-9S-XyN"/>
+                            <constraint firstItem="rfl-FN-u6n" firstAttribute="trailing" secondItem="g2s-em-Acs" secondAttribute="trailing" id="rQZ-93-h2X"/>
                             <constraint firstItem="rFu-I5-fud" firstAttribute="leading" secondItem="g2s-em-Acs" secondAttribute="leading" id="wSB-zw-5Oq"/>
+                            <constraint firstItem="rfl-FN-u6n" firstAttribute="leading" secondItem="g2s-em-Acs" secondAttribute="leading" id="zKu-us-dIl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="g2s-em-Acs"/>
                     </view>
                     <navigationItem key="navigationItem" id="OpD-2T-40S"/>
+                    <connections>
+                        <outlet property="tableView" destination="rfl-FN-u6n" id="ApP-Ko-hbi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4M-b0-cwE" sceneMemberID="firstResponder"/>
             </objects>

@@ -14,6 +14,10 @@
 		CA2F152B246F82F400446A1B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2F152A246F82F400446A1B /* BaseViewController.swift */; };
 		CA37BFF22474D09000ADB2CF /* OwnerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37BFF12474D09000ADB2CF /* OwnerVC.swift */; };
 		CA37BFF42474D0A800ADB2CF /* PilotVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37BFF32474D0A800ADB2CF /* PilotVC.swift */; };
+		CA37BFFB2474D35100ADB2CF /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37BFF72474D35000ADB2CF /* ProfileCell.swift */; };
+		CA37BFFC2474D35100ADB2CF /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA37BFF82474D35000ADB2CF /* TableViewCell.xib */; };
+		CA37BFFD2474D35100ADB2CF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37BFF92474D35000ADB2CF /* TableViewCell.swift */; };
+		CA37C0042474E53100ADB2CF /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA37C0032474E53100ADB2CF /* ProfileCell.xib */; };
 		CA3A9A5E246FD5630079FA89 /* Helicopter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A9A5D246FD5630079FA89 /* Helicopter.swift */; };
 		CA3D14D8246FB0F200BBCD05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3D14D6246FB0F200BBCD05 /* LaunchScreen.storyboard */; };
 		CA424E8F2470E4490082FDEF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA424E8E2470E4490082FDEF /* Constant.swift */; };
@@ -62,6 +66,10 @@
 		CA2F152A246F82F400446A1B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CA37BFF12474D09000ADB2CF /* OwnerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerVC.swift; sourceTree = "<group>"; };
 		CA37BFF32474D0A800ADB2CF /* PilotVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilotVC.swift; sourceTree = "<group>"; };
+		CA37BFF72474D35000ADB2CF /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		CA37BFF82474D35000ADB2CF /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		CA37BFF92474D35000ADB2CF /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		CA37C0032474E53100ADB2CF /* ProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
 		CA3A9A5D246FD5630079FA89 /* Helicopter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helicopter.swift; sourceTree = "<group>"; };
 		CA3D14D7246FB0F200BBCD05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA424E8E2470E4490082FDEF /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -146,6 +154,7 @@
 		CA37BFEF2474D04D00ADB2CF /* OwnerCabinet */ = {
 			isa = PBXGroup;
 			children = (
+				CA37BFF62474D2F800ADB2CF /* OwnerVCCells */,
 				CA37BFF12474D09000ADB2CF /* OwnerVC.swift */,
 			);
 			path = OwnerCabinet;
@@ -154,9 +163,28 @@
 		CA37BFF02474D05D00ADB2CF /* PilotCabinet */ = {
 			isa = PBXGroup;
 			children = (
+				CA37BFF52474D2EB00ADB2CF /* PilotVCCells */,
 				CA37BFF32474D0A800ADB2CF /* PilotVC.swift */,
 			);
 			path = PilotCabinet;
+			sourceTree = "<group>";
+		};
+		CA37BFF52474D2EB00ADB2CF /* PilotVCCells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PilotVCCells;
+			sourceTree = "<group>";
+		};
+		CA37BFF62474D2F800ADB2CF /* OwnerVCCells */ = {
+			isa = PBXGroup;
+			children = (
+				CA37C0032474E53100ADB2CF /* ProfileCell.xib */,
+				CA37BFF72474D35000ADB2CF /* ProfileCell.swift */,
+				CA37BFF92474D35000ADB2CF /* TableViewCell.swift */,
+				CA37BFF82474D35000ADB2CF /* TableViewCell.xib */,
+			);
+			path = OwnerVCCells;
 			sourceTree = "<group>";
 		};
 		CA454257246BA870002178EF /* Model */ = {
@@ -364,6 +392,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA3D14D8246FB0F200BBCD05 /* LaunchScreen.storyboard in Resources */,
+				CA37C0042474E53100ADB2CF /* ProfileCell.xib in Resources */,
+				CA37BFFC2474D35100ADB2CF /* TableViewCell.xib in Resources */,
 				CAFE7B33245A211300167140 /* LaunchScreenLegacy.storyboard in Resources */,
 				CAFE7B30245A211300167140 /* Preview Assets.xcassets in Resources */,
 				CAFE7B2D245A211300167140 /* Images.xcassets in Resources */,
@@ -463,6 +493,7 @@
 				CA9EBF17245A428500380442 /* Colors.swift in Sources */,
 				CAFE7B29245A211100167140 /* SceneDelegate.swift in Sources */,
 				CA454250246B9DEB002178EF /* SelectRoleVC.swift in Sources */,
+				CA37BFFD2474D35100ADB2CF /* TableViewCell.swift in Sources */,
 				CA2ADAFB246E2EFB0010F2CB /* RequestList.swift in Sources */,
 				CA0BA791245A6CBF00A9F992 /* DismissingKeyboard.swift in Sources */,
 				CA37BFF42474D0A800ADB2CF /* PilotVC.swift in Sources */,
@@ -472,6 +503,7 @@
 				CA2ADAF9246E29CF0010F2CB /* Validate.swift in Sources */,
 				CA9EBF13245A2EEC00380442 /* R.generated.swift in Sources */,
 				CA5CE1FB246BD05400D597CA /* RentHelicopterVC.swift in Sources */,
+				CA37BFFB2474D35100ADB2CF /* ProfileCell.swift in Sources */,
 				CAB484D4245E069C00F31870 /* UserDefaultList.swift in Sources */,
 				CA91A6C9246B92B800D0D370 /* PlaneCell.swift in Sources */,
 				CA5BCBE724736C2600CF9D7F /* Helpers.swift in Sources */,
