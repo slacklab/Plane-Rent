@@ -18,6 +18,8 @@
 		CA37BFFC2474D35100ADB2CF /* TypeTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA37BFF82474D35000ADB2CF /* TypeTitleCell.xib */; };
 		CA37BFFD2474D35100ADB2CF /* TypeTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37BFF92474D35000ADB2CF /* TypeTitleCell.swift */; };
 		CA37C0042474E53100ADB2CF /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA37C0032474E53100ADB2CF /* ProfileCell.xib */; };
+		CA37C0072474FE5D00ADB2CF /* AircraftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA37C0052474FE5D00ADB2CF /* AircraftCell.xib */; };
+		CA37C0082474FE5D00ADB2CF /* AircraftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37C0062474FE5D00ADB2CF /* AircraftCell.swift */; };
 		CA3A9A5E246FD5630079FA89 /* Helicopter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A9A5D246FD5630079FA89 /* Helicopter.swift */; };
 		CA3D14D8246FB0F200BBCD05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3D14D6246FB0F200BBCD05 /* LaunchScreen.storyboard */; };
 		CA424E8F2470E4490082FDEF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA424E8E2470E4490082FDEF /* Constant.swift */; };
@@ -70,6 +72,8 @@
 		CA37BFF82474D35000ADB2CF /* TypeTitleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TypeTitleCell.xib; sourceTree = "<group>"; };
 		CA37BFF92474D35000ADB2CF /* TypeTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeTitleCell.swift; sourceTree = "<group>"; };
 		CA37C0032474E53100ADB2CF /* ProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
+		CA37C0052474FE5D00ADB2CF /* AircraftCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AircraftCell.xib; sourceTree = "<group>"; };
+		CA37C0062474FE5D00ADB2CF /* AircraftCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AircraftCell.swift; sourceTree = "<group>"; };
 		CA3A9A5D246FD5630079FA89 /* Helicopter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helicopter.swift; sourceTree = "<group>"; };
 		CA3D14D7246FB0F200BBCD05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA424E8E2470E4490082FDEF /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -179,6 +183,8 @@
 		CA37BFF62474D2F800ADB2CF /* OwnerVCCells */ = {
 			isa = PBXGroup;
 			children = (
+				CA37C0062474FE5D00ADB2CF /* AircraftCell.swift */,
+				CA37C0052474FE5D00ADB2CF /* AircraftCell.xib */,
 				CA37C0032474E53100ADB2CF /* ProfileCell.xib */,
 				CA37BFF72474D35000ADB2CF /* ProfileCell.swift */,
 				CA37BFF92474D35000ADB2CF /* TypeTitleCell.swift */,
@@ -396,6 +402,7 @@
 				CA37BFFC2474D35100ADB2CF /* TypeTitleCell.xib in Resources */,
 				CAFE7B33245A211300167140 /* LaunchScreenLegacy.storyboard in Resources */,
 				CAFE7B30245A211300167140 /* Preview Assets.xcassets in Resources */,
+				CA37C0072474FE5D00ADB2CF /* AircraftCell.xib in Resources */,
 				CAFE7B2D245A211300167140 /* Images.xcassets in Resources */,
 				CA9A1A3B246A2D8900477EB5 /* Main.storyboard in Resources */,
 			);
@@ -508,6 +515,7 @@
 				CA91A6C9246B92B800D0D370 /* PlaneCell.swift in Sources */,
 				CA5BCBE724736C2600CF9D7F /* Helpers.swift in Sources */,
 				CA88E6A3245E56BF00C15809 /* AccountType.swift in Sources */,
+				CA37C0082474FE5D00ADB2CF /* AircraftCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

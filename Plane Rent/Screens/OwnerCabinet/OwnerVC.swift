@@ -23,6 +23,9 @@ class OwnerVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
 
     let houseData = ["Arryn", "Baratheon"]
     
+    // important!!! else out of range maybe
+    let additionalCellsWithoutPlanes = 2
+    
     let wordsData = ["As high as honor", "Ours is the fury", "We do not sow", "Hear me roar", "Unbowed, unbent, unbroken", "Winter is coming", "fire and blood", "Family, duty, honor", "Growing strong"]
     
     override func viewDidLoad() {
@@ -41,7 +44,10 @@ class OwnerVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.register(nibNameRight, forCellReuseIdentifier: "ProfileCell")
         
         let nibName = UINib(nibName: "TypeTitleCell", bundle: nil)
-        tableView.register(nibName, forCellReuseIdentifier: "tableViewCell")
+        tableView.register(nibName, forCellReuseIdentifier: "TypeTitleCell")
+        
+        let nibNameAir = UINib(nibName: "AircraftCell", bundle: nil)
+        tableView.register(nibNameAir, forCellReuseIdentifier: "AircraftCell")
         
 //        tableView.register(cell.classForCoder, forCellWithReuseIdentifier: "PlaneCell")
 //        tableView.register(<#T##cellClass: AnyClass?##AnyClass?#>, forCellReuseIdentifier: <#T##String#>)
@@ -57,37 +63,46 @@ class OwnerVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return houseData.count + planes.count
+//        return houseData.count + planes.count
+        return additionalCellsWithoutPlanes + planes.count
+
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         print("in cellForRowAt")
         
-        //        if (indexPath.item == 0) {
-        //            let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath) as! ProfileCell
-        //            cell.commonInit("got_\(indexPath.item)", title: houseData[indexPath.item], sub: wordsData[indexPath.item], buttonImage: R.image.doneBlue()!)
-        //            return cell
-        //        } else if (indexPath.item == 1){
-        //            let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as! TypeTitleCell
-        //            cell.commonInit(title: houseData[indexPath.item])
-        //            return cell
-        //        } else {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PlaneCell", for: indexPath) as? PlaneCell else { return UITableViewCell() }
+                if (indexPath.item == 0) {
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath) as! ProfileCell
+                    cell.commonInit("bg-rect", title: "Title", sub: "Sub", buttonImage: R.image.roundButton()!)
+                    return cell
+                } else if (indexPath.item == 1){
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "TypeTitleCell", for: indexPath) as! TypeTitleCell
+                    cell.commonInit(title: "Planes or helics")
+                    return cell
+                } else {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AircraftCell", for: indexPath) as! AircraftCell
+                    
+        let rightIndexPathRow = indexPath.row - additionalCellsWithoutPlanes
+        cell.commonInit(R.image.bgRect()!, title: planes[rightIndexPathRow].plane_base, sub: planes[rightIndexPathRow].plane_model, subSub: planes[rightIndexPathRow].plane_price)
+                    return cell
+        
+//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PlaneCell", for: indexPath) as? PlaneCell else { return UITableViewCell() }
         
         
         print("after cell")
         
-        print(planes[indexPath.row].plane_base)
+        print(planes[rightIndexPathRow].plane_base)
         
-        cell.planeAirportLabel.text = planes[indexPath.row].plane_base
-        cell.planeModelLabel.text = planes[indexPath.row].plane_model
-        cell.planePriceLabel.text = planes[indexPath.row].plane_price
+//        cell.planeAirportLabel.text = planes[indexPath.row].plane_base
+//        cell.planeModelLabel.text = planes[indexPath.row].plane_model
+//        cell.planePriceLabel.text = planes[indexPath.row].plane_price
         
         let planeImagesDir = "http://big-marka.xyz/plane_images/"
         
         if let imageURL = URL(string:
-            ((planeImagesDir + planes[indexPath.row].plane_image)
+            ((planeImagesDir + planes[rightIndexPathRow].plane_image)
                 .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
         )) {
             DispatchQueue.global().async {
@@ -95,14 +110,15 @@ class OwnerVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
                 if let data = data {
                     let image = UIImage(data: data)
                     DispatchQueue.main.async {
-                        cell.planeImage?.image = image
+                        cell.commonInit(image!, title: self.planes[rightIndexPathRow].plane_base, sub: self.planes[rightIndexPathRow].plane_model, subSub: self.planes[rightIndexPathRow].plane_price)
+//                        cell.planeImage?.image = image
                     }
                 }
             }
         }
         
         return cell
-        //        }
+                } //
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
