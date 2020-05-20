@@ -109,4 +109,8 @@ extension PlaneListVC {
         rentPlaneVC.selectedCell = indexPath.row
         rentPlaneVC.planes = planes
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 225
+    }
 }

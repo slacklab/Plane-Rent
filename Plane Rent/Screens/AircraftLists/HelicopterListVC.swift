@@ -109,5 +109,7 @@ class HelicopterListVC: BaseViewController, UITableViewDataSource, UITableViewDe
         rentHelicopterVC.helicopters = helicopters
     }
     
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 225
+    }   
 }
