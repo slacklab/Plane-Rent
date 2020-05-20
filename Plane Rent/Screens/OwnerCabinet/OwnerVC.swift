@@ -46,7 +46,7 @@ class OwnerVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.dataSource = self
         tableView.delegate = self
         
-        let nibName = UINib(nibName: "TableViewCell", bundle: nil)
+        let nibName = UINib(nibName: "TypeTitleCell", bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: "tableViewCell")
         
         let nibNameRight = UINib(nibName: "ProfileCell", bundle: nil)
@@ -64,8 +64,8 @@ class OwnerVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             cell.commonInit("got_\(indexPath.item)", title: houseData[indexPath.item], sub: wordsData[indexPath.item])
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as! TableViewCell
-            cell.commonInit("got_\(indexPath.item)", title: houseData[indexPath.item], sub: wordsData[indexPath.item])
+            let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as! TypeTitleCell
+            cell.commonInit(title: houseData[indexPath.item])
             return cell
         }
     }

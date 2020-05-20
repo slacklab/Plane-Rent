@@ -1,5 +1,5 @@
 //
-//  TableViewCell.swift
+//  TypeTitleCell.swift
 //  TableViewPractice
 //
 //  Created by BriefOS on 2/3/2560 BE.
@@ -8,13 +8,8 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
-
-    @IBOutlet weak var logoImage: UIImageView!
-    
+class TypeTitleCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
-    
-    @IBOutlet weak var subLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,10 +22,8 @@ class TableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func commonInit(_ imageName: String, title: String, sub: String) {
-        logoImage.image = UIImage(named: imageName)
+    func commonInit(title: String) {
         titleLabel.text = title
-        subLabel.text = sub
     }
     
 }

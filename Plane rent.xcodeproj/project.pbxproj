@@ -15,8 +15,8 @@
 		CA37BFF22474D09000ADB2CF /* OwnerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37BFF12474D09000ADB2CF /* OwnerVC.swift */; };
 		CA37BFF42474D0A800ADB2CF /* PilotVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37BFF32474D0A800ADB2CF /* PilotVC.swift */; };
 		CA37BFFB2474D35100ADB2CF /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37BFF72474D35000ADB2CF /* ProfileCell.swift */; };
-		CA37BFFC2474D35100ADB2CF /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA37BFF82474D35000ADB2CF /* TableViewCell.xib */; };
-		CA37BFFD2474D35100ADB2CF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37BFF92474D35000ADB2CF /* TableViewCell.swift */; };
+		CA37BFFC2474D35100ADB2CF /* TypeTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA37BFF82474D35000ADB2CF /* TypeTitleCell.xib */; };
+		CA37BFFD2474D35100ADB2CF /* TypeTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37BFF92474D35000ADB2CF /* TypeTitleCell.swift */; };
 		CA37C0042474E53100ADB2CF /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA37C0032474E53100ADB2CF /* ProfileCell.xib */; };
 		CA3A9A5E246FD5630079FA89 /* Helicopter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A9A5D246FD5630079FA89 /* Helicopter.swift */; };
 		CA3D14D8246FB0F200BBCD05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3D14D6246FB0F200BBCD05 /* LaunchScreen.storyboard */; };
@@ -67,8 +67,8 @@
 		CA37BFF12474D09000ADB2CF /* OwnerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerVC.swift; sourceTree = "<group>"; };
 		CA37BFF32474D0A800ADB2CF /* PilotVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilotVC.swift; sourceTree = "<group>"; };
 		CA37BFF72474D35000ADB2CF /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
-		CA37BFF82474D35000ADB2CF /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
-		CA37BFF92474D35000ADB2CF /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		CA37BFF82474D35000ADB2CF /* TypeTitleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TypeTitleCell.xib; sourceTree = "<group>"; };
+		CA37BFF92474D35000ADB2CF /* TypeTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeTitleCell.swift; sourceTree = "<group>"; };
 		CA37C0032474E53100ADB2CF /* ProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
 		CA3A9A5D246FD5630079FA89 /* Helicopter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helicopter.swift; sourceTree = "<group>"; };
 		CA3D14D7246FB0F200BBCD05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -181,8 +181,8 @@
 			children = (
 				CA37C0032474E53100ADB2CF /* ProfileCell.xib */,
 				CA37BFF72474D35000ADB2CF /* ProfileCell.swift */,
-				CA37BFF92474D35000ADB2CF /* TableViewCell.swift */,
-				CA37BFF82474D35000ADB2CF /* TableViewCell.xib */,
+				CA37BFF92474D35000ADB2CF /* TypeTitleCell.swift */,
+				CA37BFF82474D35000ADB2CF /* TypeTitleCell.xib */,
 			);
 			path = OwnerVCCells;
 			sourceTree = "<group>";
@@ -393,7 +393,7 @@
 			files = (
 				CA3D14D8246FB0F200BBCD05 /* LaunchScreen.storyboard in Resources */,
 				CA37C0042474E53100ADB2CF /* ProfileCell.xib in Resources */,
-				CA37BFFC2474D35100ADB2CF /* TableViewCell.xib in Resources */,
+				CA37BFFC2474D35100ADB2CF /* TypeTitleCell.xib in Resources */,
 				CAFE7B33245A211300167140 /* LaunchScreenLegacy.storyboard in Resources */,
 				CAFE7B30245A211300167140 /* Preview Assets.xcassets in Resources */,
 				CAFE7B2D245A211300167140 /* Images.xcassets in Resources */,
@@ -493,7 +493,7 @@
 				CA9EBF17245A428500380442 /* Colors.swift in Sources */,
 				CAFE7B29245A211100167140 /* SceneDelegate.swift in Sources */,
 				CA454250246B9DEB002178EF /* SelectRoleVC.swift in Sources */,
-				CA37BFFD2474D35100ADB2CF /* TableViewCell.swift in Sources */,
+				CA37BFFD2474D35100ADB2CF /* TypeTitleCell.swift in Sources */,
 				CA2ADAFB246E2EFB0010F2CB /* RequestList.swift in Sources */,
 				CA0BA791245A6CBF00A9F992 /* DismissingKeyboard.swift in Sources */,
 				CA37BFF42474D0A800ADB2CF /* PilotVC.swift in Sources */,
