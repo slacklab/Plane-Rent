@@ -9,7 +9,14 @@
 import UIKit
 
 class CheckCell: UITableViewCell {
-
+    @IBOutlet weak var mainTextLabel: UILabel!
+    
+    @IBOutlet weak var checkButton: UIButton!
+    
+    @IBAction func checkButton(_ sender: Any) {
+        
+    }
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +26,10 @@ class CheckCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func commonInit(text: String) {
+        mainTextLabel.text = text
     }
     
 }

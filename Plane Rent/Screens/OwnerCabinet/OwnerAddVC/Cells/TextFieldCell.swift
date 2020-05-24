@@ -10,6 +10,8 @@ import UIKit
 
 class TextFieldCell: UITableViewCell {
 
+    @IBOutlet weak var mainTextField: UITextField!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +23,7 @@ class TextFieldCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func commonInit(placeHolder: String) {
+        mainTextField.placeholder = placeHolder
+    }
 }

@@ -23,4 +23,8 @@ class OwnerLabelCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func commonInit(text: String) {
+        mainLabel.text = text
+    }
+    
 }
