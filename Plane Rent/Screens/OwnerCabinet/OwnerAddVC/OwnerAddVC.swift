@@ -65,7 +65,7 @@ class OwnerAddVC: BaseViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return 21
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -174,10 +174,64 @@ class OwnerAddVC: BaseViewController, UITableViewDelegate, UITableViewDataSource
 
         }
         
+        if indexRow == cellIndexCheckFlightYes {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CheckCell", for: indexPath) as! CheckCell
+            cell.commonInit(text: "Да")
+            
+            
+            return cell
+        }
         
+        if indexRow == cellIndexCheckFlightNo {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CheckCell", for: indexPath) as! CheckCell
+            cell.commonInit(text: "Нет")
+            
+            return cell
+        }
+                
+        if indexRow == cellIndexCheckFlightHours {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TextFieldCell", for: indexPath) as! TextFieldCell
+            cell.commonInit(placeHolder: "Часы чекфлайта:")
+            
+            return cell
+        }
         
+        if indexRow == cellIndexAerodromOpportunityLabel {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "OwnerLabelCell", for: indexPath) as! OwnerLabelCell
+            cell.commonInit(text: "Возможность подлета на эродромы:")
+        
+        return cell
 
+        }
         
+        if indexRow == cellIndexCheckAerodromOpportunityYes {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CheckCell", for: indexPath) as! CheckCell
+            cell.commonInit(text: "Да")
+            
+            
+            return cell
+        }
+        
+        if indexRow == cellIndexCheckAerodromOpportunityNo {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CheckCell", for: indexPath) as! CheckCell
+            cell.commonInit(text: "Нет")
+            
+            return cell
+        }
+                
+        if indexRow == cellIndexMinHoursForPodlet {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TextFieldCell", for: indexPath) as! TextFieldCell
+            cell.commonInit(placeHolder: "Минимум часов для аренды полета:")
+            
+            return cell
+        }
+        
+        if indexRow == cellIndexDoneButton {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AddImageCell", for: indexPath) as! AddImageCell
+            
+            return cell
+        }
+
         return UITableViewCell()
     }
 }
