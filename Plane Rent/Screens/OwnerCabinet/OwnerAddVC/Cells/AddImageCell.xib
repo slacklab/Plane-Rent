@@ -16,18 +16,27 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="182"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fUx-EQ-l71">
-                        <rect key="frame" x="68" y="27.5" width="184" height="127"/>
-                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGf-tb-Txc">
+                        <rect key="frame" x="111" y="52" width="98" height="78"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="98" id="PXu-cR-9bQ"/>
+                            <constraint firstAttribute="height" constant="78" id="qgQ-Bz-VDv"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <connections>
+                            <action selector="addImageButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bgT-vW-PIA"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="fUx-EQ-l71" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="68f-47-8jd"/>
-                    <constraint firstItem="fUx-EQ-l71" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="EUV-Zo-3xR"/>
-                    <constraint firstItem="fUx-EQ-l71" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.575" id="NO0-er-B0V"/>
-                    <constraint firstItem="fUx-EQ-l71" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.697802" id="sgg-op-aVr"/>
+                    <constraint firstItem="NGf-tb-Txc" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Rjn-Kg-Zfx"/>
+                    <constraint firstItem="NGf-tb-Txc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="pY0-K5-nYb"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addImageButton" destination="NGf-tb-Txc" id="4Uh-yG-q6b"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="57.589285714285708"/>
         </tableViewCell>
     </objects>

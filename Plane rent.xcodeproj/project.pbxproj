@@ -167,13 +167,8 @@
 		CA07E9E1247A30F0008ED582 /* OwnerAddVC */ = {
 			isa = PBXGroup;
 			children = (
+				CA6F4181247A4E28001A71A6 /* Cells */,
 				CA07E9DF247A2F38008ED582 /* OwnerAddVC.swift */,
-				CA07E9E2247A3B91008ED582 /* AddImageCell.swift */,
-				CA07E9E3247A3B91008ED582 /* AddImageCell.xib */,
-				CA07E9E8247A3D7C008ED582 /* CheckCell.swift */,
-				CA07E9E9247A3D7C008ED582 /* CheckCell.xib */,
-				CA07E9EC247A3F8B008ED582 /* TextFieldCell.swift */,
-				CA07E9ED247A3F8B008ED582 /* TextFieldCell.xib */,
 			);
 			path = OwnerAddVC;
 			sourceTree = "<group>";
@@ -239,12 +234,7 @@
 		CA37BFF62474D2F800ADB2CF /* OwnerVC */ = {
 			isa = PBXGroup;
 			children = (
-				CA37C0062474FE5D00ADB2CF /* AircraftCell.swift */,
-				CA37C0052474FE5D00ADB2CF /* AircraftCell.xib */,
-				CA37C0032474E53100ADB2CF /* ProfileCell.xib */,
-				CA37BFF72474D35000ADB2CF /* ProfileCell.swift */,
-				CA37BFF92474D35000ADB2CF /* TypeTitleCell.swift */,
-				CA37BFF82474D35000ADB2CF /* TypeTitleCell.xib */,
+				CA6F4182247A4EBA001A71A6 /* Cells */,
 				CA37BFF12474D09000ADB2CF /* OwnerVC.swift */,
 			);
 			path = OwnerVC;
@@ -258,6 +248,32 @@
 				CAB529C2247230860057966C /* AirUser.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CA6F4181247A4E28001A71A6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CA07E9E2247A3B91008ED582 /* AddImageCell.swift */,
+				CA07E9E3247A3B91008ED582 /* AddImageCell.xib */,
+				CA07E9EC247A3F8B008ED582 /* TextFieldCell.swift */,
+				CA07E9ED247A3F8B008ED582 /* TextFieldCell.xib */,
+				CA07E9E8247A3D7C008ED582 /* CheckCell.swift */,
+				CA07E9E9247A3D7C008ED582 /* CheckCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CA6F4182247A4EBA001A71A6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CA37C0062474FE5D00ADB2CF /* AircraftCell.swift */,
+				CA37C0052474FE5D00ADB2CF /* AircraftCell.xib */,
+				CA37C0032474E53100ADB2CF /* ProfileCell.xib */,
+				CA37BFF72474D35000ADB2CF /* ProfileCell.swift */,
+				CA37BFF92474D35000ADB2CF /* TypeTitleCell.swift */,
+				CA37BFF82474D35000ADB2CF /* TypeTitleCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		CA780C47245BC4700052D65B /* Networking */ = {
