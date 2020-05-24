@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		37076589C41DA6832FDEF319 /* Pods_Plane_rent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88DF57D8FEA8901841952456 /* Pods_Plane_rent.framework */; };
 		CA07E9E0247A2F38008ED582 /* OwnerAddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07E9DF247A2F38008ED582 /* OwnerAddVC.swift */; };
+		CA07E9E4247A3B91008ED582 /* AddImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07E9E2247A3B91008ED582 /* AddImageCell.swift */; };
+		CA07E9E5247A3B91008ED582 /* AddImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA07E9E3247A3B91008ED582 /* AddImageCell.xib */; };
+		CA07E9EA247A3D7C008ED582 /* CheckCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07E9E8247A3D7C008ED582 /* CheckCell.swift */; };
+		CA07E9EB247A3D7C008ED582 /* CheckCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA07E9E9247A3D7C008ED582 /* CheckCell.xib */; };
+		CA07E9EE247A3F8B008ED582 /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07E9EC247A3F8B008ED582 /* TextFieldCell.swift */; };
+		CA07E9EF247A3F8B008ED582 /* TextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA07E9ED247A3F8B008ED582 /* TextFieldCell.xib */; };
 		CA0BA78F245A63FB00A9F992 /* UIApplication+endEditing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0BA78E245A63FB00A9F992 /* UIApplication+endEditing.swift */; };
 		CA0BA791245A6CBF00A9F992 /* DismissingKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0BA790245A6CBF00A9F992 /* DismissingKeyboard.swift */; };
 		CA2ADAF9246E29CF0010F2CB /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2ADAF8246E29CF0010F2CB /* Validate.swift */; };
@@ -35,6 +41,10 @@
 		CA5CE1FB246BD05400D597CA /* RentHelicopterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5CE1FA246BD05400D597CA /* RentHelicopterVC.swift */; };
 		CA63B448245DA60600AFC7EF /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA63B447245DA60600AFC7EF /* Color+Hex.swift */; };
 		CA6AAF6624725EDE00DE3EC1 /* RentPlaneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6AAF6524725EDE00DE3EC1 /* RentPlaneVC.swift */; };
+		CA6F4177247A41B4001A71A6 /* OwnerAircraftInfoImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6F4175247A41B4001A71A6 /* OwnerAircraftInfoImageCell.swift */; };
+		CA6F4178247A41B4001A71A6 /* OwnerAircraftInfoImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA6F4176247A41B4001A71A6 /* OwnerAircraftInfoImageCell.xib */; };
+		CA6F417B247A427E001A71A6 /* OwnerAircraftInfoLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6F4179247A427E001A71A6 /* OwnerAircraftInfoLabelCell.swift */; };
+		CA6F417C247A427E001A71A6 /* OwnerAircraftInfoLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA6F417A247A427E001A71A6 /* OwnerAircraftInfoLabelCell.xib */; };
 		CA780C50245BC7560052D65B /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA780C4F245BC7560052D65B /* Links.swift */; };
 		CA780C52245BC8D70052D65B /* SmsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA780C51245BC8D70052D65B /* SmsService.swift */; };
 		CA88E6A3245E56BF00C15809 /* AccountType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA88E6A2245E56BF00C15809 /* AccountType.swift */; };
@@ -63,6 +73,12 @@
 		7C9BE4B4F7FD8FA24DAD7B68 /* Pods-Plane rent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plane rent.release.xcconfig"; path = "Target Support Files/Pods-Plane rent/Pods-Plane rent.release.xcconfig"; sourceTree = "<group>"; };
 		88DF57D8FEA8901841952456 /* Pods_Plane_rent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plane_rent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA07E9DF247A2F38008ED582 /* OwnerAddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerAddVC.swift; sourceTree = "<group>"; };
+		CA07E9E2247A3B91008ED582 /* AddImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImageCell.swift; sourceTree = "<group>"; };
+		CA07E9E3247A3B91008ED582 /* AddImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddImageCell.xib; sourceTree = "<group>"; };
+		CA07E9E8247A3D7C008ED582 /* CheckCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckCell.swift; sourceTree = "<group>"; };
+		CA07E9E9247A3D7C008ED582 /* CheckCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckCell.xib; sourceTree = "<group>"; };
+		CA07E9EC247A3F8B008ED582 /* TextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
+		CA07E9ED247A3F8B008ED582 /* TextFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldCell.xib; sourceTree = "<group>"; };
 		CA0BA78E245A63FB00A9F992 /* UIApplication+endEditing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+endEditing.swift"; sourceTree = "<group>"; };
 		CA0BA790245A6CBF00A9F992 /* DismissingKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissingKeyboard.swift; sourceTree = "<group>"; };
 		CA2ADAF8246E29CF0010F2CB /* Validate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
@@ -89,6 +105,10 @@
 		CA5CE1FA246BD05400D597CA /* RentHelicopterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentHelicopterVC.swift; sourceTree = "<group>"; };
 		CA63B447245DA60600AFC7EF /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
 		CA6AAF6524725EDE00DE3EC1 /* RentPlaneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentPlaneVC.swift; sourceTree = "<group>"; };
+		CA6F4175247A41B4001A71A6 /* OwnerAircraftInfoImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerAircraftInfoImageCell.swift; sourceTree = "<group>"; };
+		CA6F4176247A41B4001A71A6 /* OwnerAircraftInfoImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OwnerAircraftInfoImageCell.xib; sourceTree = "<group>"; };
+		CA6F4179247A427E001A71A6 /* OwnerAircraftInfoLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerAircraftInfoLabelCell.swift; sourceTree = "<group>"; };
+		CA6F417A247A427E001A71A6 /* OwnerAircraftInfoLabelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OwnerAircraftInfoLabelCell.xib; sourceTree = "<group>"; };
 		CA780C4F245BC7560052D65B /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
 		CA780C51245BC8D70052D65B /* SmsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsService.swift; sourceTree = "<group>"; };
 		CA88E6A2245E56BF00C15809 /* AccountType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountType.swift; sourceTree = "<group>"; };
@@ -144,6 +164,31 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		CA07E9E1247A30F0008ED582 /* OwnerAddVC */ = {
+			isa = PBXGroup;
+			children = (
+				CA07E9DF247A2F38008ED582 /* OwnerAddVC.swift */,
+				CA07E9E2247A3B91008ED582 /* AddImageCell.swift */,
+				CA07E9E3247A3B91008ED582 /* AddImageCell.xib */,
+				CA07E9E8247A3D7C008ED582 /* CheckCell.swift */,
+				CA07E9E9247A3D7C008ED582 /* CheckCell.xib */,
+				CA07E9EC247A3F8B008ED582 /* TextFieldCell.swift */,
+				CA07E9ED247A3F8B008ED582 /* TextFieldCell.xib */,
+			);
+			path = OwnerAddVC;
+			sourceTree = "<group>";
+		};
+		CA07E9F0247A3FE2008ED582 /* OwnerAircraftInfoVC */ = {
+			isa = PBXGroup;
+			children = (
+				CA6F4175247A41B4001A71A6 /* OwnerAircraftInfoImageCell.swift */,
+				CA6F4176247A41B4001A71A6 /* OwnerAircraftInfoImageCell.xib */,
+				CA6F4179247A427E001A71A6 /* OwnerAircraftInfoLabelCell.swift */,
+				CA6F417A247A427E001A71A6 /* OwnerAircraftInfoLabelCell.xib */,
+			);
+			path = OwnerAircraftInfoVC;
+			sourceTree = "<group>";
+		};
 		CA0BA78D245A63AF00A9F992 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,9 +213,9 @@
 		CA37BFEF2474D04D00ADB2CF /* OwnerCabinet */ = {
 			isa = PBXGroup;
 			children = (
-				CA37BFF62474D2F800ADB2CF /* OwnerVCCells */,
-				CA37BFF12474D09000ADB2CF /* OwnerVC.swift */,
-				CA07E9DF247A2F38008ED582 /* OwnerAddVC.swift */,
+				CA07E9F0247A3FE2008ED582 /* OwnerAircraftInfoVC */,
+				CA07E9E1247A30F0008ED582 /* OwnerAddVC */,
+				CA37BFF62474D2F800ADB2CF /* OwnerVC */,
 			);
 			path = OwnerCabinet;
 			sourceTree = "<group>";
@@ -191,7 +236,7 @@
 			path = PilotVCCells;
 			sourceTree = "<group>";
 		};
-		CA37BFF62474D2F800ADB2CF /* OwnerVCCells */ = {
+		CA37BFF62474D2F800ADB2CF /* OwnerVC */ = {
 			isa = PBXGroup;
 			children = (
 				CA37C0062474FE5D00ADB2CF /* AircraftCell.swift */,
@@ -200,8 +245,9 @@
 				CA37BFF72474D35000ADB2CF /* ProfileCell.swift */,
 				CA37BFF92474D35000ADB2CF /* TypeTitleCell.swift */,
 				CA37BFF82474D35000ADB2CF /* TypeTitleCell.xib */,
+				CA37BFF12474D09000ADB2CF /* OwnerVC.swift */,
 			);
-			path = OwnerVCCells;
+			path = OwnerVC;
 			sourceTree = "<group>";
 		};
 		CA454257246BA870002178EF /* Model */ = {
@@ -400,11 +446,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA07E9EB247A3D7C008ED582 /* CheckCell.xib in Resources */,
+				CA07E9E5247A3B91008ED582 /* AddImageCell.xib in Resources */,
 				CA3D14D8246FB0F200BBCD05 /* LaunchScreen.storyboard in Resources */,
 				CA37C0042474E53100ADB2CF /* ProfileCell.xib in Resources */,
+				CA6F417C247A427E001A71A6 /* OwnerAircraftInfoLabelCell.xib in Resources */,
 				CA37BFFC2474D35100ADB2CF /* TypeTitleCell.xib in Resources */,
+				CA6F4178247A41B4001A71A6 /* OwnerAircraftInfoImageCell.xib in Resources */,
 				CAFE7B33245A211300167140 /* LaunchScreenLegacy.storyboard in Resources */,
 				CAFE7B30245A211300167140 /* Preview Assets.xcassets in Resources */,
+				CA07E9EF247A3F8B008ED582 /* TextFieldCell.xib in Resources */,
 				CA37C0072474FE5D00ADB2CF /* AircraftCell.xib in Resources */,
 				CAFE7B2D245A211300167140 /* Images.xcassets in Resources */,
 				CA9A1A3B246A2D8900477EB5 /* Main.storyboard in Resources */,
@@ -488,6 +539,7 @@
 				CA454259246BA897002178EF /* Plane.swift in Sources */,
 				CA37BFF22474D09000ADB2CF /* OwnerVC.swift in Sources */,
 				CA2F152B246F82F400446A1B /* BaseViewController.swift in Sources */,
+				CA07E9E4247A3B91008ED582 /* AddImageCell.swift in Sources */,
 				CA07E9E0247A2F38008ED582 /* OwnerAddVC.swift in Sources */,
 				CA45424E246B9A25002178EF /* InputSMSCodeVC.swift in Sources */,
 				CA454256246BA069002178EF /* PlaneListVC.swift in Sources */,
@@ -495,9 +547,13 @@
 				CA454252246B9E89002178EF /* RegistrationVC.swift in Sources */,
 				CA0BA78F245A63FB00A9F992 /* UIApplication+endEditing.swift in Sources */,
 				CA6AAF6624725EDE00DE3EC1 /* RentPlaneVC.swift in Sources */,
+				CA07E9EE247A3F8B008ED582 /* TextFieldCell.swift in Sources */,
 				CAF00692246E553300F09524 /* BookedVC.swift in Sources */,
+				CA6F4177247A41B4001A71A6 /* OwnerAircraftInfoImageCell.swift in Sources */,
 				CAFC51EB246112C100B7AE12 /* String+StartSym.swift in Sources */,
+				CA07E9EA247A3D7C008ED582 /* CheckCell.swift in Sources */,
 				CAF00690246E3A8C00F09524 /* UIView+Rotate.swift in Sources */,
+				CA6F417B247A427E001A71A6 /* OwnerAircraftInfoLabelCell.swift in Sources */,
 				CA63B448245DA60600AFC7EF /* Color+Hex.swift in Sources */,
 				CA780C52245BC8D70052D65B /* SmsService.swift in Sources */,
 				CAE0A794245D04E600224FED /* StatusResponse.swift in Sources */,

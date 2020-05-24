@@ -92,7 +92,7 @@ class OwnerVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
             cell.commonInit(title: currentName,
                             sub: currentLastName,
                             buttonImage: R.image.roundButton()!)
-            cell.actionButton.addTarget(self, action: #selector(addAircraftTapped), for: .allTouchEvents)
+            cell.actionButton.addTarget(self, action: #selector(addAircraftTapped), for: .touchDown)
             
             return cell
             
