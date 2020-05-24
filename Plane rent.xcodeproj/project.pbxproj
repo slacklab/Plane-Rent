@@ -53,6 +53,8 @@
 		CA9A1A3D246A2DE400477EB5 /* InputPhoneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9A1A3C246A2DE400477EB5 /* InputPhoneVC.swift */; };
 		CA9EBF13245A2EEC00380442 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EBF12245A2EEC00380442 /* R.generated.swift */; };
 		CA9EBF17245A428500380442 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EBF16245A428500380442 /* Colors.swift */; };
+		CAA61C40247A57C7007841F2 /* OwnerLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA61C3E247A57C7007841F2 /* OwnerLabelCell.swift */; };
+		CAA61C41247A57C7007841F2 /* OwnerLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAA61C3F247A57C7007841F2 /* OwnerLabelCell.xib */; };
 		CAB484D4245E069C00F31870 /* UserDefaultList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB484D3245E069C00F31870 /* UserDefaultList.swift */; };
 		CAB529C3247230860057966C /* AirUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB529C2247230860057966C /* AirUser.swift */; };
 		CAC37EAB245E287F00BEB7D6 /* String+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC37EAA245E287F00BEB7D6 /* String+Random.swift */; };
@@ -118,6 +120,8 @@
 		CA9A1A62246A2FB200477EB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA9EBF12245A2EEC00380442 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		CA9EBF16245A428500380442 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		CAA61C3E247A57C7007841F2 /* OwnerLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerLabelCell.swift; sourceTree = "<group>"; };
+		CAA61C3F247A57C7007841F2 /* OwnerLabelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OwnerLabelCell.xib; sourceTree = "<group>"; };
 		CAB484D3245E069C00F31870 /* UserDefaultList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultList.swift; sourceTree = "<group>"; };
 		CAB529C2247230860057966C /* AirUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirUser.swift; sourceTree = "<group>"; };
 		CAC37EAA245E287F00BEB7D6 /* String+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Random.swift"; sourceTree = "<group>"; };
@@ -259,6 +263,8 @@
 				CA07E9ED247A3F8B008ED582 /* TextFieldCell.xib */,
 				CA07E9E8247A3D7C008ED582 /* CheckCell.swift */,
 				CA07E9E9247A3D7C008ED582 /* CheckCell.xib */,
+				CAA61C3E247A57C7007841F2 /* OwnerLabelCell.swift */,
+				CAA61C3F247A57C7007841F2 /* OwnerLabelCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -474,6 +480,7 @@
 				CA07E9EF247A3F8B008ED582 /* TextFieldCell.xib in Resources */,
 				CA37C0072474FE5D00ADB2CF /* AircraftCell.xib in Resources */,
 				CAFE7B2D245A211300167140 /* Images.xcassets in Resources */,
+				CAA61C41247A57C7007841F2 /* OwnerLabelCell.xib in Resources */,
 				CA9A1A3B246A2D8900477EB5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -557,6 +564,7 @@
 				CA2F152B246F82F400446A1B /* BaseViewController.swift in Sources */,
 				CA07E9E4247A3B91008ED582 /* AddImageCell.swift in Sources */,
 				CA07E9E0247A2F38008ED582 /* OwnerAddVC.swift in Sources */,
+				CAA61C40247A57C7007841F2 /* OwnerLabelCell.swift in Sources */,
 				CA45424E246B9A25002178EF /* InputSMSCodeVC.swift in Sources */,
 				CA454256246BA069002178EF /* PlaneListVC.swift in Sources */,
 				CA454254246B9FA9002178EF /* SelectAirTypeVC.swift in Sources */,
