@@ -1252,6 +1252,51 @@
             </objects>
             <point key="canvasLocation" x="6016" y="-522"/>
         </scene>
+        <!--Owner AddVC-->
+        <scene sceneID="vLu-R9-vLt">
+            <objects>
+                <viewController storyboardIdentifier="OwnerAddVC" id="AAB-8w-1lV" customClass="OwnerAddVC" customModule="Plane_rent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8rl-4O-HSI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-rect" translatesAutoresizingMaskIntoConstraints="NO" id="Sb1-0r-5Xp">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="9tS-ON-Fnd"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добавить ЛА" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKK-18-FOM">
+                                <rect key="frame" x="155" y="34" width="104" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zrV-HV-tqc">
+                                <rect key="frame" x="0.0" y="96" width="414" height="800"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Sb1-0r-5Xp" firstAttribute="top" secondItem="8rl-4O-HSI" secondAttribute="top" id="M8G-Kx-1AJ"/>
+                            <constraint firstAttribute="bottom" secondItem="zrV-HV-tqc" secondAttribute="bottom" id="V38-xE-2OY"/>
+                            <constraint firstItem="OKK-18-FOM" firstAttribute="centerX" secondItem="Sb1-0r-5Xp" secondAttribute="centerX" id="ZDu-pM-bkf"/>
+                            <constraint firstItem="OKK-18-FOM" firstAttribute="centerY" secondItem="Sb1-0r-5Xp" secondAttribute="centerY" id="ajU-0O-l2J"/>
+                            <constraint firstItem="zrV-HV-tqc" firstAttribute="trailing" secondItem="FFA-uE-Hgz" secondAttribute="trailing" id="g8V-cb-88A"/>
+                            <constraint firstItem="zrV-HV-tqc" firstAttribute="top" secondItem="Sb1-0r-5Xp" secondAttribute="bottom" constant="8" id="hRp-vB-Khc"/>
+                            <constraint firstItem="zrV-HV-tqc" firstAttribute="leading" secondItem="FFA-uE-Hgz" secondAttribute="leading" id="nFn-6U-Pni"/>
+                            <constraint firstItem="Sb1-0r-5Xp" firstAttribute="leading" secondItem="FFA-uE-Hgz" secondAttribute="leading" id="oR0-UZ-Oon"/>
+                            <constraint firstItem="FFA-uE-Hgz" firstAttribute="trailing" secondItem="Sb1-0r-5Xp" secondAttribute="trailing" id="uGc-cZ-NoI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FFA-uE-Hgz"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CWk-D4-zo8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SjF-O5-wfl" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2716" y="-1771"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bg-rect" width="375" height="812"/>

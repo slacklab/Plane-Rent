@@ -67,7 +67,7 @@ class OwnerVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return additionalCellsWithoutPlanes + planes.count
+        return additionalCellsWithoutPlanes + planes.count + helicopters.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -92,16 +92,20 @@ class OwnerVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
             cell.commonInit(title: currentName,
                             sub: currentLastName,
                             buttonImage: R.image.roundButton()!)
+            cell.actionButton.addTarget(self, action: #selector(addAircraftTapped), for: .allTouchEvents)
+            
             return cell
             
         } else if (indexPath.item == typeAircraftTitleIndex){
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "TypeTitleCell", for: indexPath) as! TypeTitleCell
-            cell.commonInit(title: "Самолеты и вертолеты")
+            cell.commonInit(title: "Ваши суда:")
             
             return cell
             
         } else if isPlaneCellNow() {
+            
+            // MARK: - Show planes
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "AircraftCell", for: indexPath) as! AircraftCell
             
@@ -136,7 +140,40 @@ class OwnerVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
             return cell
             
         } else {
-            return UITableViewCell()
+            
+            // MARK: - Show helicopters
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AircraftCell", for: indexPath) as! AircraftCell
+            
+            let rightIndexPathRow = indexPath.row - additionalCellsWithoutPlanes - self.planes.count
+            cell.commonInit(R.image.bgRect()!,
+                title: helicopters[rightIndexPathRow].helicopter_base,
+                sub: helicopters[rightIndexPathRow].helicopter_model,
+                subSub: helicopters[rightIndexPathRow].helicopter_price)
+            
+            print("after cell helic \(indexPath.row)")
+            
+            let helicopterImagesDir = "\(Links.apiPath)helicopter_images/"
+            
+            if let imageURL = URL(string:
+                ((helicopterImagesDir + helicopters[rightIndexPathRow].helicopter_image)
+                    .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+            )) {
+                DispatchQueue.global().async {
+                    let data = try? Data(contentsOf: imageURL)
+                    if let data = data {
+                        let image = UIImage(data: data)
+                        DispatchQueue.main.async {
+                            cell.commonInit(image!,
+                                            title: self.helicopters[rightIndexPathRow].helicopter_base,
+                                            sub: self.helicopters[rightIndexPathRow].helicopter_model,
+                                            subSub: self.helicopters[rightIndexPathRow].helicopter_price)
+                        }
+                    }
+                }
+            }
+            
+            return cell
         }
     }
     
@@ -203,6 +240,7 @@ class OwnerVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
         }.resume()
         
     }
+    
     // MARK: - download Helicopters json
     
     func downloadJsonHelicopters() {
@@ -217,7 +255,7 @@ class OwnerVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
                 return
             }
             
-            print("downloaded")
+            print("downloaded helic")
             
             do {
                 let decoder = JSONDecoder()
@@ -231,9 +269,21 @@ class OwnerVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
                 }
                 
             } catch {
-                print("smth wrong after download")
+                print("smth wrong after download helic")
             }
             
         }.resume()
+    }
+    
+    @objc func addAircraftTapped() {
+        #if DEBUG
+        print("Add aircraft button tapped")
+        #endif
+        
+        let ownerAddVC = self.storyboard?.instantiateViewController(
+            withIdentifier: "OwnerAddVC"
+            ) as! OwnerAddVC
+        
+        self.navigationController!.pushViewController(ownerAddVC, animated: true)
     }
 }

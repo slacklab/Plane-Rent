@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		37076589C41DA6832FDEF319 /* Pods_Plane_rent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88DF57D8FEA8901841952456 /* Pods_Plane_rent.framework */; };
+		CA07E9E0247A2F38008ED582 /* OwnerAddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07E9DF247A2F38008ED582 /* OwnerAddVC.swift */; };
 		CA0BA78F245A63FB00A9F992 /* UIApplication+endEditing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0BA78E245A63FB00A9F992 /* UIApplication+endEditing.swift */; };
 		CA0BA791245A6CBF00A9F992 /* DismissingKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0BA790245A6CBF00A9F992 /* DismissingKeyboard.swift */; };
 		CA2ADAF9246E29CF0010F2CB /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2ADAF8246E29CF0010F2CB /* Validate.swift */; };
@@ -61,6 +62,7 @@
 		6A75D29385CE083745F632F2 /* Pods-Plane rent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plane rent.debug.xcconfig"; path = "Target Support Files/Pods-Plane rent/Pods-Plane rent.debug.xcconfig"; sourceTree = "<group>"; };
 		7C9BE4B4F7FD8FA24DAD7B68 /* Pods-Plane rent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plane rent.release.xcconfig"; path = "Target Support Files/Pods-Plane rent/Pods-Plane rent.release.xcconfig"; sourceTree = "<group>"; };
 		88DF57D8FEA8901841952456 /* Pods_Plane_rent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plane_rent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA07E9DF247A2F38008ED582 /* OwnerAddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerAddVC.swift; sourceTree = "<group>"; };
 		CA0BA78E245A63FB00A9F992 /* UIApplication+endEditing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+endEditing.swift"; sourceTree = "<group>"; };
 		CA0BA790245A6CBF00A9F992 /* DismissingKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissingKeyboard.swift; sourceTree = "<group>"; };
 		CA2ADAF8246E29CF0010F2CB /* Validate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			children = (
 				CA37BFF62474D2F800ADB2CF /* OwnerVCCells */,
 				CA37BFF12474D09000ADB2CF /* OwnerVC.swift */,
+				CA07E9DF247A2F38008ED582 /* OwnerAddVC.swift */,
 			);
 			path = OwnerCabinet;
 			sourceTree = "<group>";
@@ -447,7 +450,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -485,6 +488,7 @@
 				CA454259246BA897002178EF /* Plane.swift in Sources */,
 				CA37BFF22474D09000ADB2CF /* OwnerVC.swift in Sources */,
 				CA2F152B246F82F400446A1B /* BaseViewController.swift in Sources */,
+				CA07E9E0247A2F38008ED582 /* OwnerAddVC.swift in Sources */,
 				CA45424E246B9A25002178EF /* InputSMSCodeVC.swift in Sources */,
 				CA454256246BA069002178EF /* PlaneListVC.swift in Sources */,
 				CA454254246B9FA9002178EF /* SelectAirTypeVC.swift in Sources */,
