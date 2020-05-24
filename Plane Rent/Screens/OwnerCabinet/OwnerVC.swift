@@ -34,10 +34,6 @@ class OwnerVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     let profileCellIndex = 0
     let typeAircraftTitleIndex = 1
     
-    
-
-    // count of plane cells
-    var countPlaneCells = 0
     var planesCellIndex = [Int]()
     
     override func viewDidLoad() {
@@ -65,9 +61,6 @@ class OwnerVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
         
         downloadJsonPlanes()
         
-
-        
-        
         downloadJsonHelicopters()
         
         tableView.tableFooterView = UIView()
@@ -78,6 +71,18 @@ class OwnerVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        func isPlaneCellNow() -> Bool {
+            var result = false
+            
+            for item in planesCellIndex {
+                if indexPath.row == item {
+                    result = true
+                }
+            }
+            
+            return result
+        }
         
         print("in cellForRowAt \(indexPath.row)")
         
@@ -96,7 +101,7 @@ class OwnerVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
             
             return cell
             
-        } else {
+        } else if isPlaneCellNow() {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "AircraftCell", for: indexPath) as! AircraftCell
             
@@ -130,20 +135,21 @@ class OwnerVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
             
             return cell
             
+        } else {
+            return UITableViewCell()
         }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        if indexPath.row == profileCellIndex {
+        switch indexPath.row {
+        case profileCellIndex:
+            return 225
+        case typeAircraftTitleIndex:
+            return 50
+        default:
             return 225
         }
-        
-        if indexPath.row == typeAircraftTitleIndex {
-            return 50
-        }
-        
-        return 225
     }
     
     override func didReceiveMemoryWarning() {
@@ -175,7 +181,7 @@ class OwnerVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
                 let decoder = JSONDecoder()
                 
                 let downloadedPlanes = try decoder.decode(Planes.self, from: data)
-
+                
                 self.planes = downloadedPlanes.air_airplanes
                 
                 // find out for all plane index cells
@@ -220,8 +226,6 @@ class OwnerVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
                 
                 self.helicopters = downloadHelicopters.air_helicopters
                 
-                self.countPlaneCells = self.helicopters.count
-                
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
@@ -233,5 +237,3 @@ class OwnerVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
         }.resume()
     }
 }
-
-
