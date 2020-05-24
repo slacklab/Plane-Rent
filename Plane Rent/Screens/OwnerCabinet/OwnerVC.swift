@@ -18,22 +18,28 @@ class OwnerVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     var currentLastName: String = ""
     
     var currentPhone = ""
-        
+    
     var url = URL(string: "")
     
     private var planes = [Plane]()
+    private var helicopters = [Helicopter]()
     
     var cell : UITableViewCell = UITableViewCell()
-        
+    
     // important!!! else out of range maybe
     let additionalCellsWithoutPlanes = 2
-    
     
     // MARK: - Cell indexes
     
     let profileCellIndex = 0
     let typeAircraftTitleIndex = 1
+    
+    
 
+    // count of plane cells
+    var countPlaneCells = 0
+    var planesCellIndex = [Int]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,10 +47,8 @@ class OwnerVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
         currentName = defaults.string(forKey: UserDefaultList.currentAccountName) ?? ""
         currentLastName = defaults.string(forKey: UserDefaultList.currentAccountLastName) ?? ""
         
-        url = URL(string: "\(Links.apiPath)DB_SELECT_AIRPLANES_BY_PHONE.php?where=\(currentPhone)")
-        
         self.title = "Хочу сдать в аренду"
-
+        
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -59,7 +63,13 @@ class OwnerVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
         let nibNameAir = UINib(nibName: "AircraftCell", bundle: nil)
         tableView.register(nibNameAir, forCellReuseIdentifier: "AircraftCell")
         
-        downloadJson()
+        downloadJsonPlanes()
+        
+
+        
+        
+        downloadJsonHelicopters()
+        
         tableView.tableFooterView = UIView()
     }
     
@@ -72,19 +82,29 @@ class OwnerVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
         print("in cellForRowAt \(indexPath.row)")
         
         if (indexPath.item == profileCellIndex) {
+            
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath) as! ProfileCell
-            cell.commonInit(title: currentName, sub: currentLastName, buttonImage: R.image.roundButton()!)
+            cell.commonInit(title: currentName,
+                            sub: currentLastName,
+                            buttonImage: R.image.roundButton()!)
             return cell
+            
         } else if (indexPath.item == typeAircraftTitleIndex){
+            
             let cell = tableView.dequeueReusableCell(withIdentifier: "TypeTitleCell", for: indexPath) as! TypeTitleCell
             cell.commonInit(title: "Самолеты и вертолеты")
+            
             return cell
+            
         } else {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "AircraftCell", for: indexPath) as! AircraftCell
             
             let rightIndexPathRow = indexPath.row - additionalCellsWithoutPlanes
-            cell.commonInit(isLoadImage: false, R.image.bgRect()!, title: planes[rightIndexPathRow].plane_base, sub: planes[rightIndexPathRow].plane_model, subSub: planes[rightIndexPathRow].plane_price)
+            cell.commonInit(R.image.bgRect()!,
+                            title: planes[rightIndexPathRow].plane_base,
+                            sub: planes[rightIndexPathRow].plane_model,
+                            subSub: planes[rightIndexPathRow].plane_price)
             
             print("after cell \(indexPath.row)")
             
@@ -99,15 +119,18 @@ class OwnerVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
                     if let data = data {
                         let image = UIImage(data: data)
                         DispatchQueue.main.async {
-                            cell.commonInit(isLoadImage: true, image!, title: self.planes[rightIndexPathRow].plane_base, sub: self.planes[rightIndexPathRow].plane_model, subSub: self.planes[rightIndexPathRow].plane_price)
-                            //                        cell.planeImage?.image = image
+                            cell.commonInit(image!,
+                                            title: self.planes[rightIndexPathRow].plane_base,
+                                            sub: self.planes[rightIndexPathRow].plane_model,
+                                            subSub: self.planes[rightIndexPathRow].plane_price)
                         }
                     }
                 }
             }
             
             return cell
-        } //
+            
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -119,8 +142,6 @@ class OwnerVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == typeAircraftTitleIndex {
             return 50
         }
-        
-        
         
         return 225
     }
@@ -134,9 +155,11 @@ class OwnerVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
         
     }
     
-    // MARK: - donwload planes by phone
+    // MARK: - donwload planes by phone json
     
-    func downloadJson() {
+    func downloadJsonPlanes() {
+        url = URL(string: "\(Links.apiPath)DB_SELECT_AIRPLANES_BY_PHONE.php?where=\(currentPhone)")
+        
         guard let downloadUrl = url else { return }
         
         URLSession.shared.dataTask(with: downloadUrl) { data, urlResponse, error in
@@ -152,8 +175,53 @@ class OwnerVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
                 let decoder = JSONDecoder()
                 
                 let downloadedPlanes = try decoder.decode(Planes.self, from: data)
-                
+
                 self.planes = downloadedPlanes.air_airplanes
+                
+                // find out for all plane index cells
+                let maxPlaneCellIndex = self.planes.count + self.additionalCellsWithoutPlanes - 1
+                let minPlaneCellIndex = self.additionalCellsWithoutPlanes
+                
+                for planeCellIndex in minPlaneCellIndex...maxPlaneCellIndex {
+                    self.planesCellIndex.append(planeCellIndex)
+                }
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+                
+            } catch {
+                print("smth wrong after download")
+            }
+            
+        }.resume()
+        
+    }
+    // MARK: - download Helicopters json
+    
+    func downloadJsonHelicopters() {
+        url = URL(string: "\(Links.apiPath)DB_SELECT_HELICOPTERS_BY_PHONE.php?where=\(currentPhone)")
+        
+        guard let downloadUrl = url else { return }
+        
+        URLSession.shared.dataTask(with: downloadUrl) { data, urlResponse, error in
+            
+            guard let data = data, error == nil, urlResponse != nil else {
+                print("smth wrong")
+                return
+            }
+            
+            print("downloaded")
+            
+            do {
+                let decoder = JSONDecoder()
+                
+                let downloadHelicopters = try decoder.decode(Helicopters.self, from: data)
+                
+                self.helicopters = downloadHelicopters.air_helicopters
+                
+                self.countPlaneCells = self.helicopters.count
+                
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
@@ -165,3 +233,5 @@ class OwnerVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
         }.resume()
     }
 }
+
+

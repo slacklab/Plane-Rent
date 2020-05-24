@@ -29,16 +29,11 @@ class AircraftCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func commonInit(isLoadImage: Bool, _ imageName: UIImage, title: String, sub: String, subSub: String) {
+    func commonInit(_ imageName: UIImage, title: String, sub: String, subSub: String) {
         
-        if isLoadImage == true {
             logoImage.image = imageName
-        }
-        
-        if isLoadImage == false {
             titleLabel.text = title
             subLabel.text = sub
             subSubLabel.text = subSub
-        }
     }
 }
