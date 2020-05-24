@@ -13,7 +13,7 @@ class PlaneListVC: BaseViewController, UITableViewDataSource, UITableViewDelegat
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    final let url = URL(string: "http://big-marka.xyz/DB_SELECT_AIRPLANES_BY_PHONE.php?where=none")
+    final let url = URL(string: "\(Links.apiPath)DB_SELECT_AIRPLANES_BY_PHONE.php?where=none")
     private var planes = [Plane]()
     
     override func viewDidLoad() {

@@ -14,7 +14,7 @@ class HelicopterListVC: BaseViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    final let url = URL(string: "http://big-marka.xyz/DB_SELECT_HELICOPTERS_BY_PHONE.php?where=none")
+    final let url = URL(string: "\(Links.apiPath)DB_SELECT_HELICOPTERS_BY_PHONE.php?where=none")
     private var helicopters = [Helicopter]()
     
     override func viewDidLoad() {
@@ -71,7 +71,7 @@ class HelicopterListVC: BaseViewController, UITableViewDataSource, UITableViewDe
         cell.planeModelLabel.text = helicopters[indexPath.row].helicopter_model
         cell.planePriceLabel.text = helicopters[indexPath.row].helicopter_price
         
-        let helicopterImagesDir = "http://big-marka.xyz/helicopter_images/"
+        let helicopterImagesDir = "\(Links.apiPath)helicopter_images/"
         
         if let imageURL = URL(string:
             ((helicopterImagesDir + helicopters[indexPath.row].helicopter_image)

@@ -9,8 +9,6 @@
 import UIKit
 
 class ProfileCell: UITableViewCell {
-
-    @IBOutlet weak var logoImage: UIImageView!
     
     @IBOutlet weak var titleLabel: UILabel!
     
@@ -29,8 +27,7 @@ class ProfileCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func commonInit(_ imageName: String, title: String, sub: String, buttonImage: UIImage) {
-        logoImage.image = UIImage(named: imageName)
+    func commonInit(title: String, sub: String, buttonImage: UIImage) {
         titleLabel.text = title
         subLabel.text = sub
         actionButton.setImage(buttonImage, for: .normal)

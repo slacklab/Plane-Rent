@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37076589C41DA6832FDEF319 /* Pods_Plane_rent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88DF57D8FEA8901841952456 /* Pods_Plane_rent.framework */; };
 		CA0BA78F245A63FB00A9F992 /* UIApplication+endEditing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0BA78E245A63FB00A9F992 /* UIApplication+endEditing.swift */; };
 		CA0BA791245A6CBF00A9F992 /* DismissingKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0BA790245A6CBF00A9F992 /* DismissingKeyboard.swift */; };
 		CA2ADAF9246E29CF0010F2CB /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2ADAF8246E29CF0010F2CB /* Validate.swift */; };
@@ -54,13 +55,12 @@
 		CAFE7B2D245A211300167140 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAFE7B2C245A211300167140 /* Images.xcassets */; };
 		CAFE7B30245A211300167140 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAFE7B2F245A211300167140 /* Preview Assets.xcassets */; };
 		CAFE7B33245A211300167140 /* LaunchScreenLegacy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAFE7B31245A211300167140 /* LaunchScreenLegacy.storyboard */; };
-		DFEC390D07B36E54883BA025 /* Pods_Plane_rent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64FA2A8C89104124EA122F67 /* Pods_Plane_rent.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		362427858AB4538C82E21F55 /* Pods-Plane rent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plane rent.release.xcconfig"; path = "Target Support Files/Pods-Plane rent/Pods-Plane rent.release.xcconfig"; sourceTree = "<group>"; };
-		64FA2A8C89104124EA122F67 /* Pods_Plane_rent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plane_rent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		833C02020C579575B32989D8 /* Pods-Plane rent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plane rent.debug.xcconfig"; path = "Target Support Files/Pods-Plane rent/Pods-Plane rent.debug.xcconfig"; sourceTree = "<group>"; };
+		6A75D29385CE083745F632F2 /* Pods-Plane rent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plane rent.debug.xcconfig"; path = "Target Support Files/Pods-Plane rent/Pods-Plane rent.debug.xcconfig"; sourceTree = "<group>"; };
+		7C9BE4B4F7FD8FA24DAD7B68 /* Pods-Plane rent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plane rent.release.xcconfig"; path = "Target Support Files/Pods-Plane rent/Pods-Plane rent.release.xcconfig"; sourceTree = "<group>"; };
+		88DF57D8FEA8901841952456 /* Pods_Plane_rent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plane_rent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA0BA78E245A63FB00A9F992 /* UIApplication+endEditing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+endEditing.swift"; sourceTree = "<group>"; };
 		CA0BA790245A6CBF00A9F992 /* DismissingKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissingKeyboard.swift; sourceTree = "<group>"; };
 		CA2ADAF8246E29CF0010F2CB /* Validate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
@@ -118,18 +118,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFEC390D07B36E54883BA025 /* Pods_Plane_rent.framework in Frameworks */,
+				37076589C41DA6832FDEF319 /* Pods_Plane_rent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F4A1B975CAD9CBC2841A2DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88DF57D8FEA8901841952456 /* Pods_Plane_rent.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		37DB29307B9358AAF7FBDEB7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				833C02020C579575B32989D8 /* Pods-Plane rent.debug.xcconfig */,
-				362427858AB4538C82E21F55 /* Pods-Plane rent.release.xcconfig */,
+				6A75D29385CE083745F632F2 /* Pods-Plane rent.debug.xcconfig */,
+				7C9BE4B4F7FD8FA24DAD7B68 /* Pods-Plane rent.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -289,7 +297,7 @@
 				CAFE7B25245A211100167140 /* Plane Rent */,
 				CAFE7B24245A211100167140 /* Products */,
 				37DB29307B9358AAF7FBDEB7 /* Pods */,
-				E58B26AC3326A6F60DFEC0EB /* Frameworks */,
+				0F4A1B975CAD9CBC2841A2DF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -328,14 +336,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		E58B26AC3326A6F60DFEC0EB /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				64FA2A8C89104124EA122F67 /* Pods_Plane_rent.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -343,12 +343,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CAFE7B37245A211300167140 /* Build configuration list for PBXNativeTarget "Plane rent" */;
 			buildPhases = (
-				E2444DF28A5846ABCE110F71 /* [CP] Check Pods Manifest.lock */,
+				A8B9DCA2FB4661D4A336BB03 /* [CP] Check Pods Manifest.lock */,
 				CA9EBF10245A2DC200380442 /* R.swift */,
 				CAFE7B1F245A211100167140 /* Sources */,
 				CAFE7B20245A211100167140 /* Frameworks */,
 				CAFE7B21245A211100167140 /* Resources */,
-				9D1D892496EAE132EFB9A7A3 /* [CP] Embed Pods Frameworks */,
+				EE5FB5325EE89CD2EB3A8A80 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -411,44 +411,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9D1D892496EAE132EFB9A7A3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Plane rent/Pods-Plane rent-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Plane rent/Pods-Plane rent-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Plane rent/Pods-Plane rent-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CA9EBF10245A2DC200380442 /* R.swift */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$TEMP_DIR/rswift-lastrun",
-			);
-			name = R.swift;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				$SRCROOT/R.generated.swift,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
-		};
-		E2444DF28A5846ABCE110F71 /* [CP] Check Pods Manifest.lock */ = {
+		A8B9DCA2FB4661D4A336BB03 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -468,6 +431,43 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA9EBF10245A2DC200380442 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$SRCROOT/R.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		EE5FB5325EE89CD2EB3A8A80 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Plane rent/Pods-Plane rent-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Plane rent/Pods-Plane rent-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Plane rent/Pods-Plane rent-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -657,7 +657,7 @@
 		};
 		CAFE7B38245A211300167140 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 833C02020C579575B32989D8 /* Pods-Plane rent.debug.xcconfig */;
+			baseConfigurationReference = 6A75D29385CE083745F632F2 /* Pods-Plane rent.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -678,7 +678,7 @@
 		};
 		CAFE7B39245A211300167140 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 362427858AB4538C82E21F55 /* Pods-Plane rent.release.xcconfig */;
+			baseConfigurationReference = 7C9BE4B4F7FD8FA24DAD7B68 /* Pods-Plane rent.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

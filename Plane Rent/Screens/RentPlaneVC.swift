@@ -25,7 +25,7 @@ class RentPlaneVC: BaseViewController {
     
     var selectedCell: Int = 0
     var planes = [Plane]()
-    let planeImagesDir = "http://big-marka.xyz/plane_images/"
+    let planeImagesDir = "\(Links.apiPath)plane_images/"
     
     @IBAction func doneButton(_ sender: Any) {
         let isDateRentRight = !dateRent.isEmpty
@@ -106,7 +106,6 @@ class RentPlaneVC: BaseViewController {
         print(valueCurrentUserName)
         print(valueCurrentUserLastName)
         #endif
-        
         
         switch valueCurrentAccountType {
         case AccountType.passenger:

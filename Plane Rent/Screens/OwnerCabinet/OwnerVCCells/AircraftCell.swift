@@ -9,7 +9,7 @@
 import UIKit
 
 class AircraftCell: UITableViewCell {
-
+    
     @IBOutlet weak var logoImage: UIImageView!
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -22,17 +22,23 @@ class AircraftCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
-    func commonInit(_ imageName: UIImage, title: String, sub: String, subSub: String) {
-        logoImage.image = imageName
-        titleLabel.text = title
-        subLabel.text = sub
-        subSubLabel.text = subSub
+    func commonInit(isLoadImage: Bool, _ imageName: UIImage, title: String, sub: String, subSub: String) {
+        
+        if isLoadImage == true {
+            logoImage.image = imageName
+        }
+        
+        if isLoadImage == false {
+            titleLabel.text = title
+            subLabel.text = sub
+            subSubLabel.text = subSub
+        }
     }
 }

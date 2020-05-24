@@ -24,7 +24,7 @@ class RentHelicopterVC: BaseViewController {
     
     var selectedCell: Int = 0
     var helicopters = [Helicopter]()
-    let helicopterImagesDir = "http://big-marka.xyz/helicopter_images/"
+    let helicopterImagesDir = "\(Links.apiPath)helicopter_images/"
     
     @IBAction func doneButton(_ sender: Any) {
         let isDateRentRight = !dateRent.isEmpty
