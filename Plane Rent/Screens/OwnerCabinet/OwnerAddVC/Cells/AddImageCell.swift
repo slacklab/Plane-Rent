@@ -9,52 +9,15 @@
 import UIKit
 
 class AddImageCell: UITableViewCell {
+    
+    var delegate : ImagePickerDelegate?
 
+    @IBOutlet weak var mainImageView: UIImageView!
+    
     @IBOutlet weak var addImageButton: UIButton!
     
     @IBAction func addImageButton(_ sender: Any) {
-//        let chooseAlert = UIAlertController(
-//            title: nil,
-//            message: nil,
-//            preferredStyle: .actionSheet)
-//
-//        chooseAlert.addAction(
-//            UIAlertAction(
-//                title: NSLocalizedString("Gallery", comment: ""),
-//                style: .default,
-//                handler: { [weak self] _ in
-//                    guard let strongSelf = self else { return }
-//                    if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-//                        let imagePicker = UIImagePickerController()
-//                        imagePicker.delegate = strongSelf
-//                        imagePicker.sourceType = .photoLibrary;
-//                        imagePicker.allowsEditing = false
-//                        strongSelf.present(imagePicker, animated: true, completion: nil)
-//                    }
-//            }))
-//
-//        chooseAlert.addAction(
-//            UIAlertAction(
-//                title: NSLocalizedString("Camera", comment: ""),
-//                style: .default) { [weak self] _ in
-//                    guard let strongSelf = self else { return }
-//                    if UIImagePickerController.isSourceTypeAvailable(.camera) {
-//                        let imagePicker = UIImagePickerController()
-//                        imagePicker.delegate = strongSelf
-//                        imagePicker.sourceType = .camera;
-//                        imagePicker.allowsEditing = false
-//                        strongSelf.present(imagePicker, animated: true, completion: nil)
-//                    }
-//        })
-//
-//        chooseAlert.addAction(
-//            UIAlertAction(
-//                title: "Cancel",
-//                style: .cancel,
-//                handler: nil))
-//
-//        self.present(chooseAlert, animated: true)
-
+        delegate?.pickImage()
     }
     
     override func awakeFromNib() {

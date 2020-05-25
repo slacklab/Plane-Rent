@@ -27,17 +27,30 @@
                             <action selector="addImageButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bgT-vW-PIA"/>
                         </connections>
                     </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="done-blue" translatesAutoresizingMaskIntoConstraints="NO" id="NOD-OE-YJp">
+                        <rect key="frame" x="16" y="25.5" width="121" height="131"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="131" id="qdp-CY-Nem"/>
+                            <constraint firstAttribute="width" constant="121" id="xyf-rk-5ZE"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="NOD-OE-YJp" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Pv5-DP-Znu"/>
                     <constraint firstItem="NGf-tb-Txc" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Rjn-Kg-Zfx"/>
                     <constraint firstItem="NGf-tb-Txc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="pY0-K5-nYb"/>
+                    <constraint firstItem="NOD-OE-YJp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="v5X-J7-sQ9"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="addImageButton" destination="NGf-tb-Txc" id="4Uh-yG-q6b"/>
+                <outlet property="mainImageView" destination="NOD-OE-YJp" id="nIH-5g-JOw"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="57.589285714285708"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="done-blue" width="72" height="72"/>
+    </resources>
 </document>

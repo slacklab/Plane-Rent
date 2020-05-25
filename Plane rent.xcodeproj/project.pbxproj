@@ -55,6 +55,7 @@
 		CA9EBF17245A428500380442 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EBF16245A428500380442 /* Colors.swift */; };
 		CAA61C40247A57C7007841F2 /* OwnerLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA61C3E247A57C7007841F2 /* OwnerLabelCell.swift */; };
 		CAA61C41247A57C7007841F2 /* OwnerLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAA61C3F247A57C7007841F2 /* OwnerLabelCell.xib */; };
+		CAA61C43247B58BA007841F2 /* OwnerAddVC+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA61C42247B58B9007841F2 /* OwnerAddVC+Protocol.swift */; };
 		CAB484D4245E069C00F31870 /* UserDefaultList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB484D3245E069C00F31870 /* UserDefaultList.swift */; };
 		CAB529C3247230860057966C /* AirUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB529C2247230860057966C /* AirUser.swift */; };
 		CAC37EAB245E287F00BEB7D6 /* String+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC37EAA245E287F00BEB7D6 /* String+Random.swift */; };
@@ -122,6 +123,7 @@
 		CA9EBF16245A428500380442 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CAA61C3E247A57C7007841F2 /* OwnerLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerLabelCell.swift; sourceTree = "<group>"; };
 		CAA61C3F247A57C7007841F2 /* OwnerLabelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OwnerLabelCell.xib; sourceTree = "<group>"; };
+		CAA61C42247B58B9007841F2 /* OwnerAddVC+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OwnerAddVC+Protocol.swift"; sourceTree = "<group>"; };
 		CAB484D3245E069C00F31870 /* UserDefaultList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultList.swift; sourceTree = "<group>"; };
 		CAB529C2247230860057966C /* AirUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirUser.swift; sourceTree = "<group>"; };
 		CAC37EAA245E287F00BEB7D6 /* String+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Random.swift"; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			children = (
 				CA6F4181247A4E28001A71A6 /* Cells */,
 				CA07E9DF247A2F38008ED582 /* OwnerAddVC.swift */,
+				CAA61C42247B58B9007841F2 /* OwnerAddVC+Protocol.swift */,
 			);
 			path = OwnerAddVC;
 			sourceTree = "<group>";
@@ -574,6 +577,7 @@
 				CA07E9EE247A3F8B008ED582 /* TextFieldCell.swift in Sources */,
 				CAF00692246E553300F09524 /* BookedVC.swift in Sources */,
 				CA6F4177247A41B4001A71A6 /* OwnerAircraftInfoImageCell.swift in Sources */,
+				CAA61C43247B58BA007841F2 /* OwnerAddVC+Protocol.swift in Sources */,
 				CAFC51EB246112C100B7AE12 /* String+StartSym.swift in Sources */,
 				CA07E9EA247A3D7C008ED582 /* CheckCell.swift in Sources */,
 				CAF00690246E3A8C00F09524 /* UIView+Rotate.swift in Sources */,
